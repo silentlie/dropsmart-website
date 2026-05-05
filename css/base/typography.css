@@ -1,6 +1,8 @@
 body {
     font-family: var(--font-body);
+    font-size: var(--fs-body-md);
     line-height: var(--lh-body);
+    font-weight: var(--fw-regular);
     color: var(--color-on-surface);
     background-color: var(--color-surface);
 }
@@ -13,4 +15,36 @@ h5,
 h6 {
     font-family: var(--font-heading);
     line-height: var(--lh-heading);
+    font-weight: var(--fw-bold);
+    color: var(--color-on-surface);
+}
+
+h1 {
+    font-size: var(--fs-display-md);
+}
+
+h2 {
+    font-size: var(--fs-headline-lg);
+}
+
+h3 {
+    font-size: var(--fs-headline-md);
+}
+
+h4 {
+    font-size: var(--fs-title-lg);
+}
+
+h5 {
+    font-size: var(--fs-title-md);
+}
+
+h6 {
+    font-size: var(--fs-title-sm);
+}
+
+p {
+    font-size: var(--fs-body-md);
+    line-height: var(--lh-body);
+    color: var(--color-on-surface-muted);
 }

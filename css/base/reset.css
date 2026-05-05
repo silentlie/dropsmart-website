@@ -7,7 +7,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    html {
+    :root {
         interpolate-size: allow-keywords;
     }
 }
@@ -27,6 +27,7 @@ canvas,
 svg {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 input,
