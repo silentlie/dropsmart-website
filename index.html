@@ -1,23 +1,44 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>DropSmart — Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <header>
-    <h1>DropSmart</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="how-it-works/">How it Works</a> |
-      <a href="tips-learning/">Tips & Learning</a> |
-      <a href="help-support/">Help & Support</a> |
-      <a href="get-started/">Get Started</a>
+  <header class="site-header">
+    <div class="container inner">
+      <a class="logo" href="/">DropSmart</a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/" aria-current="page">Home</a></li>
+          <li><a class="nav-link" href="/how-it-works/">How It Works</a></li>
+          <li><a class="nav-link" href="/tips-learning/">Tips & Learning</a></li>
+          <li><a class="nav-link" href="/help-support/">Help & Support</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="/get-started/">Get Started</a>
+      <details class="mobile-menu">
+        <summary class="menu-toggle" aria-label="Open navigation menu">☰</summary>
+      </details>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <ul class="mobile-nav-list">
+        <li><a class="mobile-nav-link" href="/" aria-current="page">Home</a></li>
+        <li><a class="mobile-nav-link" href="/how-it-works/">How It Works</a></li>
+        <li><a class="mobile-nav-link" href="/tips-learning/">Tips & Learning</a></li>
+        <li><a class="mobile-nav-link" href="/help-support/">Help & Support</a></li>
+        <li><a class="mobile-cta-link" href="/get-started/">Get Started</a></li>
+      </ul>
     </nav>
   </header>
   <main>
@@ -27,4 +48,5 @@
     <p>&copy; DropSmart — Placeholder</p>
   </footer>
 </body>
+
 </html>
