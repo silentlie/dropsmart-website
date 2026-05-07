@@ -11,6 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -23,11 +24,13 @@
           <ul class="nav-list">
             <li><a class="nav-link" href="/">Home</a></li>
             <li><a class="nav-link" href="/how-it-works/">How It Works</a></li>
+                 <li><a class="nav-link" href="/how-data-works/" >How Data Works</a></li>
             <li><a class="nav-link" href="/tips-learning/">Tips & Learning</a></li>
             <li><a class="nav-link" href="/help-support/" aria-current="page">Help & Support</a></li>
+             <li><a class="nav-link" href="/about/index.html">About</a></li>
           </ul>
         </nav>
-        <a class="cta" href="/get-started/">Get Started</a>
+           <a class="cta" href="/how-it-works/index.html" >Get Started</a>
         <details class="mobile-menu">
           <summary class="menu-toggle" aria-label="Open navigation menu">☰</summary>
         </details>
@@ -36,15 +39,189 @@
         <ul class="nav-list">
           <li><a class="nav-link" href="/">Home</a></li>
           <li><a class="nav-link" href="/how-it-works/">How It Works</a></li>
+               <li><a class="nav-link" href="/how-data-works/" >How Data Works</a></li>
           <li><a class="nav-link" href="/tips-learning/">Tips & Learning</a></li>
           <li><a class="nav-link" href="/help-support/" aria-current="page">Help & Support</a></li>
-          <li><a class="cta" href="/get-started/">Get Started</a></li>
+           <li><a class="nav-link" href="/about/index.html">About</a></li>
+          <li><a class="cta" href="/how-it-works/index.html">Get Started</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <p>Placeholder for help and support information.</p>
+    <section class="hero">
+  <h1>We Are Here to Help</h1>
+  <p>Find answers, troubleshoot issues, or get in touch with our team.</p>
+</section>
+
+<!-- CARDS -->
+<section class="cards-section">
+  <div class="cards-wrap">
+
+    <div class="card">
+      <div class="card-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+          <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+        </svg>
+      </div>
+      <h3>Installation Help</h3>
+      <p>Step-by-step guides for setting up your smart water meter seamlessly.</p>
+      <a href="/how-it-works/index.html" class="card-link">View Guides →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+          <path d="M18 20V10M12 20V4M6 20v-6"/>
+        </svg>
+      </div>
+      <h3>Understanding Your Data</h3>
+      <p>Learn how to read your usage charts and identify saving opportunities.</p>
+      <a href="/how-data-works/index.html" class="card-link">Learn More →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <h3>Renter and Subsidy Info</h3>
+      <p>Information on government rebates and solutions for rental properties.</p>
+      <a href="/how-it-works/index.html" class="card-link">Check Eligibility →</a>
+    </div>
+
+  </div>
+</section>
+  <section class="faq-section">
+ 
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="section-rule"></div>
+ 
+    <div class="faq-list">
+ 
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <details>
+          <summary class="faq-question">
+            Do I need a plumber for installation?
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">
+            No — AquaWise is designed for simple DIY installation. Most setups
+            take under 30 minutes using our step-by-step guide. However, if you
+            have an older or non-standard meter, we recommend consulting a
+            licensed plumber.
+          </p>
+        </details>
+      </div>
+ 
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <details>
+          <summary class="faq-question">
+            Can I use AquaWise if I am renting?
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">
+            Yes! Renters can use AquaWise in most cases. We also have a
+            dedicated renters guide that outlines your rights, how to get
+            landlord approval, and which government rebates you may still
+            qualify for.
+          </p>
+        </details>
+      </div>
+ 
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <details>
+          <summary class="faq-question">
+            How accurate is the real-time monitoring?
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">
+            AquaWise sensors measure water flow with ±1% accuracy. Data is
+            synced to the dashboard every 5 minutes, giving you near real-time
+            visibility into your household consumption.
+          </p>
+        </details>
+      </div>
+ 
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <details>
+          <summary class="faq-question">
+            What if I see an incorrect reading?
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">
+            First, try refreshing your dashboard and verifying the sensor is
+            firmly attached. If readings still appear off, submit a report via
+            the contact form below and our team will investigate within 24 hours.
+          </p>
+        </details>
+      </div>
+ 
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <details>
+          <summary class="faq-question">
+            How do I apply for government assistance?
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">
+            Navigate to the Renter &amp; Subsidy Info section in your dashboard
+            for a full list of eligible rebates. We also have pre-filled
+            application templates to make the process as quick as possible.
+          </p>
+        </details>
+      </div>
+ 
+      <!-- FAQ 6 -->
+      <div class="faq-item">
+        <details>
+          <summary class="faq-question">
+            How do I reset my meter connection?
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">
+            Hold the reset button on the sensor for 5 seconds until the LED
+            flashes blue. Then open the AquaWise app and tap "Add Device" to
+            re-pair. The process usually takes under 2 minutes.
+          </p>
+        </details>
+      </div>
+ 
+    </div>
+  </section>
+
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="contact-inner">
+    <h2 class="section-title">Still Need Help?</h2>
+    <p>Send us a message and we'll get back to you within 24 hours.</p>
+
+    <div class="contact-box">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your full name"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="email@example.com"/>
+        </div>
+      </div>
+      <div class="form-group msg-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="How can we assist you today?"></textarea>
+      </div>
+      <button class="btn-send">Send Message</button>
+    </div>
+  </div>
+</section>
+
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -62,7 +239,10 @@
             <li><a class="footer-link" href="/">Home</a></li>
             <li><a class="footer-link" href="/how-it-works/">How It Works</a></li>
             <li><a class="footer-link" href="/tips-learning/">Tips &amp; Learning</a></li>
+            
+            
             <li><a class="footer-link" href="/get-started/">Get Started</a></li>
+
           </ul>
         </nav>
 

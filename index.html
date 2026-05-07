@@ -1,99 +1,343 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DropSmart — Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/landing-page/style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>DropSmart — Home</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="inner">
+          <a class="logo" href="/">DropSmart</a>
 
-<body>
-  <header class="site-header">
-    <div class="container">
-      <div class="inner">
-        <a class="logo" href="/">DropSmart</a>
-
-        <nav class="nav" aria-label="Main navigation">
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list">
+              <li><a class="nav-link" href="/" aria-current="page">Home</a></li>
+              <li>
+                <a class="nav-link" href="/how-it-works/">How It Works</a>
+              </li>
+                   <li><a class="nav-link" href="/how-data-works/" >How Data Works</a></li>
+              <li>
+                <a class="nav-link" href="/tips-learning/">Tips & Learning</a>
+              </li>
+              <li>
+                <a class="nav-link" href="/help-support/">Help & Support</a>
+              </li>
+              <li><a class="nav-link" href="/about/index.html">About</a></li>
+            </ul>
+          </nav>
+          <a class="cta" href="/how-it-works/index.html">Get Started</a>
+          <details class="mobile-menu">
+            <summary class="menu-toggle" aria-label="Open navigation menu">
+              ☰
+            </summary>
+          </details>
+        </div>
+        <nav class="mobile-nav" aria-label="Mobile navigation">
           <ul class="nav-list">
             <li><a class="nav-link" href="/" aria-current="page">Home</a></li>
             <li><a class="nav-link" href="/how-it-works/">How It Works</a></li>
-            <li><a class="nav-link" href="/tips-learning/">Tips & Learning</a></li>
-            <li><a class="nav-link" href="/help-support/">Help & Support</a></li>
+            <li>     <li><a class="nav-link" href="/how-data-works/" >How Data Works</a></li>
+              <a class="nav-link" href="/tips-learning/">Tips & Learning</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/help-support/">Help & Support</a>
+            </li>
+            <li><a class="nav-link" href="/about/index.html">About</a></li>
+            <li>
+              <a class="cta" href="/how-it-works/index.html">Get Started</a>
+            </li>
           </ul>
         </nav>
-        <a class="cta" href="/get-started/">Get Started</a>
-        <details class="mobile-menu">
-          <summary class="menu-toggle" aria-label="Open navigation menu">☰</summary>
-        </details>
       </div>
-      <nav class="mobile-nav" aria-label="Mobile navigation">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="/" aria-current="page">Home</a></li>
-          <li><a class="nav-link" href="/how-it-works/">How It Works</a></li>
-          <li><a class="nav-link" href="/tips-learning/">Tips & Learning</a></li>
-          <li><a class="nav-link" href="/help-support/">Help & Support</a></li>
-          <li><a class="cta" href="/get-started/">Get Started</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <p>Placeholder content for the DropSmart homepage.</p>
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a class="footer-logo" href="/">DropSmart</a>
-          <p class="footer-description">
-            Helping renters and households understand water use, reduce waste, and make smarter everyday decisions.
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-grid">
+          <!-- LEFT — text -->
+          <div class="hero-text">
+            <!-- logo -->
+            <div class="hero-logo">
+              <div class="logo-circle">
+                <svg
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 4C18 4 8 14 8 22C8 27.52 12.48 32 18 32C23.52 32 28 27.52 28 22C28 14 18 4 18 4Z"
+                    fill="#00C2E0"
+                    opacity="0.85"
+                  />
+                  <path
+                    d="M13 24C13 24 15 28 18 28"
+                    stroke="rgba(255,255,255,0.6)"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span class="brand-name">AquaWise</span>
+              </div>
+            </div>
+
+            <div class="badge">Smart Water Management</div>
+
+            <h1 class="hero-title">
+              Control Your Flow,<br />
+              <span class="accent">Cut Your Bills</span>
+            </h1>
+
+            <p class="hero-desc">
+              AquaWise helps Australian households track and reduce water usage
+              with a simple smart meter — no stress, no complexity.
+            </p>
+
+            <div class="hero-btns">
+              <a href="/how-it-works/index.html" class="btn-primary"
+                >See How It Works</a
+              >
+              <a href="/about/index.html" class="btn-secondary">Learn More</a>
+            </div>
+          </div>
+
+          <!-- RIGHT — dashboard card -->
+          <div class="hero-dashboard">
+            <div class="dash-label">Smart Meter Display Information</div>
+            <div class="dash-title">Household Overview</div>
+
+            <div class="dash-stats">
+              <div class="stat-box">
+                <div class="stat-label">Weekly Usage</div>
+                <div class="stat-value">142L</div>
+                <div class="stat-sub">↓ Down 18%</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Estimated Bill</div>
+                <div class="stat-value">$28</div>
+                <div class="stat-sub2">Next cycle: 14 days</div>
+              </div>
+            </div>
+
+            <!-- mini bar chart -->
+            <div class="chart-bars">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar active"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ HOW IT WORKS ══ -->
+      <section class="section how-it-works" id="how-it-works">
+        <div class="section-header">
+          <h2 class="section-title">How It Works</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77
+                     a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91
+                     a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                />
+              </svg>
+            </div>
+            <h3>Install</h3>
+            <p>
+              A simple, non-invasive sensor clips onto your existing meter in
+              minutes. No plumber required.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24">
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg>
+            </div>
+            <h3>Read</h3>
+            <p>
+              Real-time data flows to your dashboard, mapping out exactly where
+              your water goes.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </div>
+            <h3>Action</h3>
+            <p>
+              Get personalized tips and leak alerts to reduce waste and lower
+              your monthly bills instantly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ BUILT FOR ══ -->
+      <section class="section built-for">
+        <div class="built-header">
+          <h2>Built for the Modern Australian Home</h2>
+          <p>
+            Managing utilities shouldn't be a full-time job. AquaWise does the
+            heavy lifting so you can focus on living.
           </p>
         </div>
 
-        <nav class="footer-section" aria-label="Explore">
-          <h2 class="footer-heading">Explore</h2>
-          <ul class="footer-list">
-            <li><a class="footer-link" href="/">Home</a></li>
-            <li><a class="footer-link" href="/how-it-works/">How It Works</a></li>
-            <li><a class="footer-link" href="/tips-learning/">Tips &amp; Learning</a></li>
-            <li><a class="footer-link" href="/get-started/">Get Started</a></li>
-          </ul>
-        </nav>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+            <h3>Save Money</h3>
+            <div class="amount">$340/yr</div>
+            <p>
+              The average household saves significant annual costs by
+              identifying silent leaks and high-flow habits.
+            </p>
+          </div>
 
-        <nav class="footer-section" aria-label="Support">
-          <h2 class="footer-heading">Support</h2>
-          <ul class="footer-list">
-            <li><a class="footer-link" href="/help-support/">Help &amp; Support</a></li>
-            <li><a class="footer-link" href="/help-support/#faq">FAQ</a></li>
-            <li><a class="footer-link" href="/help-support/#contact">Contact</a></li>
-            <li><a class="footer-link" href="/tips-learning/#renters">For Renters</a></li>
-          </ul>
-        </nav>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+              </svg>
+            </div>
+            <h3>No Overwhelm</h3>
+            <p>
+              Designed for busy renters and homeowners. No complex jargon, just
+              clear insights and actionable steps delivered to your phone.
+            </p>
+          </div>
 
-        <nav class="footer-section" aria-label="Legal">
-          <h2 class="footer-heading">Legal</h2>
-          <ul class="footer-list">
-            <li><a class="footer-link" href="/#">Privacy Policy</a></li>
-            <li><a class="footer-link" href="/#">Terms of Use</a></li>
-            <li><a class="footer-link" href="/#">Accessibility</a></li>
-          </ul>
-        </nav>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <h3>Renter Friendly</h3>
+            <p>
+              Zero plumbing modifications required. Take the device with you
+              when you move. It's as simple as clicking a pen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ CTA BANNER ══ -->
+      <section class="cta-banner">
+        <div class="cta-inner">
+          <div class="cta-text">
+            <h2>Australian households waste up to 30% of water</h2>
+            <p>
+              Join 15,000+ homes already saving with AquaWise. It takes 2
+              minutes to get started.
+            </p>
+          </div>
+          <a href="/how-it-works/index.html" class="btn-cta"
+            >Start Saving Today</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="footer-logo" href="/">DropSmart</a>
+            <p class="footer-description">
+              Helping renters and households understand water use, reduce waste,
+              and make smarter everyday decisions.
+            </p>
+          </div>
+
+          <nav class="footer-section" aria-label="Explore">
+            <h2 class="footer-heading">Explore</h2>
+            <ul class="footer-list">
+              <li><a class="footer-link" href="/">Home</a></li>
+              <li>
+                <a class="footer-link" href="/how-it-works/">How It Works</a>
+              </li>
+              <li>
+                <a class="footer-link" href="/tips-learning/"
+                  >Tips &amp; Learning</a
+                >
+              </li>
+              <li>
+                <a class="footer-link" href="/get-started/">Get Started</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="footer-section" aria-label="Support">
+            <h2 class="footer-heading">Support</h2>
+            <ul class="footer-list">
+              <li>
+                <a class="footer-link" href="/help-support/"
+                  >Help &amp; Support</a
+                >
+              </li>
+              <li><a class="footer-link" href="/help-support/#faq">FAQ</a></li>
+              <li>
+                <a class="footer-link" href="/help-support/#contact">Contact</a>
+              </li>
+              <li>
+                <a class="footer-link" href="/tips-learning/#renters"
+                  >For Renters</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="footer-section" aria-label="Legal">
+            <h2 class="footer-heading">Legal</h2>
+            <ul class="footer-list">
+              <li><a class="footer-link" href="/#">Privacy Policy</a></li>
+              <li><a class="footer-link" href="/#">Terms of Use</a></li>
+              <li><a class="footer-link" href="/#">Accessibility</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            &copy; 2026 DropSmart — All rights reserved.
+          </p>
+          <p class="footer-note">Designed for sustainable water awareness.</p>
+        </div>
       </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2026 DropSmart — All rights reserved.</p>
-        <p class="footer-note">
-          Designed for sustainable water awareness.
-        </p>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

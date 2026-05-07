@@ -1,99 +1,402 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DropSmart — Tips & Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>DropSmart — Tips & Learning</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
-</head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="inner">
+          <a class="logo" href="/">DropSmart</a>
 
-<body>
-  <header class="site-header">
-    <div class="container">
-      <div class="inner">
-        <a class="logo" href="/">DropSmart</a>
-
-        <nav class="nav" aria-label="Main navigation">
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list">
+              <li><a class="nav-link" href="/">Home</a></li>
+              <li>
+                <a class="nav-link" href="/how-it-works/">How It Works</a>
+              </li>     <li><a class="nav-link" href="/how-data-works/" >How Data Works</a></li>
+              <li>
+                <a class="nav-link" href="/tips-learning/" aria-current="page"
+                  >Tips & Learning</a
+                >
+              </li>
+              <li>
+                <a class="nav-link" href="/help-support/">Help & Support</a>
+              </li>
+              <li><a class="nav-link" href="/about/index.html">About</a></li>
+            </ul>
+          </nav>
+          <a class="cta" href="/how-it-works/index.html">Get Started</a>
+          <details class="mobile-menu">
+            <summary class="menu-toggle" aria-label="Open navigation menu">
+              ☰
+            </summary>
+          </details>
+        </div>
+        <nav class="mobile-nav" aria-label="Mobile navigation">
           <ul class="nav-list">
             <li><a class="nav-link" href="/">Home</a></li>
-            <li><a class="nav-link" href="/how-it-works/">How It Works</a></li>
-            <li><a class="nav-link" href="/tips-learning/" aria-current="page">Tips & Learning</a></li>
-            <li><a class="nav-link" href="/help-support/">Help & Support</a></li>
+            <li><a class="nav-link" href="/how-it-works/">How It Works</a></li>  
+               <li><a class="nav-link" href="/how-data-works/" >How Data Works</a></li>
+            <li>
+              <a class="nav-link" href="/tips-learning/" aria-current="page"
+                >Tips & Learning</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/help-support/">Help & Support</a>
+            </li>
+            <li><a class="nav-link" href="/about/index.html">About</a></li>
+            <li>
+              <a class="cta" href="/how-it-works/index.html">Get Started</a>
+            </li>
           </ul>
         </nav>
-        <a class="cta" href="/get-started/">Get Started</a>
-        <details class="mobile-menu">
-          <summary class="menu-toggle" aria-label="Open navigation menu">☰</summary>
-        </details>
       </div>
-      <nav class="mobile-nav" aria-label="Mobile navigation">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="/">Home</a></li>
-          <li><a class="nav-link" href="/how-it-works/">How It Works</a></li>
-          <li><a class="nav-link" href="/tips-learning/" aria-current="page">Tips & Learning</a></li>
-          <li><a class="nav-link" href="/help-support/">Help & Support</a></li>
-          <li><a class="cta" href="/get-started/">Get Started</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <p>Placeholder for tips and learning resources.</p>
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a class="footer-logo" href="/">DropSmart</a>
-          <p class="footer-description">
-            Helping renters and households understand water use, reduce waste, and make smarter everyday decisions.
-          </p>
+    </header>
+    <main>
+      <section class="page-hero">
+        <h1>Simple Tips to Cut Your Bill</h1>
+        <p>Small daily actions that fit your routine — nothing overwhelming.</p>
+      </section>
+
+      <!-- FILTER TABS -->
+      <div class="filter-bar">
+        <div class="filter-tabs">
+          <button class="tab-btn active">All</button>
+          <button class="tab-btn">Shower</button>
+          <button class="tab-btn">Laundry</button>
+          <button class="tab-btn">Garden</button>
+          <button class="tab-btn">Kitchen</button>
+        </div>
+      </div>
+
+      <!-- MAIN LAYOUT -->
+      <div class="tips-main">
+        <div class="tips-layout">
+          <!-- SIDEBAR -->
+          <aside class="sidebar">
+            <!-- Today's Action -->
+            <div class="today-card">
+              <div class="today-label">Today's Action</div>
+              <div class="today-row">
+                <div class="today-check">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <p class="today-text">
+                  Reduce your shower by 2 minutes — saves approximately 20L
+                  today.
+                </p>
+              </div>
+            </div>
+
+            <!-- Habit Streak -->
+            <div class="streak-card">
+              <div class="streak-header">
+                <div class="streak-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Your Habit Streak</h4>
+                  <p>Complete daily actions to build momentum.</p>
+                </div>
+              </div>
+              <div class="days-row">
+                <div class="day-dot done">M</div>
+                <div class="day-dot done">T</div>
+                <div class="day-dot done">W</div>
+                <div class="day-dot done">T</div>
+                <div class="day-dot done">F</div>
+                <div class="day-dot inactive">S</div>
+                <div class="day-dot inactive">S</div>
+              </div>
+              <div class="streak-msg">
+                <div class="streak-count">5 day streak! 🔥</div>
+                <p>You're doing great! One more day to a personal best.</p>
+              </div>
+            </div>
+
+            <!-- Pro Recommendation -->
+            <div class="pro-card">
+              <div class="pro-label">Pro Recommendation</div>
+              <h3>Switch to Smart Flow Sensors</h3>
+              <p>Save up to $150 per year on utilities.</p>
+            </div>
+          </aside>
+
+          <!-- TIP CARDS -->
+          <div class="tips-grid">
+            <div class="tip-card">
+              <div class="tip-card-top">
+                <span class="tip-category cat-shower">Shower</span>
+                <span class="tip-difficulty diff-easy">Easy</span>
+              </div>
+              <h3>Shorten Your Shower</h3>
+              <p>
+                Cutting just two minutes from your daily shower can drastically
+                reduce your monthly bill without major life changes.
+              </p>
+              <div class="tip-saving">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+                ~$18 / month saved
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-top">
+                <span class="tip-category cat-laundry">Laundry</span>
+                <span class="tip-difficulty diff-easy">Easy</span>
+              </div>
+              <h3>Run Full Loads Only</h3>
+              <p>
+                Wait until your washing machine is completely full. Partial
+                loads waste energy and water unnecessarily.
+              </p>
+              <div class="tip-saving">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+                ~$12 / month saved
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-top">
+                <span class="tip-category cat-general">General</span>
+                <span class="tip-difficulty diff-medium">Medium</span>
+              </div>
+              <h3>Fix Dripping Taps</h3>
+              <p>
+                A slow drip can waste over 100 liters of water a month. Changing
+                a washer is a simple DIY fix with big returns.
+              </p>
+              <div class="tip-saving">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+                ~$35 / month saved
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-top">
+                <span class="tip-category cat-laundry">Laundry</span>
+                <span class="tip-difficulty diff-easy">Easy</span>
+              </div>
+              <h3>Use Cold Water Wash</h3>
+              <p>
+                Modern detergents are designed to work perfectly in cold water,
+                saving the energy used to heat it up.
+              </p>
+              <div class="tip-saving">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+                ~$8 / month saved
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-top">
+                <span class="tip-category cat-garden">Garden</span>
+                <span class="tip-difficulty diff-easy">Easy</span>
+              </div>
+              <h3>Water at Dawn</h3>
+              <p>
+                Early morning watering prevents evaporation loss and helps your
+                plants thrive in the Australian sun.
+              </p>
+              <div class="tip-saving">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+                ~$22 / month saved
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-card-top">
+                <span class="tip-category cat-kitchen">Kitchen</span>
+                <span class="tip-difficulty diff-medium">Medium</span>
+              </div>
+              <h3>Install Flow Restrictor</h3>
+              <p>
+                Small aerators for your kitchen tap reduce the flow volume while
+                maintaining plenty of pressure for washing.
+              </p>
+              <div class="tip-saving">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+                ~$15 / month saved
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMUNITY STATS -->
+      <section class="community-section">
+        <div class="community-inner">
+          <div class="community-left">
+            <h2>Together we've saved 2.4 million liters this month.</h2>
+            <p>
+              By following these simple tips, the AquaWise community is making a
+              tangible difference for Australia's water security.
+            </p>
+            <div class="stat-grid">
+              <div class="stat-box">
+                <div class="stat-num">420k</div>
+                <div class="stat-label">Total Savings ($)</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-num">15.2k</div>
+                <div class="stat-label">Active Households</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="community-img">
+            <svg
+              viewBox="0 0 200 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <ellipse
+                cx="100"
+                cy="80"
+                rx="45"
+                ry="60"
+                fill="rgba(255,255,255,0.6)"
+              />
+              <rect
+                x="94"
+                y="130"
+                width="12"
+                height="40"
+                fill="rgba(255,255,255,0.4)"
+              />
+              <ellipse
+                cx="55"
+                cy="100"
+                rx="28"
+                ry="40"
+                fill="rgba(255,255,255,0.4)"
+              />
+              <rect
+                x="50"
+                y="135"
+                width="8"
+                height="30"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <ellipse
+                cx="148"
+                cy="105"
+                rx="28"
+                ry="40"
+                fill="rgba(255,255,255,0.4)"
+              />
+              <rect
+                x="143"
+                y="140"
+                width="8"
+                height="30"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <rect
+                x="0"
+                y="160"
+                width="200"
+                height="40"
+                fill="rgba(255,255,255,0.12)"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="footer-logo" href="/">DropSmart</a>
+            <p class="footer-description">
+              Helping renters and households understand water use, reduce waste,
+              and make smarter everyday decisions.
+            </p>
+          </div>
+
+          <nav class="footer-section" aria-label="Explore">
+            <h2 class="footer-heading">Explore</h2>
+            <ul class="footer-list">
+              <li><a class="footer-link" href="/">Home</a></li>
+              <li>
+                <a class="footer-link" href="/how-it-works/">How It Works</a>
+              </li>
+              <li>
+                <a class="footer-link" href="/tips-learning/"
+                  >Tips &amp; Learning</a
+                >
+              </li>
+              <li>
+                <a class="footer-link" href="/get-started/">Get Started</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="footer-section" aria-label="Support">
+            <h2 class="footer-heading">Support</h2>
+            <ul class="footer-list">
+              <li>
+                <a class="footer-link" href="/help-support/"
+                  >Help &amp; Support</a
+                >
+              </li>
+              <li><a class="footer-link" href="/help-support/#faq">FAQ</a></li>
+              <li>
+                <a class="footer-link" href="/help-support/#contact">Contact</a>
+              </li>
+              <li>
+                <a class="footer-link" href="/tips-learning/#renters"
+                  >For Renters</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="footer-section" aria-label="Legal">
+            <h2 class="footer-heading">Legal</h2>
+            <ul class="footer-list">
+              <li><a class="footer-link" href="/#">Privacy Policy</a></li>
+              <li><a class="footer-link" href="/#">Terms of Use</a></li>
+              <li><a class="footer-link" href="/#">Accessibility</a></li>
+            </ul>
+          </nav>
         </div>
 
-        <nav class="footer-section" aria-label="Explore">
-          <h2 class="footer-heading">Explore</h2>
-          <ul class="footer-list">
-            <li><a class="footer-link" href="/">Home</a></li>
-            <li><a class="footer-link" href="/how-it-works/">How It Works</a></li>
-            <li><a class="footer-link" href="/tips-learning/">Tips &amp; Learning</a></li>
-            <li><a class="footer-link" href="/get-started/">Get Started</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer-section" aria-label="Support">
-          <h2 class="footer-heading">Support</h2>
-          <ul class="footer-list">
-            <li><a class="footer-link" href="/help-support/">Help &amp; Support</a></li>
-            <li><a class="footer-link" href="/help-support/#faq">FAQ</a></li>
-            <li><a class="footer-link" href="/help-support/#contact">Contact</a></li>
-            <li><a class="footer-link" href="/tips-learning/#renters">For Renters</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer-section" aria-label="Legal">
-          <h2 class="footer-heading">Legal</h2>
-          <ul class="footer-list">
-            <li><a class="footer-link" href="/#">Privacy Policy</a></li>
-            <li><a class="footer-link" href="/#">Terms of Use</a></li>
-            <li><a class="footer-link" href="/#">Accessibility</a></li>
-          </ul>
-        </nav>
+        <div class="footer-bottom">
+          <p class="footer-copy">&copy; DropSmart — Placeholder</p>
+          <p class="footer-note">Designed for sustainable water awareness.</p>
+        </div>
       </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copy">&copy; DropSmart — Placeholder</p>
-        <p class="footer-note">
-          Designed for sustainable water awareness.
-        </p>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
