@@ -141,7 +141,17 @@
     --color-info-container: var(--blue-100);
     --color-on-info-container: var(--blue-900);
 
+    --glass-border: rgb(255 255 255 / 0.12);
+    --glass-bg: rgb(255 255 255 / 0.06);
+    --glass-shadow: rgb(0 0 0 / 0.24);
+    --glass-accent-border: rgb(from var(--color-accent) r g b / 0.35);
+    --glass-accent-bg: rgb(from var(--color-accent) r g b / 0.18);
+    --glass-accent-shadow: rgb(from var(--color-accent) r g b / 0.12);
+
     /* spacing */
+    --header-height: 4rem;
+    /* 64px */
+
     --space-1: 0.25rem;
     /* 4px */
     --space-2: 0.5rem;

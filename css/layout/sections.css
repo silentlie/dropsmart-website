@@ -1,0 +1,13 @@
+.section {
+    padding-block: var(--space-16);
+    &.sm {
+        padding-block: var(--space-8);
+    }
+    &.lg {
+        padding-block: var(--space-24);
+    }
+}
+
+.hide {
+    display: none;
+}

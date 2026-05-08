@@ -1,0 +1,59 @@
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+
+    &.sm {
+        gap: var(--space-4);
+    }
+
+    &.lg {
+        gap: var(--space-10);
+    }
+}
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.grid {
+    display: grid;
+    gap: var(--space-8);
+
+    &.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &.three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    &.four {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    &.auto {
+        grid-template-columns:
+            repeat(auto-fit,
+                minmax(min(100%, 18rem), 1fr));
+    }
+}
+
+@media (max-width: 48rem) {
+
+    .grid {
+
+        &.two,
+        &.three,
+        &.four {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.flow>*+* {
+    margin-top: var(--flow-space, var(--space-4));
+}
