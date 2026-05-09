@@ -87,6 +87,22 @@
     --color-accent-strong: var(--secondary-blue-400);
     --color-on-accent: var(--secondary-blue-900);
 
+    --color-accent-subtle: rgb(from var(--color-accent) r g b / 0.12);
+    --color-accent-border: rgb(from var(--color-accent) r g b / 0.45);
+    --color-accent-text: var(--color-secondary-hover);
+
+    --color-accent-inverse-subtle: rgb(from var(--color-accent) r g b / 0.12);
+    --color-accent-inverse-border: rgb(from var(--color-accent) r g b / 0.55);
+    --color-accent-inverse-text: var(--color-accent);
+
+    --glass-border: rgb(255 255 255 / 0.12);
+    --glass-bg: rgb(255 255 255 / 0.06);
+    --glass-shadow: rgb(0 0 0 / 0.24);
+
+    --glass-accent-border: rgb(from var(--color-accent) r g b / 0.35);
+    --glass-accent-bg: rgb(from var(--color-accent) r g b / 0.18);
+    --glass-accent-shadow: rgb(from var(--color-accent) r g b / 0.12);
+
     --color-bg: var(--neutral-100);
     --color-bg-subtle: var(--blue-100);
     --color-surface: var(--white);
@@ -141,12 +157,14 @@
     --color-info-container: var(--blue-100);
     --color-on-info-container: var(--blue-900);
 
-    --glass-border: rgb(255 255 255 / 0.12);
-    --glass-bg: rgb(255 255 255 / 0.06);
-    --glass-shadow: rgb(0 0 0 / 0.24);
-    --glass-accent-border: rgb(from var(--color-accent) r g b / 0.35);
-    --glass-accent-bg: rgb(from var(--color-accent) r g b / 0.18);
-    --glass-accent-shadow: rgb(from var(--color-accent) r g b / 0.12);
+    /* shadow */
+    --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
+    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 
     /* spacing */
     --header-height: 4rem;
@@ -198,15 +216,6 @@
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --radius-full: 999px;
-
-    /* shadow */
-    --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
-    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 
     /* typography */
     --fs-xs: 0.75rem;

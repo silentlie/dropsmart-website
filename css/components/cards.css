@@ -1,0 +1,19 @@
+.card {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-4);
+
+    transition:
+        border-color var(--transition-medium),
+        transform var(--transition-medium),
+        box-shadow var(--transition-medium);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--glass-accent-border)
+    }
+}

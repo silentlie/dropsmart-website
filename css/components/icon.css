@@ -1,0 +1,97 @@
+:root {
+    /* icon base */
+    --icon-size: 1.25rem;
+    --icon-padding: var(--space-2);
+    --icon-radius: var(--radius-md);
+    --icon-border-width: 1px;
+
+    /* default icon */
+    --icon-color: var(--color-text);
+    --icon-border: transparent;
+    --icon-bg: transparent;
+    --icon-shadow: none;
+
+    /* muted icon */
+    --icon-muted-color: var(--color-text-muted);
+    --icon-muted-border: transparent;
+    --icon-muted-bg: transparent;
+    --icon-muted-shadow: none;
+
+    /* accent icon for light backgrounds */
+    --icon-accent-color: var(--color-accent-text);
+    --icon-accent-border: var(--color-accent-border);
+    --icon-accent-bg: var(--color-accent-subtle);
+    --icon-accent-shadow: 0 0 20px rgb(from var(--color-accent) r g b / 0.16);
+
+    /* accent icon for dark backgrounds */
+    --icon-accent-inverse-color: var(--color-accent);
+    --icon-accent-inverse-border: var(--color-accent-inverse-border);
+    --icon-accent-inverse-bg: var(--color-accent-inverse-subtle);
+    --icon-accent-inverse-shadow: 0 0 24px rgb(from var(--color-accent) r g b / 0.2);
+
+    /* glass accent icon */
+    --icon-glass-accent-color: var(--color-accent);
+    --icon-glass-accent-border: var(--glass-accent-border);
+    --icon-glass-accent-bg: var(--glass-accent-bg);
+    --icon-glass-accent-shadow: 0 0 24px var(--glass-accent-shadow);
+}
+
+.icon {
+    display: inline-grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: fit-content;
+    padding: var(--icon-padding);
+
+    border: var(--icon-border-width) solid var(--icon-border);
+    border-radius: var(--icon-radius);
+
+    background-color: var(--icon-bg);
+    color: var(--icon-color);
+    box-shadow: var(--icon-shadow);
+
+    line-height: 1;
+
+    & svg {
+        width: var(--icon-size);
+        height: var(--icon-size);
+        stroke: currentColor;
+    }
+
+    &.muted {
+        border-color: var(--icon-muted-border);
+        background-color: var(--icon-muted-bg);
+        color: var(--icon-muted-color);
+        box-shadow: var(--icon-muted-shadow);
+    }
+
+    &.accent {
+        border-color: var(--icon-accent-border);
+        background-color: var(--icon-accent-bg);
+        color: var(--icon-accent-color);
+        box-shadow: var(--icon-accent-shadow);
+    }
+
+    &.accent-inverse {
+        border-color: var(--icon-accent-inverse-border);
+        background-color: var(--icon-accent-inverse-bg);
+        color: var(--icon-accent-inverse-color);
+        box-shadow: var(--icon-accent-inverse-shadow);
+    }
+
+    &.glass-accent {
+        border-color: var(--icon-glass-accent-border);
+        background-color: var(--icon-glass-accent-bg);
+        color: var(--icon-glass-accent-color);
+        box-shadow: var(--icon-glass-accent-shadow);
+    }
+
+    &.borderless {
+        border-color: transparent;
+    }
+
+    &.shadowless {
+        box-shadow: none;
+    }
+}
