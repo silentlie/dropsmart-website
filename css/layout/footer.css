@@ -11,23 +11,13 @@
 
         & .footer-brand {
             & .footer-logo {
-                display: inline-block;
                 margin-bottom: var(--space-4);
-                font-family: var(--font-heading);
                 font-size: var(--fs-headline-sm);
-                font-weight: var(--fw-bold);
                 color: var(--color-text-inverse);
-                text-decoration: none;
 
                 &:hover,
                 &:focus-visible {
                     color: var(--color-accent);
-                }
-
-                &:focus-visible {
-                    outline: 2px solid var(--color-focus-ring);
-                    outline-offset: 3px;
-                    border-radius: var(--radius-sm);
                 }
             }
 
