@@ -1,10 +1,8 @@
+.benefits-section,
 .problem-section {
-    background-color: var(--color-bg);
-
     .container {
         display: grid;
         gap: var(--space-12);
-
     }
 
     .section-header {
@@ -29,7 +27,7 @@
         }
     }
 
-    .info-card {
+    .card {
         display: grid;
         justify-items: center;
         text-align: center;
@@ -58,9 +56,166 @@
             gap: var(--space-3);
         }
 
-        .info-card {
+        .card {
             gap: var(--space-3);
             padding: var(--space-6);
+        }
+    }
+}
+
+.solution-section {
+    --solution-step-size: 2.5rem;
+    --solution-step-line-color: rgb(from var(--color-primary) r g b / 0.25);
+    background-color: var(--color-bg);
+
+    .grid {
+        gap: var(--space-16);
+        align-items: center;
+
+        .solution-intro {
+            display: grid;
+            justify-items: end;
+            text-align: right;
+            gap: var(--space-6);
+        }
+
+        .solution-steps {
+
+            .solution-step {
+                display: grid;
+                grid-template-columns: var(--solution-step-size) minmax(0, 1fr);
+                gap: var(--space-6);
+
+                .solution-step-rail {
+                    display: grid;
+                    grid-template-rows: var(--solution-step-size) 1fr;
+                    justify-items: center;
+
+                    .solution-step-number {
+                        display: grid;
+                        place-items: center;
+
+                        width: var(--solution-step-size);
+                        aspect-ratio: 1;
+                        border-radius: var(--radius-full);
+                        background-color: var(--color-primary);
+                        color: var(--color-on-primary);
+
+                        font-weight: var(--fw-bold);
+                        box-shadow: var(--shadow-sm);
+                    }
+
+                    .solution-step-line {
+                        width: 1px;
+                        min-height: var(--space-8);
+                        background-color: var(--solution-step-line-color);
+                    }
+                }
+
+                .solution-step-body {
+                    display: grid;
+                    gap: var(--space-2);
+
+                    padding-bottom: var(--space-8);
+                }
+
+                &:last-child {
+                    .solution-step-line {
+                        display: none;
+                    }
+
+                    .solution-step-body {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (width < 48rem) {
+        .grid {
+            gap: var(--space-8);
+
+            .solution-intro {
+                gap: var(--space-4);
+                justify-items: center;
+                text-align: center;
+            }
+
+            .solution-steps {
+                margin-inline: auto;
+            }
+        }
+    }
+}
+
+.cta-section {
+    background-color: var(--color-bg);
+
+    .cta-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: var(--space-12);
+
+        background-color: var(--color-primary);
+        color: var(--color-on-primary);
+
+        border-radius: var(--radius-4xl);
+        padding: var(--space-16) var(--space-20);
+
+        .cta-text {
+            display: grid;
+            gap: var(--space-4);
+            color: var(--color-on-primary);
+
+            h2 {
+                color: var(--color-on-primary);
+            }
+
+            p:not(.eyebrow) {
+                color: var(--color-on-primary);
+            }
+        }
+
+        .section-actions {
+            display: grid;
+            gap: var(--space-4);
+            justify-items: stretch;
+            min-width: 16rem;
+
+            .btn {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+
+    @media (width < 48rem) {
+        .cta-panel {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            text-align: center;
+
+            padding: var(--space-12) var(--space-6);
+            gap: var(--space-6);
+
+            .cta-text {
+                justify-items: center;
+                text-align: center;
+            }
+
+            .section-actions {
+                display: flex;
+                flex-direction: column;
+                justify-content: stretch;
+                align-items: center;
+                gap: var(--space-4);
+
+                .btn {
+                    width: 100%;
+                }
+            }
         }
     }
 }

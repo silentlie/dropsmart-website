@@ -50,15 +50,16 @@
       </nav>
     </div>
   </header>
+
   <main>
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero-inner grid two">
           <div class="hero-text">
             <p class="eyebrow glass-accent">
               Smart Water Device
             </p>
-            <h1 class="hero-title">
+            <h1 class="hero-title" id="hero-title">
               Control Your Flow,
               <span>Cut Your Bills</span>
             </h1>
@@ -68,7 +69,7 @@
               through simple monitoring and practical learning tools.
             </p>
             <div class="hero-actions cluster">
-              <a class="btn accent lg pill glow" href="/get-started/">
+              <a class="btn accent lg pill glow pulse" href="/get-started/">
                 Get Started
               </a>
               <a class="btn outline-inverse lg pill" href="/how-it-works/">
@@ -89,11 +90,12 @@
         </div>
       </div>
     </section>
-    <section class="problem-section section lg">
+
+    <section class="problem-section section lg" aria-labelledby="problem-title">
       <div class="container">
         <div class="section-header">
           <p class="eyebrow accent">The Problem</p>
-          <h2>
+          <h2 id="problem-title">
             Water bills show the cost,
             not the cause.
           </h2>
@@ -104,9 +106,9 @@
           </p>
         </div>
         <div class="grid three">
-          <article class="info-card card">
+          <article class="card">
             <div class="icon accent borderless shadowless">
-              <img src="assets/icons/gauge.svg" alt="">
+              <img src="assets/icons/gauge.svg" alt="" aria-hidden="true">
             </div>
             <h3>Unclear usage</h3>
             <p>
@@ -114,9 +116,9 @@
               leaks, or routines increased water use.
             </p>
           </article>
-          <article class="info-card card">
+          <article class="card">
             <div class="icon accent borderless shadowless">
-              <img src="assets/icons/book-open.svg" alt="">
+              <img src="assets/icons/book-open.svg" alt="" aria-hidden="true">
             </div>
             <h3>Scattered advice</h3>
             <p>
@@ -124,9 +126,9 @@
               council pages, and product recommendations.
             </p>
           </article>
-          <article class="info-card card">
+          <article class="card">
             <div class="icon accent borderless shadowless">
-              <img src="assets/icons/house.svg" alt="">
+              <img src="assets/icons/house.svg" alt="" aria-hidden="true">
             </div>
             <h3>Limited options</h3>
             <p>
@@ -137,14 +139,15 @@
         </div>
       </div>
     </section>
-    <section class="solution-section section lg">
+
+    <section class="solution-section section lg" aria-labelledby="solution-title">
       <div class="container">
-        <div class="split">
-          <div class="section-text">
+        <div class="grid two">
+          <div class="solution-intro">
             <p class="eyebrow accent">
               The Solution
             </p>
-            <h2>
+            <h2 id="solution-title">
               DropSmart turns confusion
               into a clear starting point.
             </h2>
@@ -152,63 +155,72 @@
               It helps households understand their water use,
               learn what matters, and choose practical next steps.
             </p>
-            <div class="section-actions cluster">
-              <a class="btn accent pill" href="/get-started/">
+            <div class="solution-actions cluster">
+              <a class="btn accent pill glow sm" href="/get-started/">
                 Start Planning
               </a>
-              <a class="btn outline pill" href="/how-it-works/">
+              <a class="btn outline pill sm" href="/how-it-works/">
                 See How It Works
               </a>
             </div>
           </div>
-          <div class="process-list">
-            <article class="process-item">
-              <div class="card-icon">
-                <img src="assets/icons/scan-search.svg" alt="">
+          <ol class="solution-steps">
+            <li class="solution-step">
+              <div class="solution-step-rail" aria-hidden="true">
+                <span class="solution-step-number">1</span>
+                <span class="solution-step-line"></span>
               </div>
-              <div>
+
+              <div class="solution-step-body">
                 <h3>Understand your home</h3>
                 <p>
                   Start with your household type,
                   habits, and constraints.
                 </p>
               </div>
-            </article>
-            <article class="process-item">
-              <div class="card-icon">
-                <img src="assets/icons/lightbulb.svg" alt="">
+            </li>
+
+            <li class="solution-step">
+              <div class="solution-step-rail" aria-hidden="true">
+                <span class="solution-step-number">2</span>
+                <span class="solution-step-line"></span>
               </div>
-              <div>
+
+              <div class="solution-step-body">
                 <h3>Learn what matters</h3>
                 <p>
                   Explore simple explanations about usage,
                   leaks, and saving options.
                 </p>
               </div>
-            </article>
-            <article class="process-item">
-              <div class="card-icon">
-                <img src="assets/icons/circle-arrow-right.svg" alt="">
+            </li>
+
+            <li class="solution-step">
+              <div class="solution-step-rail" aria-hidden="true">
+                <span class="solution-step-number">3</span>
+                <span class="solution-step-line"></span>
               </div>
-              <div>
+
+              <div class="solution-step-body">
                 <h3>Take the next step</h3>
                 <p>
                   Choose actions that fit your situation
                   and are easier to follow.
                 </p>
               </div>
-            </article>
-          </div>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
-    <section class="benefits-section section lg">
+
+    <section class="benefits-section section lg" aria-labelledby="benefits-title">
       <div class="container">
         <div class="section-header center">
           <p class="eyebrow accent">
             From Insight to Action
           </p>
-          <h2>
+          <h2 id="benefits-title">
             Designed for everyday
             water-saving decisions.
           </h2>
@@ -218,18 +230,18 @@
           </p>
         </div>
         <div class="grid three">
-          <article class="benefit-card card">
-            <div class="card-icon">
-              <img src="assets/icons/chart-column.svg" alt="">
+          <article class="card">
+            <div class="icon accent borderless shadowless">
+              <img src="assets/icons/chart-column.svg" alt="" aria-hidden="true">
             </div>
             <h3>See patterns clearly</h3>
             <p>
               Make usage information easier to understand.
             </p>
           </article>
-          <article class="benefit-card card">
-            <div class="card-icon">
-              <img src="assets/icons/droplets.svg" alt="">
+          <article class="card">
+            <div class="icon accent borderless shadowless">
+              <img src="assets/icons/droplets.svg" alt="" aria-hidden="true">
             </div>
             <h3>Reduce avoidable waste</h3>
             <p>
@@ -237,9 +249,9 @@
               that may waste water.
             </p>
           </article>
-          <article class="benefit-card card">
-            <div class="card-icon">
-              <img src="assets/icons/key-round.svg" alt="">
+          <article class="card">
+            <div class="icon accent borderless shadowless">
+              <img src="assets/icons/key-round.svg" alt="" aria-hidden="true">
             </div>
             <h3>Support renters</h3>
             <p>
@@ -247,9 +259,9 @@
               on major installation.
             </p>
           </article>
-          <article class="benefit-card card">
-            <div class="card-icon">
-              <img src="assets/icons/clock.svg" alt="">
+          <article class="card">
+            <div class="icon accent borderless shadowless">
+              <img src="assets/icons/clock.svg" alt="" aria-hidden="true">
             </div>
             <h3>Act before bills rise</h3>
             <p>
@@ -257,9 +269,9 @@
               becomes expensive.
             </p>
           </article>
-          <article class="benefit-card card">
-            <div class="card-icon">
-              <img src="assets/icons/library.svg" alt="">
+          <article class="card">
+            <div class="icon accent borderless shadowless">
+              <img src="assets/icons/library.svg" alt="" aria-hidden="true">
             </div>
             <h3>Learn at your pace</h3>
             <p>
@@ -267,9 +279,9 @@
               of technical explanations.
             </p>
           </article>
-          <article class="benefit-card card">
-            <div class="card-icon">
-              <img src="assets/icons/route.svg" alt="">
+          <article class="card">
+            <div class="icon accent borderless shadowless">
+              <img src="assets/icons/route.svg" alt="" aria-hidden="true">
             </div>
             <h3>Choose realistic steps</h3>
             <p>
@@ -280,26 +292,27 @@
         </div>
       </div>
     </section>
-    <section class="cta-section section lg">
+
+    <section class="cta-section section lg" aria-labelledby="cta-title">
       <div class="container">
         <div class="cta-panel">
           <div class="cta-text">
             <p class="eyebrow glass-accent">Start Saving Smarter</p>
-            <h2>Plan your next step before the next bill arrives.</h2>
+            <h2 id="cta-title">Plan your next step before the next bill arrives.</h2>
             <p>
               Start with your household, explore practical guidance,
               and choose a realistic action.
             </p>
           </div>
-
-          <div class="section-actions cluster">
-            <a class="btn accent pill glow" href="/get-started/">Go to Get Started</a>
+          <div class="section-actions">
+            <a class="btn accent pill glow pulse" href="/get-started/">Go to Get Started</a>
             <a class="btn outline-inverse pill" href="/help-support/">Read Help &amp; Support</a>
           </div>
         </div>
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
