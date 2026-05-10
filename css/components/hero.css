@@ -93,6 +93,7 @@
 
     @media (max-width: 48rem) {
         & .hero-inner {
+            padding-block: var(--space-6);
             & .hero-text {
                 align-items: center;
                 text-align: center;

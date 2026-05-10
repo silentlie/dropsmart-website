@@ -87,7 +87,7 @@
     }
 
     &.pulse {
-        animation: btn-pulse 3s infinite;
+        animation: btn-pulse 2s infinite;
     }
 
     &.xxs {
