@@ -109,72 +109,186 @@
         <div class="flow-panels card">
 
           <article class="intro flow-panel">
-            <div class="flow-content grid two">
-              <div>
+            <div class="intro-layout">
+              <div class="flow-content">
                 <p class="eyebrow">Get Started</p>
+
                 <h1 id="get-started-title">
                   Capture the basics before you ask for bigger commitments.
                 </h1>
+
                 <p>
-                  This static flow shows how DropSmart can guide users through the
-                  details that matter most before live submission is enabled.
+                  This planner helps you gather the key details that matter most before
+                  live submission is enabled.
                 </p>
 
-                <div class="notice">
-                  The intent is to help households gather a clearer brief for future
-                  support, installer conversations, landlord requests, or funding checks.
-                </div>
+                <p>
+                  You’ll walk away with a clearer brief for future support, installer
+                  conversations, landlord requests, or funding checks.
+                </p>
 
                 <div class="flow-actions cluster">
-                  <a class="btn accent pill" href="#step-1">Start planning</a>
+                  <a class="btn accent pill glow" href="#step-1">
+                    Start planning
+                    <span aria-hidden="true">→</span>
+                  </a>
                 </div>
               </div>
 
-              <div class="planner-card" aria-hidden="true">
-                <span class="planner-badge">4-Step Planner</span>
-                <div class="mock-line wide"></div>
-                <div class="mock-line"></div>
-                <div class="mock-line short"></div>
-                <div class="mock-grid">
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
+              <aside class="planner-overview" aria-labelledby="planner-overview-title">
+                <h2 id="planner-overview-title">4-Step Planner</h2>
+
+                <ol class="planner-steps">
+                  <li class="planner-step">
+                    <div class="planner-step-rail" aria-hidden="true">
+                      <span class="planner-step-number">1</span>
+                      <span class="planner-step-line"></span>
+                    </div>
+
+                    <div class="planner-step-body">
+                      <h3>Your details</h3>
+                      <p>Tell us who you are and how we can reach you.</p>
+                    </div>
+                  </li>
+
+                  <li class="planner-step">
+                    <div class="planner-step-rail" aria-hidden="true">
+                      <span class="planner-step-number">2</span>
+                      <span class="planner-step-line"></span>
+                    </div>
+
+                    <div class="planner-step-body">
+                      <h3>Property info</h3>
+                      <p>Share key details about your home or property setup.</p>
+                    </div>
+                  </li>
+
+                  <li class="planner-step">
+                    <div class="planner-step-rail" aria-hidden="true">
+                      <span class="planner-step-number">3</span>
+                      <span class="planner-step-line"></span>
+                    </div>
+
+                    <div class="planner-step-body">
+                      <h3>Scheduling</h3>
+                      <p>Choose a preferred time window or next-step timing.</p>
+                    </div>
+                  </li>
+
+                  <li class="planner-step">
+                    <div class="planner-step-rail" aria-hidden="true">
+                      <span class="planner-step-number">4</span>
+                      <span class="planner-step-line"></span>
+                    </div>
+
+                    <div class="planner-step-body">
+                      <h3>Review &amp; Confirm</h3>
+                      <p>Review your details and confirm the summary is ready.</p>
+                    </div>
+                  </li>
+                </ol>
+
+                <p class="planner-note">
+                  <span class="planner-note-icon" aria-hidden="true">
+                    <img src="../assets/icons/key-round.svg" alt="">
+                  </span>
+
+                  <span>
+                    Your information stays private and is only used to help prepare your plan.
+                  </span>
+                </p>
+              </aside>
             </div>
           </article>
 
           <article class="step-1 flow-panel">
             <div class="flow-heading">
               <p class="eyebrow">Step 1</p>
+
               <h2>Basic details</h2>
-              <p>Collect simple contact details so the future flow can prepare a useful summary.</p>
+
+              <p>
+                Let’s start with a few basics so we can tailor DropSmart
+                to what matters most to you.
+              </p>
             </div>
 
             <form class="flow-form">
               <label>
-                Full name
-                <input type="text" placeholder="Jordan Smith">
+                First name
+                <input type="text" placeholder="e.g. Jordan">
+              </label>
+
+              <label>
+                Last name
+                <input type="text" placeholder="e.g. Smith">
               </label>
 
               <label>
                 Email
-                <input type="email" placeholder="jordan@example.com">
+                <input type="email" placeholder="you@example.com">
               </label>
 
               <label>
-                Phone
-                <input type="tel" placeholder="0400 000 000">
+                Phone <span class="optional">(optional)</span>
+                <input type="tel" placeholder="e.g. 0400 000 000">
               </label>
 
-              <label>
+              <fieldset class="segmented-field">
+                <legend>Who are you?</legend>
+
+                <div class="segmented-options">
+                  <label>
+                    <input type="radio" name="user-role" checked>
+                    <span>Renter</span>
+                  </label>
+
+                  <label>
+                    <input type="radio" name="user-role">
+                    <span>Homeowner</span>
+                  </label>
+
+                  <label>
+                    <input type="radio" name="user-role">
+                    <span>Landlord</span>
+                  </label>
+
+                  <label>
+                    <input type="radio" name="user-role">
+                    <span>Property manager</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <label class="full">
                 What brings you here?
-                <input type="text" placeholder="Lower ongoing water costs">
+                <select>
+                  <option selected>Select an option</option>
+                  <option>Lower ongoing water costs</option>
+                  <option>Concerned about a possible leak</option>
+                  <option>Preparing for installer or support conversation</option>
+                  <option>Need information for landlord or body corporate</option>
+                  <option>Want to understand household water use</option>
+                  <option>Other</option>
+                </select>
+              </label>
+
+              <label class="full">
+                Optional notes
+                <textarea placeholder="Anything else you’d like us to know?"></textarea>
               </label>
             </form>
 
-            <div class="flow-actions cluster">
-              <a class="btn outline pill" href="#intro">Back</a>
-              <a class="btn accent pill" href="#step-2">Next step</a>
+            <div class="flow-actions">
+              <a class="btn outline pill" href="#intro">
+                <span aria-hidden="true">←</span>
+                Back
+              </a>
+
+              <a class="btn accent pill" href="#step-2">
+                Next step
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
           </article>
 
