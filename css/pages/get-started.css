@@ -1,3 +1,69 @@
 .get-started-page {
     background-color: var(--color-bg);
+
+    .get-started-flow {
+        height: 100svh;
+        display: grid;
+        place-items: center;
+
+        .flow-target {
+            display: none;
+        }
+
+        .flow-panels {
+            .flow-panel {
+                display: none;
+            }
+
+            .intro {
+                display: block;
+            }
+        }
+
+        &:has(#step-1:target),
+        &:has(#step-2:target),
+        &:has(#step-3:target),
+        &:has(#step-4:target),
+        &:has(#summary:target) {
+            .intro {
+                display: none;
+            }
+        }
+
+        &:has(#intro:target) {
+            .intro {
+                display: block;
+            }
+        }
+
+        &:has(#step-1:target) {
+            .step-1 {
+                display: block;
+            }
+        }
+
+        &:has(#step-2:target) {
+            .step-2 {
+                display: block;
+            }
+        }
+
+        &:has(#step-3:target) {
+            .step-3 {
+                display: block;
+            }
+        }
+
+        &:has(#step-4:target) {
+            .step-4 {
+                display: block;
+            }
+        }
+
+        &:has(#summary:target) {
+            .summary {
+                display: block;
+            }
+        }
+    }
 }
