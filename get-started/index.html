@@ -53,123 +53,389 @@
       <span id="summary" class="flow-target" aria-hidden="true"></span>
       <div class="container">
         <nav class="flow-nav" aria-label="Get started steps">
-          <a href="#intro">Intro</a>
-          <a href="#step-1">1</a>
-          <a href="#step-2">2</a>
-          <a href="#step-3">3</a>
-          <a href="#step-4">4</a>
-          <a href="#summary">Done</a>
+          <a href="#intro">
+            <span class="flow-icon">
+              <span class="flow-icon-default">
+                <img src="../assets/icons/route.svg" alt="">
+              </span>
+              <span class="flow-icon-complete">✓</span>
+            </span>
+            <span class="flow-label">Start</span>
+          </a>
+
+          <a href="#step-1">
+            <span class="flow-icon">
+              <span class="flow-icon-default">1</span>
+              <span class="flow-icon-complete">✓</span>
+            </span>
+            <span class="flow-label">Basic Details</span>
+          </a>
+
+          <a href="#step-2">
+            <span class="flow-icon">
+              <span class="flow-icon-default">2</span>
+              <span class="flow-icon-complete">✓</span>
+            </span>
+            <span class="flow-label">Property Info</span>
+          </a>
+
+          <a href="#step-3">
+            <span class="flow-icon">
+              <span class="flow-icon-default">3</span>
+              <span class="flow-icon-complete">✓</span>
+            </span>
+            <span class="flow-label">Schedule</span>
+          </a>
+
+          <a href="#step-4">
+            <span class="flow-icon">
+              <span class="flow-icon-default">4</span>
+              <span class="flow-icon-complete">✓</span>
+            </span>
+            <span class="flow-label">Confirmation</span>
+          </a>
+
+          <a href="#summary">
+            <span class="flow-icon">
+              <span class="flow-icon-default">
+                <img src="../assets/icons/flag.svg" alt="">
+              </span>
+              <span class="flow-icon-complete">✓</span>
+            </span>
+            <span class="flow-label">Done</span>
+          </a>
         </nav>
 
         <div class="flow-panels card">
 
           <article class="intro flow-panel">
-            <div class="flow-content grid two">
-              <div>
+            <div class="intro-layout">
+              <div class="flow-content">
                 <p class="eyebrow">Get Started</p>
+
                 <h1 id="get-started-title">
                   Capture the basics before you ask for bigger commitments.
                 </h1>
+
                 <p>
-                  This static flow shows how DropSmart can guide users through the
-                  details that matter most before live submission is enabled.
+                  This planner helps you gather the key details that matter most before
+                  live submission is enabled.
                 </p>
 
-                <div class="notice">
-                  The intent is to help households gather a clearer brief for future
-                  support, installer conversations, landlord requests, or funding checks.
-                </div>
+                <p>
+                  You’ll walk away with a clearer brief for future support, installer
+                  conversations, landlord requests, or funding checks.
+                </p>
 
                 <div class="flow-actions cluster">
-                  <a class="btn accent pill" href="#step-1">Start planning</a>
+                  <a class="btn accent pill glow" href="#step-1">
+                    Start planning
+                    <span aria-hidden="true">→</span>
+                  </a>
                 </div>
               </div>
 
-              <div class="planner-card" aria-hidden="true">
-                <span class="planner-badge">4-Step Planner</span>
-                <div class="mock-line wide"></div>
-                <div class="mock-line"></div>
-                <div class="mock-line short"></div>
-                <div class="mock-grid">
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
+              <aside class="planner-overview" aria-labelledby="planner-overview-title">
+                <h2 id="planner-overview-title">4-Step Planner</h2>
+
+                <ol class="planner-steps">
+                  <li class="planner-step">
+                    <div class="planner-step-rail" aria-hidden="true">
+                      <span class="planner-step-number">1</span>
+                      <span class="planner-step-line"></span>
+                    </div>
+
+                    <div class="planner-step-body">
+                      <h3>Your details</h3>
+                      <p>Tell us who you are and how we can reach you.</p>
+                    </div>
+                  </li>
+
+                  <li class="planner-step">
+                    <div class="planner-step-rail" aria-hidden="true">
+                      <span class="planner-step-number">2</span>
+                      <span class="planner-step-line"></span>
+                    </div>
+
+                    <div class="planner-step-body">
+                      <h3>Property info</h3>
+                      <p>Share key details about your home or property setup.</p>
+                    </div>
+                  </li>
+
+                  <li class="planner-step">
+                    <div class="planner-step-rail" aria-hidden="true">
+                      <span class="planner-step-number">3</span>
+                      <span class="planner-step-line"></span>
+                    </div>
+
+                    <div class="planner-step-body">
+                      <h3>Scheduling</h3>
+                      <p>Choose a preferred time window or next-step timing.</p>
+                    </div>
+                  </li>
+
+                  <li class="planner-step">
+                    <div class="planner-step-rail" aria-hidden="true">
+                      <span class="planner-step-number">4</span>
+                      <span class="planner-step-line"></span>
+                    </div>
+
+                    <div class="planner-step-body">
+                      <h3>Review &amp; Confirm</h3>
+                      <p>Review your details and confirm the summary is ready.</p>
+                    </div>
+                  </li>
+                </ol>
+
+                <p class="planner-note">
+                  <span class="planner-note-icon" aria-hidden="true">
+                    <img src="../assets/icons/key-round.svg" alt="">
+                  </span>
+
+                  <span>
+                    Your information stays private and is only used to help prepare your plan.
+                  </span>
+                </p>
+              </aside>
             </div>
           </article>
 
           <article class="step-1 flow-panel">
-            <div class="flow-heading">
-              <p class="eyebrow">Step 1</p>
-              <h2>Basic details</h2>
-              <p>Collect simple contact details so the future flow can prepare a useful summary.</p>
-            </div>
+            <div class="form-content">
+              <div class="flow-heading">
+                <p class="eyebrow">Step 1</p>
 
-            <form class="flow-form">
-              <label>
-                Full name
-                <input type="text" placeholder="Jordan Smith">
-              </label>
+                <h2>Your details</h2>
 
-              <label>
-                Email
-                <input type="email" placeholder="jordan@example.com">
-              </label>
+                <p>
+                  Let’s start with a few basics so we can tailor DropSmart
+                  to what matters most to you.
+                </p>
+              </div>
 
-              <label>
-                Phone
-                <input type="tel" placeholder="0400 000 000">
-              </label>
+              <form class="form">
+                <div class="form-row one-one">
+                  <label>
+                    <span class="field-label">
+                      First name <span class="required" aria-hidden="true">*</span>
+                    </span>
+                    <input name="first-name" type="text" placeholder="e.g. Jordan" required>
+                  </label>
 
-              <label>
-                What brings you here?
-                <input type="text" placeholder="Lower ongoing water costs">
-              </label>
-            </form>
+                  <label>
+                    <span class="field-label">
+                      Last name <span class="required" aria-hidden="true">*</span>
+                    </span>
+                    <input name="last-name" type="text" placeholder="e.g. Smith" required>
+                  </label>
+                </div>
+                <div class="form-row one-one">
+                  <label>
+                    <span class="field-label">
+                      Email <span class="required" aria-hidden="true">*</span>
+                    </span>
+                    <input name="email" type="email" placeholder="you@example.com" required>
+                  </label>
 
-            <div class="flow-actions cluster">
-              <a class="btn outline pill" href="#intro">Back</a>
-              <a class="btn accent pill" href="#step-2">Next step</a>
+                  <label>
+                    <span class="field-label">
+                      Phone <span class="optional">(optional)</span>
+                    </span>
+                    <input name="phone" type="tel" placeholder="e.g. 0400 000 000">
+                  </label>
+                </div>
+                <fieldset class="segmented-field">
+                  <legend>
+                    <span class="field-label">
+                      Who are you? <span class="required" aria-hidden="true">*</span>
+                    </span>
+                  </legend>
+
+                  <div class="segmented-options">
+                    <label for="role-renter">
+                      <input id="role-renter" type="radio" name="user-role" value="renter" checked required>
+                      <span>Renter</span>
+                    </label>
+
+                    <label for="role-homeowner">
+                      <input id="role-homeowner" type="radio" name="user-role" value="homeowner">
+                      <span>Homeowner</span>
+                    </label>
+
+                    <label for="role-landlord">
+                      <input id="role-landlord" type="radio" name="user-role" value="landlord">
+                      <span>Landlord</span>
+                    </label>
+
+                    <label for="role-property-manager">
+                      <input id="role-property-manager" type="radio" name="user-role" value="property-manager">
+                      <span>Property manager</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="reason-field">
+                  <label>
+                    <span class="field-label">
+                      What brings you here? <span class="required" aria-hidden="true">*</span>
+                    </span>
+
+                    <select name="reason" required>
+                      <option value="" selected disabled>Select an option</option>
+                      <option value="lower-costs">Lower ongoing water costs</option>
+                      <option value="possible-leak">Concerned about a possible leak</option>
+                      <option value="support-conversation">Preparing for installer or support conversation</option>
+                      <option value="landlord-body-corporate">Need information for landlord or body corporate</option>
+                      <option value="understand-water-use">Want to understand household water use</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </label>
+
+                  <label class="reason-other-field">
+                    <span class="field-label">
+                      Please describe your reason
+                    </span>
+
+                    <input name="reason-other-text" type="text" placeholder="Tell us briefly what brings you here">
+                  </label>
+                </div>
+
+                <div class="form-actions">
+                  <a class="btn outline pill" href="#intro">
+                    <span aria-hidden="true">←</span>
+                    Back
+                  </a>
+
+                  <a class="btn accent pill glow" href="#step-2">
+                    Next step
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </form>
             </div>
           </article>
 
           <article class="step-2 flow-panel">
-            <div class="flow-heading">
-              <p class="eyebrow">Step 2</p>
-              <h2>Property info</h2>
-              <p>Help users describe the property before they request support or installation advice.</p>
-            </div>
+            <div class="form-content">
+              <div class="flow-heading">
+                <p class="eyebrow">Step 2</p>
 
-            <form class="flow-form">
-              <label>
-                Suburb
-                <input type="text" placeholder="Brisbane">
-              </label>
+                <h2>Property info</h2>
 
-              <label>
-                Property type
-                <input type="text" placeholder="Detached house">
-              </label>
+                <p>
+                  Tell us where the existing water meter is and anything that may help make the DropSmart installation
+                  smoother.
+                </p>
+              </div>
 
-              <label>
-                Occupants
-                <input type="number" placeholder="4">
-              </label>
+              <form class="form">
+                <div class="form-row one-three">
+                  <label>
+                    <span class="field-label">
+                      Unit / Lot / Apt <span class="optional">(optional)</span>
+                    </span>
+                    <input name="unit" type="text" placeholder="e.g. Unit 5, Lot 12">
+                  </label>
 
-              <label>
-                Outdoor water use
-                <input type="text" placeholder="Low">
-              </label>
+                  <label>
+                    <span class="field-label">
+                      Street address <span class="required" aria-hidden="true">*</span>
+                    </span>
+                    <input name="street-address" type="text" placeholder="e.g. 12 River Street" required>
+                  </label>
+                </div>
+                <div class="form-row four">
+                  <label>
+                    <span class="field-label">
+                      Suburb <span class="required" aria-hidden="true">*</span>
+                    </span>
+                    <input name="suburb" type="text" placeholder="e.g. Brisbane" required>
+                  </label>
 
-              <label class="full">
-                Property notes
-                <textarea placeholder="Include roof area, access constraints, landlord context..."></textarea>
-              </label>
-            </form>
+                  <label>
+                    <span class="field-label">
+                      Postcode <span class="required" aria-hidden="true">*</span>
+                    </span>
+                    <input name="postcode" type="text" inputmode="numeric" placeholder="e.g. 4000" required>
+                  </label>
 
-            <div class="flow-actions cluster">
-              <a class="btn outline pill" href="#step-1">Back</a>
-              <a class="btn accent pill" href="#step-3">Next step</a>
+                  <label>
+                    <span class="field-label">
+                      State <span class="required" aria-hidden="true">*</span>
+                    </span>
+                    <select name="state" required>
+                      <option value="" selected disabled>Select</option>
+                      <option value="qld">QLD</option>
+                      <option value="nsw">NSW</option>
+                      <option value="vic">VIC</option>
+                      <option value="act">ACT</option>
+                      <option value="sa">SA</option>
+                      <option value="wa">WA</option>
+                      <option value="tas">TAS</option>
+                      <option value="nt">NT</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    <span class="field-label">
+                      Property type <span class="required" aria-hidden="true">*</span>
+                    </span>
+                    <select name="property-type" required>
+                      <option value="" selected disabled>Select property type</option>
+                      <option value="detached-house">Detached house</option>
+                      <option value="townhouse">Townhouse / villa</option>
+                      <option value="unit-apartment">Unit / apartment</option>
+                      <option value="duplex">Duplex</option>
+                      <option value="commercial">Commercial property</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="form-row one-three">
+                  <label>
+                    <span class="field-label">
+                      Old meter location <span class="required" aria-hidden="true">*</span>
+                    </span>
+                    <select name="old-meter-location" required>
+                      <option value="" selected disabled>Select location</option>
+                      <option value="front-yard">Front yard</option>
+                      <option value="side-access">Side of property</option>
+                      <option value="backyard">Backyard</option>
+                      <option value="garage">Garage / utility area</option>
+                      <option value="meter-box">Meter box</option>
+                      <option value="not-sure">Not sure</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    <span class="field-label">
+                      Parking note <span class="optional">(optional)</span>
+                    </span>
+                    <input name="parking-note" type="text"
+                      placeholder="e.g. Street parking available, driveway access, visitor bay">
+                  </label>
+                </div>
+                <label>
+                  <span class="field-label">
+                    Other notes <span class="optional">(optional)</span>
+                  </span>
+                  <textarea name="installation-notes"
+                    placeholder="e.g. Gate code, locked side access, dog in yard, meter behind garden bed, call on arrival..."></textarea>
+                </label>
+
+                <div class="form-actions">
+                  <a class="btn outline pill" href="#step-1">
+                    <span aria-hidden="true">←</span>
+                    Back
+                  </a>
+
+                  <a class="btn accent pill glow" href="#step-3">
+                    Next step
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </form>
             </div>
           </article>
 
