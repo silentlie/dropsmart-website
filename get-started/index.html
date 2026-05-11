@@ -43,8 +43,239 @@
       </nav>
     </div>
   </header>
-  <main>
-    <p>Placeholder for getting started instructions.</p>
+  <main class="get-started-page">
+    <section class="get-started-flow section lg">
+      <div class="container">
+        <nav class="flow-nav" aria-label="Get started steps">
+          <a href="#intro">Intro</a>
+          <a href="#step-1">1</a>
+          <a href="#step-2">2</a>
+          <a href="#step-3">3</a>
+          <a href="#step-4">4</a>
+          <a href="#confirmation">Done</a>
+        </nav>
+
+        <div class="flow-panels card">
+
+          <article id="intro" class="flow-panel">
+            <div class="flow-content grid two">
+              <div>
+                <p class="eyebrow">Get Started</p>
+                <h1 id="get-started-title">
+                  Capture the basics before you ask for bigger commitments.
+                </h1>
+                <p>
+                  This static flow shows how DropSmart can guide users through the
+                  details that matter most before live submission is enabled.
+                </p>
+
+                <div class="notice">
+                  The intent is to help households gather a clearer brief for future
+                  support, installer conversations, landlord requests, or funding checks.
+                </div>
+
+                <div class="flow-actions cluster">
+                  <a class="btn accent pill" href="#step-1">Start planning</a>
+                </div>
+              </div>
+
+              <div class="planner-card" aria-hidden="true">
+                <span class="planner-badge">4-Step Planner</span>
+                <div class="mock-line wide"></div>
+                <div class="mock-line"></div>
+                <div class="mock-line short"></div>
+                <div class="mock-grid">
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="step-1" class="flow-panel">
+            <div class="flow-heading">
+              <p class="eyebrow">Step 1</p>
+              <h2>Basic details</h2>
+              <p>Collect simple contact details so the future flow can prepare a useful summary.</p>
+            </div>
+
+            <form class="flow-form">
+              <label>
+                Full name
+                <input type="text" placeholder="Jordan Smith">
+              </label>
+
+              <label>
+                Email
+                <input type="email" placeholder="jordan@example.com">
+              </label>
+
+              <label>
+                Phone
+                <input type="tel" placeholder="0400 000 000">
+              </label>
+
+              <label>
+                What brings you here?
+                <input type="text" placeholder="Lower ongoing water costs">
+              </label>
+            </form>
+
+            <div class="flow-actions cluster">
+              <a class="btn outline pill" href="#intro">Back</a>
+              <a class="btn accent pill" href="#step-2">Next step</a>
+            </div>
+          </article>
+
+          <article id="step-2" class="flow-panel">
+            <div class="flow-heading">
+              <p class="eyebrow">Step 2</p>
+              <h2>Property info</h2>
+              <p>Help users describe the property before they request support or installation advice.</p>
+            </div>
+
+            <form class="flow-form">
+              <label>
+                Suburb
+                <input type="text" placeholder="Brisbane">
+              </label>
+
+              <label>
+                Property type
+                <input type="text" placeholder="Detached house">
+              </label>
+
+              <label>
+                Occupants
+                <input type="number" placeholder="4">
+              </label>
+
+              <label>
+                Outdoor water use
+                <input type="text" placeholder="Low">
+              </label>
+
+              <label class="full">
+                Property notes
+                <textarea placeholder="Include roof area, access constraints, landlord context..."></textarea>
+              </label>
+            </form>
+
+            <div class="flow-actions cluster">
+              <a class="btn outline pill" href="#step-1">Back</a>
+              <a class="btn accent pill" href="#step-3">Next step</a>
+            </div>
+          </article>
+
+          <article id="step-3" class="flow-panel">
+            <div class="flow-heading">
+              <p class="eyebrow">Step 3</p>
+              <h2>Schedule</h2>
+              <p>Let users record their preferred timing and support style.</p>
+            </div>
+
+            <form class="flow-form">
+              <label>
+                Preferred timeframe
+                <input type="text" placeholder="Just researching">
+              </label>
+
+              <label>
+                Preferred support style
+                <input type="text" placeholder="Email summary">
+              </label>
+
+              <label>
+                Best contact window
+                <input type="text" placeholder="Weekdays after 3pm">
+              </label>
+
+              <label>
+                Approval status
+                <input type="text" placeholder="No approval needed yet">
+              </label>
+            </form>
+
+            <div class="flow-actions cluster">
+              <a class="btn outline pill" href="#step-2">Back</a>
+              <a class="btn accent pill" href="#step-4">Next step</a>
+            </div>
+          </article>
+
+          <article id="step-4" class="flow-panel">
+            <div class="flow-heading">
+              <p class="eyebrow">Step 4</p>
+              <h2>Confirmation</h2>
+              <p>Make it clear that this version is a static prototype and does not submit information.</p>
+            </div>
+
+            <div class="check-list">
+              <label>
+                <input type="checkbox">
+                I understand this prototype does not submit my information yet.
+              </label>
+
+              <label>
+                <input type="checkbox">
+                I want the future live version to compare next steps, not just collect my details.
+              </label>
+
+              <label>
+                <input type="checkbox">
+                I may also need help with approvals, funding, or property-fit questions.
+              </label>
+            </div>
+
+            <div class="notice">
+              This planner is a static preview. Submission, validation, and follow-up messaging are intentionally out of
+              scope for this phase.
+            </div>
+
+            <div class="flow-actions cluster">
+              <a class="btn outline pill" href="#step-3">Back</a>
+              <a class="btn accent pill" href="#confirmation">Review summary</a>
+            </div>
+          </article>
+
+          <article id="confirmation" class="flow-panel">
+            <div class="flow-heading">
+              <p class="eyebrow">Confirmation</p>
+              <h2>What happens next?</h2>
+              <p>
+                After the form, users should leave with a clear expectation of what happens next,
+                even if the live experience is not active yet.
+              </p>
+            </div>
+
+            <div class="summary-grid">
+              <div class="summary-box">
+                <h3>Future flow</h3>
+                <ul>
+                  <li>Summarise the property and goal details back to the user.</li>
+                  <li>Highlight constraints, questions, and recommended next actions.</li>
+                  <li>Route the user toward support, approvals, or installer-ready planning.</li>
+                </ul>
+              </div>
+
+              <div class="summary-box">
+                <h3>This prototype proves</h3>
+                <ul>
+                  <li>The hierarchy supports a single multi-step form.</li>
+                  <li>The shared cards, buttons, and section patterns work consistently.</li>
+                  <li>The form can be shown clearly without pretending it is functional.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-actions cluster">
+              <a class="btn outline pill" href="#step-4">Back</a>
+              <a class="btn accent pill" href="#intro">Start again</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="container">
