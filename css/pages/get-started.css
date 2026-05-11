@@ -3,7 +3,7 @@
 }
 
 .get-started-flow {
-    height: 100svh;
+    min-height: 100svh;
     display: grid;
     place-items: center;
 
@@ -28,7 +28,6 @@
         gap: var(--flow-line-width);
 
         width: 100%;
-        padding: var(--space-6);
 
         a {
             position: relative;
@@ -158,6 +157,7 @@
     }
 
     .flow-panels {
+        width: 100%;
         padding: var(--space-12);
         border-radius: var(--radius-4xl);
 
@@ -414,5 +414,170 @@
                 }
             }
         }
+    }
+}
+
+.step-1 {
+    .step-1-layout {
+        width: 100%;
+        display: grid;
+        gap: var(--space-4);
+    }
+
+    .flow-heading {
+        display: grid;
+        gap: var(--space-3);
+
+        h2 {
+            font-size: var(--fs-display-md);
+            line-height: var(--lh-tight);
+        }
+    }
+
+    .flow-form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-5) var(--space-6);
+
+        label,
+        fieldset {
+            display: grid;
+            gap: var(--space-2);
+        }
+
+        label,
+        legend {
+            color: var(--color-text);
+            font-weight: var(--fw-semibold);
+        }
+
+        .required {
+            color: var(--color-error);
+            font-weight: var(--fw-bold);
+        }
+
+        .optional {
+            color: var(--color-text-subtle);
+            font-size: var(--fs-sm);
+            font-weight: var(--fw-regular);
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+
+            background-color: var(--color-input-bg);
+            color: var(--color-input-text);
+
+            font: inherit;
+        }
+
+        input,
+        select {
+            min-height: 3rem;
+            padding-inline: var(--space-4);
+        }
+
+        textarea {
+            min-height: 5rem;
+            resize: vertical;
+            padding: var(--space-4);
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: var(--color-input-placeholder);
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid var(--color-focus-ring);
+            border-color: var(--color-input-border-focus);
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        .segmented-field {
+            border: 0;
+            padding: 0;
+
+            .segmented-options {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-md);
+
+                overflow: hidden;
+
+                label {
+                    position: relative;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: var(--space-2);
+
+                    min-height: 3rem;
+                    padding-inline: var(--space-4);
+
+                    border-right: 1px solid var(--color-border-subtle);
+
+                    color: var(--color-text);
+                    cursor: pointer;
+                }
+
+                label:last-child {
+                    border-right: 0;
+                }
+
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+
+                label:has(input:checked) {
+                    background-color: var(--color-accent-subtle);
+                    color: var(--color-accent-text);
+                }
+
+                label:has(input:focus-visible) {
+                    outline: 2px solid var(--color-focus-ring);
+                    outline-offset: -2px;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .reason-field {
+            display: grid;
+            gap: var(--space-3);
+
+            .reason-other-field {
+                display: none;
+            }
+
+            &:has(select option[value="other"]:checked) {
+                .reason-other-field {
+                    display: grid;
+                }
+            }
+        }
+    }
+
+    .flow-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: var(--space-4);
+        border-top: 1px solid var(--color-border-subtle);
     }
 }

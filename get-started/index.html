@@ -202,93 +202,115 @@
           </article>
 
           <article class="step-1 flow-panel">
-            <div class="flow-heading">
-              <p class="eyebrow">Step 1</p>
+            <div class="step-1-layout">
+              <div class="flow-heading">
+                <p class="eyebrow">Step 1</p>
 
-              <h2>Basic details</h2>
+                <h2>Your details</h2>
 
-              <p>
-                Let’s start with a few basics so we can tailor DropSmart
-                to what matters most to you.
-              </p>
-            </div>
+                <p>
+                  Let’s start with a few basics so we can tailor DropSmart
+                  to what matters most to you.
+                </p>
+              </div>
 
-            <form class="flow-form">
-              <label>
-                First name
-                <input type="text" placeholder="e.g. Jordan">
-              </label>
+              <form class="flow-form">
+                <label>
+                  <span class="field-label">
+                    First name <span class="required" aria-hidden="true">*</span>
+                  </span>
+                  <input name="first-name" type="text" placeholder="e.g. Jordan" required>
+                </label>
 
-              <label>
-                Last name
-                <input type="text" placeholder="e.g. Smith">
-              </label>
+                <label>
+                  <span class="field-label">
+                    Last name <span class="required" aria-hidden="true">*</span>
+                  </span>
+                  <input name="last-name" type="text" placeholder="e.g. Smith" required>
+                </label>
 
-              <label>
-                Email
-                <input type="email" placeholder="you@example.com">
-              </label>
+                <label>
+                  <span class="field-label">
+                    Email <span class="required" aria-hidden="true">*</span>
+                  </span>
+                  <input name="email" type="email" placeholder="you@example.com" required>
+                </label>
 
-              <label>
-                Phone <span class="optional">(optional)</span>
-                <input type="tel" placeholder="e.g. 0400 000 000">
-              </label>
+                <label>
+                  <span class="field-label">
+                    Phone <span class="optional">(optional)</span>
+                  </span>
+                  <input name="phone" type="tel" placeholder="e.g. 0400 000 000">
+                </label>
 
-              <fieldset class="segmented-field">
-                <legend>Who are you?</legend>
+                <fieldset class="segmented-field full">
+                  <legend>
+                    <span class="field-label">
+                      Who are you? <span class="required" aria-hidden="true">*</span>
+                    </span>
+                  </legend>
 
-                <div class="segmented-options">
+                  <div class="segmented-options">
+                    <label for="role-renter">
+                      <input id="role-renter" type="radio" name="user-role" value="renter" checked required>
+                      <span>Renter</span>
+                    </label>
+
+                    <label for="role-homeowner">
+                      <input id="role-homeowner" type="radio" name="user-role" value="homeowner">
+                      <span>Homeowner</span>
+                    </label>
+
+                    <label for="role-landlord">
+                      <input id="role-landlord" type="radio" name="user-role" value="landlord">
+                      <span>Landlord</span>
+                    </label>
+
+                    <label for="role-property-manager">
+                      <input id="role-property-manager" type="radio" name="user-role" value="property-manager">
+                      <span>Property manager</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="reason-field full">
                   <label>
-                    <input type="radio" name="user-role" checked>
-                    <span>Renter</span>
+                    <span class="field-label">
+                      What brings you here? <span class="required" aria-hidden="true">*</span>
+                    </span>
+
+                    <select name="reason" required>
+                      <option value="" selected disabled>Select an option</option>
+                      <option value="lower-costs">Lower ongoing water costs</option>
+                      <option value="possible-leak">Concerned about a possible leak</option>
+                      <option value="support-conversation">Preparing for installer or support conversation</option>
+                      <option value="landlord-body-corporate">Need information for landlord or body corporate</option>
+                      <option value="understand-water-use">Want to understand household water use</option>
+                      <option value="other">Other</option>
+                    </select>
                   </label>
 
-                  <label>
-                    <input type="radio" name="user-role">
-                    <span>Homeowner</span>
-                  </label>
+                  <label class="reason-other-field">
+                    <span class="field-label">
+                      Please describe your reason
+                    </span>
 
-                  <label>
-                    <input type="radio" name="user-role">
-                    <span>Landlord</span>
-                  </label>
-
-                  <label>
-                    <input type="radio" name="user-role">
-                    <span>Property manager</span>
+                    <input name="reason-other-text" type="text" placeholder="Tell us briefly what brings you here">
                   </label>
                 </div>
-              </fieldset>
 
-              <label class="full">
-                What brings you here?
-                <select>
-                  <option selected>Select an option</option>
-                  <option>Lower ongoing water costs</option>
-                  <option>Concerned about a possible leak</option>
-                  <option>Preparing for installer or support conversation</option>
-                  <option>Need information for landlord or body corporate</option>
-                  <option>Want to understand household water use</option>
-                  <option>Other</option>
-                </select>
-              </label>
+                <div class="flow-actions full">
+                  <a class="btn outline pill" href="#intro">
+                    <span aria-hidden="true">←</span>
+                    Back
+                  </a>
 
-              <label class="full">
-                Optional notes
-                <textarea placeholder="Anything else you’d like us to know?"></textarea>
-              </label>
-            </form>
-
-            <div class="flow-actions">
-              <a class="btn outline pill" href="#intro">
-                <span aria-hidden="true">←</span>
-                Back
-              </a>
-
-              <a class="btn accent pill" href="#step-2">
-                Next step
-                <span aria-hidden="true">→</span>
-              </a>
+                  <a class="btn accent pill glow" href="#step-2">
+                    Next step
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </form>
             </div>
           </article>
 
