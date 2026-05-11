@@ -6,14 +6,16 @@
     box-shadow: var(--shadow-md);
     padding: var(--space-4);
 
-    transition:
-        border-color var(--transition-medium),
-        transform var(--transition-medium),
-        box-shadow var(--transition-medium);
+    &.interactive {
+        transition:
+            border-color var(--transition-medium),
+            transform var(--transition-medium),
+            box-shadow var(--transition-medium);
 
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--glass-accent-border)
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--glass-accent-border);
+        }
     }
 }
