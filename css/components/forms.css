@@ -216,6 +216,27 @@
                 outline-offset: 2px;
             }
         }
+
+        .checkbox {
+            display: inline-flex;
+            gap: var(--space-3);
+
+            color: var(--color-text);
+            font-weight: var(--fw-regular);
+            line-height: var(--lh-body);
+
+            cursor: pointer;
+
+            input[type="checkbox"] {
+                width: auto;
+                accent-color: var(--color-accent);
+                cursor: pointer;
+            }
+
+            .checkbox-text {
+                align-self: center;
+            }
+        }
     }
 
     .form-actions {

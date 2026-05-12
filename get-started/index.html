@@ -50,7 +50,7 @@
       <span id="step-2" class="flow-target" aria-hidden="true"></span>
       <span id="step-3" class="flow-target" aria-hidden="true"></span>
       <span id="step-4" class="flow-target" aria-hidden="true"></span>
-      <span id="summary" class="flow-target" aria-hidden="true"></span>
+      <span id="confirmation" class="flow-target" aria-hidden="true"></span>
       <div class="container">
         <nav class="flow-nav" aria-label="Get started steps">
           <a href="#intro">
@@ -95,7 +95,7 @@
             <span class="flow-label">Confirmation</span>
           </a>
 
-          <a href="#summary">
+          <a href="#confirmation">
             <span class="flow-icon">
               <span class="flow-icon-default">
                 <img src="../assets/icons/flag.svg" alt="">
@@ -625,8 +625,7 @@
                     Optional notes <span class="optional">(optional)</span>
                   </span>
 
-                  <textarea name="schedule-notes"
-                    placeholder="e.g. Special instructions..."></textarea>
+                  <textarea name="schedule-notes" placeholder="e.g. Special instructions..."></textarea>
                 </label>
 
                 <div class="form-actions">
@@ -645,73 +644,139 @@
           </article>
 
           <article class="step-4 flow-panel">
-            <div class="flow-heading">
-              <p class="eyebrow">Step 4</p>
-              <h2>Confirmation</h2>
-              <p>Make it clear that this version is a static prototype and does not submit information.</p>
-            </div>
+            <div class="form-content">
+              <div class="flow-heading">
+                <p class="eyebrow">Step 4</p>
 
-            <div class="check-list">
-              <label>
-                <input type="checkbox">
-                I understand this prototype does not submit my information yet.
-              </label>
+                <h2>Confirmation</h2>
 
-              <label>
-                <input type="checkbox">
-                I want the future live version to compare next steps, not just collect my details.
-              </label>
+                <p>
+                  Please review the terms below and confirm your consent to continue.
+                </p>
+              </div>
 
-              <label>
-                <input type="checkbox">
-                I may also need help with approvals, funding, or property-fit questions.
-              </label>
-            </div>
+              <form class="form">
+                <div class="grid two">
+                  <aside aria-label="Terms and conditions preview">
+                    <div class="placeholder pdf-placeholder">
+                      <img src="https://placehold.co/600x400?text=DropSmart+Terms+And+Conditions"
+                        alt="Placeholder preview of the DropSmart Terms and Conditions PDF">
+                    </div>
+                  </aside>
+                  <div>
+                    <fieldset>
+                      <label class="checkbox">
+                        <input name="confirm-accurate-details" type="checkbox" required>
 
-            <div class="notice">
-              This planner is a static preview. Submission, validation, and follow-up messaging are intentionally out of
-              scope for this phase.
-            </div>
+                        <span class="checkbox-text">
+                          I confirm that the details I provided are accurate and complete.
+                          <span class="required" aria-hidden="true">*</span>
+                        </span>
+                      </label>
 
-            <div class="flow-actions cluster">
-              <a class="btn outline pill" href="#step-3">Back</a>
-              <a class="btn accent pill" href="#summary">Review summary</a>
+                      <label class="checkbox">
+                        <input name="agree-terms" type="checkbox" required>
+
+                        <span class="checkbox-text">
+                          I have read and agree to the DropSmart terms and conditions.
+                          <span class="required" aria-hidden="true">*</span>
+                        </span>
+                      </label>
+
+                      <label class="checkbox">
+                        <input name="contact-installation-request" type="checkbox" required>
+
+                        <span class="checkbox-text">
+                          I agree that DropSmart may contact me about my installation request.
+                          <span class="required" aria-hidden="true">*</span>
+                        </span>
+                      </label>
+
+                      <label class="checkbox">
+                        <input name="receive-water-saving-updates" type="checkbox">
+
+                        <span class="checkbox-text">
+                          I would like to receive helpful water-saving tips and service updates.
+                          <span class="optional">(Optional)</span>
+                        </span>
+                      </label>
+                    </fieldset>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <a class="btn outline pill" href="#step-3">
+                    <span aria-hidden="true">←</span>
+                    Back
+                  </a>
+
+                  <a class="btn accent pill glow" href="#confirmation">
+                    Submit
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </form>
             </div>
           </article>
 
-          <article class="summary flow-panel">
-            <div class="flow-heading">
-              <p class="eyebrow">Summary</p>
-              <h2>What happens next?</h2>
-              <p>
-                After the form, users should leave with a clear expectation of what happens next,
-                even if the live experience is not active yet.
-              </p>
-            </div>
+          <article class="confirmation flow-panel">
+            <div class="flow-content">
+              <div class="confirmation-hero">
+                <div class="success-icon" aria-hidden="true">
+                  ✓
+                </div>
 
-            <div class="summary-grid">
-              <div class="summary-box">
-                <h3>Future flow</h3>
-                <ul>
-                  <li>Summarise the property and goal details back to the user.</li>
-                  <li>Highlight constraints, questions, and recommended next actions.</li>
-                  <li>Route the user toward support, approvals, or installer-ready planning.</li>
-                </ul>
+                <div class="flow-heading">
+                  <p class="eyebrow">Complete</p>
+
+                  <h2>Your request has been submitted</h2>
+
+                  <p>
+                    Thanks for choosing DropSmart. We’ll review your request and contact you shortly using your selected
+                    contact preferences.
+                  </p>
+                </div>
               </div>
 
-              <div class="summary-box">
-                <h3>This prototype proves</h3>
-                <ul>
-                  <li>The hierarchy supports a single multi-step form.</li>
-                  <li>The shared cards, buttons, and section patterns work consistently.</li>
-                  <li>The form can be shown clearly without pretending it is functional.</li>
-                </ul>
-              </div>
-            </div>
+              <div class="success-next-steps" aria-label="What happens next">
+                <div class="success-step">
+                  <img class="success-step-icon" src="../assets/icons/mail.svg" alt="" aria-hidden="true">
 
-            <div class="flow-actions cluster">
-              <a class="btn outline pill" href="#step-4">Back</a>
-              <a class="btn accent pill" href="#intro">Start again</a>
+                  <p>
+                    We’ll confirm via your preferred contact method.
+                  </p>
+                </div>
+
+                <div class="success-step">
+                  <img class="success-step-icon" src="../assets/icons/calendar.svg" alt="" aria-hidden="true">
+
+                  <p>
+                    Installation will be scheduled in your preferred window.
+                  </p>
+                </div>
+
+                <div class="success-step">
+                  <img class="success-step-icon" src="../assets/icons/droplet.svg" alt="" aria-hidden="true">
+
+                  <p>
+                    Track and save water with DropSmart.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flow-actions cluster">
+                <a class="btn outline pill" href="#intro">
+                  Another request
+                </a>
+
+                <a class="btn outline pill" href="../help-support/">
+                  Support
+                </a>
+
+                <a class="btn accent pill glow" href="../tips-learning/">
+                  Learn more
+                </a>
+              </div>
             </div>
           </article>
 
