@@ -215,7 +215,7 @@
               </div>
 
               <form class="form">
-                <div class="form-row one-one">
+                <div class="form-row">
                   <label>
                     <span class="field-label">
                       First name <span class="required" aria-hidden="true">*</span>
@@ -230,7 +230,7 @@
                     <input name="last-name" type="text" placeholder="e.g. Smith" required>
                   </label>
                 </div>
-                <div class="form-row one-one">
+                <div class="form-row">
                   <label>
                     <span class="field-label">
                       Email <span class="required" aria-hidden="true">*</span>
@@ -345,7 +345,7 @@
                     <input name="street-address" type="text" placeholder="e.g. 12 River Street" required>
                   </label>
                 </div>
-                <div class="form-row four">
+                <div class="form-row">
                   <label>
                     <span class="field-label">
                       Suburb <span class="required" aria-hidden="true">*</span>
@@ -440,37 +440,207 @@
           </article>
 
           <article class="step-3 flow-panel">
-            <div class="flow-heading">
-              <p class="eyebrow">Step 3</p>
-              <h2>Schedule</h2>
-              <p>Let users record their preferred timing and support style.</p>
-            </div>
+            <div class="form-content">
+              <div class="flow-heading">
+                <p class="eyebrow">Step 3</p>
 
-            <form class="flow-form">
-              <label>
-                Preferred timeframe
-                <input type="text" placeholder="Just researching">
-              </label>
+                <h2>Schedule</h2>
 
-              <label>
-                Preferred support style
-                <input type="text" placeholder="Email summary">
-              </label>
+                <p>
+                  Choose your preferred timing and how you’d like to be contacted.
+                </p>
+              </div>
 
-              <label>
-                Best contact window
-                <input type="text" placeholder="Weekdays after 3pm">
-              </label>
+              <form class="form">
+                <div class="form-row">
+                  <label>
+                    <span class="field-label">
+                      Preferred installation date <span class="required" aria-hidden="true">*</span>
+                    </span>
 
-              <label>
-                Approval status
-                <input type="text" placeholder="No approval needed yet">
-              </label>
-            </form>
+                    <input name="installation-date" type="date" required>
+                  </label>
 
-            <div class="flow-actions cluster">
-              <a class="btn outline pill" href="#step-2">Back</a>
-              <a class="btn accent pill" href="#step-4">Next step</a>
+                  <fieldset class="segmented-field">
+                    <legend>
+                      <span class="field-label">
+                        Installation hours window <span class="required" aria-hidden="true">*</span>
+                      </span>
+                    </legend>
+
+                    <div class="segmented-options">
+                      <label for="install-morning">
+                        <input id="install-morning" type="radio" name="installation-window" value="morning" checked
+                          required>
+                        <span>Morning</span>
+                      </label>
+
+                      <label for="install-afternoon">
+                        <input id="install-afternoon" type="radio" name="installation-window" value="afternoon">
+                        <span>Afternoon</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <label>
+                    <span class="field-label">
+                      Who will attend? <span class="required" aria-hidden="true">*</span>
+                    </span>
+
+                    <select name="attendance" required>
+                      <option value="" disabled>Select attendee</option>
+                      <option value="tenant-present" selected>Tenant will be present</option>
+                      <option value="owner-present">Owner will be present</option>
+                      <option value="someone-else-present">Someone else will be present</option>
+                      <option value="no-one-present">No one will be present</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <fieldset class="multi-select-field">
+                    <legend>
+                      <span class="field-label">
+                        Best days for consultation <span class="required" aria-hidden="true">*</span>
+                      </span>
+                    </legend>
+
+                    <div class="multi-select-options">
+                      <label for="consult-mon">
+                        <input id="consult-mon" type="checkbox" name="consultation-days" value="monday" checked>
+                        <span>Mon</span>
+                      </label>
+
+                      <label for="consult-tue">
+                        <input id="consult-tue" type="checkbox" name="consultation-days" value="tuesday" checked>
+                        <span>Tue</span>
+                      </label>
+
+                      <label for="consult-wed">
+                        <input id="consult-wed" type="checkbox" name="consultation-days" value="wednesday" checked>
+                        <span>Wed</span>
+                      </label>
+
+                      <label for="consult-thu">
+                        <input id="consult-thu" type="checkbox" name="consultation-days" value="thursday">
+                        <span>Thu</span>
+                      </label>
+
+                      <label for="consult-fri">
+                        <input id="consult-fri" type="checkbox" name="consultation-days" value="friday">
+                        <span>Fri</span>
+                      </label>
+
+                      <label for="consult-sat">
+                        <input id="consult-sat" type="checkbox" name="consultation-days" value="saturday">
+                        <span>Sat</span>
+                      </label>
+
+                      <label for="consult-sun">
+                        <input id="consult-sun" type="checkbox" name="consultation-days" value="sunday">
+                        <span>Sun</span>
+                      </label>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="segmented-field">
+                    <legend>
+                      <span class="field-label">
+                        Consultation contact window <span class="required" aria-hidden="true">*</span>
+                      </span>
+                    </legend>
+
+                    <div class="segmented-options">
+                      <label for="consult-window-morning">
+                        <input id="consult-window-morning" type="radio" name="consultation-window" value="morning"
+                          checked required>
+                        <span>Morning</span>
+                      </label>
+
+                      <label for="consult-window-afternoon">
+                        <input id="consult-window-afternoon" type="radio" name="consultation-window" value="afternoon">
+                        <span>Afternoon</span>
+                      </label>
+
+                      <label for="consult-window-evening">
+                        <input id="consult-window-evening" type="radio" name="consultation-window" value="evening">
+                        <span>Evening</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="form-row">
+                  <fieldset class="multi-select-field">
+                    <legend>
+                      <span class="field-label">
+                        Contact method <span class="required" aria-hidden="true">*</span>
+                      </span>
+                    </legend>
+
+                    <div class="multi-select-options">
+                      <label for="contact-email">
+                        <input id="contact-email" type="checkbox" name="contact-method" value="email" checked>
+                        <span>Email</span>
+                      </label>
+
+                      <label for="contact-phone">
+                        <input id="contact-phone" type="checkbox" name="contact-method" value="phone" checked>
+                        <span>Phone call</span>
+                      </label>
+
+                      <label for="contact-sms">
+                        <input id="contact-sms" type="checkbox" name="contact-method" value="sms">
+                        <span>SMS</span>
+                      </label>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="multi-select-field">
+                    <legend>
+                      <span class="field-label">
+                        Reminder method <span class="required" aria-hidden="true">*</span>
+                      </span>
+                    </legend>
+
+                    <div class="multi-select-options">
+                      <label for="reminder-email">
+                        <input id="reminder-email" type="checkbox" name="reminder-method" value="email" checked>
+                        <span>Email</span>
+                      </label>
+
+                      <label for="reminder-sms">
+                        <input id="reminder-sms" type="checkbox" name="reminder-method" value="sms" checked>
+                        <span>SMS</span>
+                      </label>
+
+                      <label for="reminder-calendar">
+                        <input id="reminder-calendar" type="checkbox" name="reminder-method" value="calendar-invite">
+                        <span>Calendar invite</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <label>
+                  <span class="field-label">
+                    Optional notes <span class="optional">(optional)</span>
+                  </span>
+
+                  <textarea name="schedule-notes"
+                    placeholder="e.g. Special instructions..."></textarea>
+                </label>
+
+                <div class="form-actions">
+                  <a class="btn outline pill" href="#step-2">
+                    <span aria-hidden="true">←</span>
+                    Back
+                  </a>
+
+                  <a class="btn accent pill glow" href="#step-4">
+                    Next step
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </form>
             </div>
           </article>
 
