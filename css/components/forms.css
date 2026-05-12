@@ -19,24 +19,27 @@
 
         .form-row {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
             gap: var(--space-5) var(--space-6);
 
-            @media (width > 48rem) {
-                &.one-one {
-                    grid-template-columns: repeat(2, minmax(0, 1fr));
-                }
+            &.one-one {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
 
-                &.one-two {
-                    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-                }
+            &.one-two {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+            }
 
-                &.one-three {
-                    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
-                }
+            &.one-three {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+            }
 
-                &.four {
-                    grid-template-columns: repeat(4, minmax(0, 1fr));
-                }
+            &.four {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            @media (width < 64rem) {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -105,13 +108,9 @@
         }
 
         .segmented-field {
-            border: 0;
-            padding: 0;
-            margin: 0;
-
             .segmented-options {
                 display: grid;
-                grid-template-columns: repeat(4, minmax(0, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
                 border: 1px solid var(--color-border);
                 border-radius: var(--radius-md);
                 overflow: hidden;
@@ -149,6 +148,93 @@
                     outline-offset: -2px;
                     z-index: 1;
                 }
+
+                @media (width < 36rem) {
+                    grid-template-columns: 1fr;
+
+                    label {
+                        border-right: 0;
+                        border-bottom: 1px solid var(--color-border-subtle);
+                    }
+
+                    label:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .multi-select-field {
+            display: grid;
+            gap: var(--space-3);
+
+            .multi-select-options {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 3rem), 1fr));
+                gap: var(--space-3);
+            }
+
+            label {
+                position: relative;
+
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: var(--space-3);
+
+                min-height: 3rem;
+                padding: var(--space-3) var(--space-4);
+
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-md);
+
+                background-color: var(--color-input-bg);
+                color: var(--color-text);
+
+                text-align: center;
+                cursor: pointer;
+            }
+
+            input {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            label:has(input:checked) {
+                background-color: var(--color-accent-subtle);
+                border-color: var(--color-input-border-focus);
+                color: var(--color-accent-text);
+
+                .option-meta {
+                    color: var(--color-accent-text);
+                }
+            }
+
+            label:has(input:focus-visible) {
+                outline: 2px solid var(--color-focus-ring);
+                outline-offset: 2px;
+            }
+        }
+
+        .checkbox {
+            display: inline-flex;
+            gap: var(--space-3);
+
+            color: var(--color-text);
+            font-weight: var(--fw-regular);
+            line-height: var(--lh-body);
+
+            cursor: pointer;
+
+            input[type="checkbox"] {
+                width: auto;
+                accent-color: var(--color-accent);
+                cursor: pointer;
+            }
+
+            .checkbox-text {
+                align-self: center;
             }
         }
     }
