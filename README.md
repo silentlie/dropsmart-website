@@ -15,6 +15,8 @@ Static multi-page website prototype for DropSmart, a water-awareness planning an
 |   `-- index.html
 |-- help-support/
 |   `-- index.html
+|-- robots.txt
+|-- sitemap.xml
 |-- css/
 |   |-- styles.css
 |   |-- base/
@@ -62,8 +64,10 @@ http://localhost:8080/
 - Page-specific composition should stay in `css/pages/`.
 - Cards are static by default. Add `interactive` to opt into hover motion.
 - The get-started flow relies on modern CSS features, including native CSS nesting and `:has()`.
+- Crawl metadata uses the GitHub Pages project URL, `https://silentlie.github.io/dropsmart-website/`, in canonical links, `robots.txt`, and `sitemap.xml`.
 
 ## Notes
 
 - Google Fonts are loaded from the network.
 - Form fields in the get-started flow are static prototype fields and do not submit data.
+- If the site moves to a custom domain, update the canonical URLs, sitemap URLs, and `robots.txt` sitemap URL together.

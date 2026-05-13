@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://silentlie.github.io/dropsmart-website/sitemap.xml
