@@ -1,0 +1,271 @@
+.support-topics-section {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+
+    .container {
+        display: grid;
+        gap: var(--space-8);
+        justify-items: center;
+    }
+
+    .support-tabs-nav {
+        display: inline-flex;
+        justify-content: center;
+        gap: var(--space-1);
+        padding: var(--space-2);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-full);
+        background-color: var(--color-surface);
+        box-shadow: var(--shadow-md);
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+
+            padding-block: var(--space-3);
+            padding-inline: var(--space-5);
+
+            border-radius: var(--radius-full);
+
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-weight: var(--fw-bold);
+
+            .support-tab-icon {
+                display: grid;
+                place-items: center;
+                width: 1rem;
+                aspect-ratio: 1;
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 1;
+                }
+            }
+
+            .support-tab-title {
+                display: inline;
+                white-space: nowrap;
+                font-size: var(--fs-body-sm);
+                font-weight: var(--fw-bold);
+            }
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-accent-subtle);
+                color: var(--color-accent-text);
+            }
+
+            &:focus-visible {
+                outline: 2px solid var(--color-focus-ring);
+                outline-offset: -4px;
+            }
+        }
+    }
+
+    .support-panels {
+        justify-self: stretch;
+
+        .support-panel {
+            display: none;
+        }
+
+        .faq-panel {
+            display: block;
+        }
+    }
+
+    &:has(:is(#installation, #renters, #pricing, #data-privacy, #contact):target) {
+        .faq-panel {
+            display: none;
+        }
+    }
+
+    &:has(#faq:target) .faq-panel,
+    &:has(#installation:target) .installation-panel,
+    &:has(#renters:target) .renters-panel,
+    &:has(#pricing:target) .pricing-panel,
+    &:has(#data-privacy:target) .data-privacy-panel,
+    &:has(#contact:target) .support-contact-panel {
+        display: block;
+    }
+
+    &:not(:has(.support-target:target)) .support-tabs-nav a:first-child,
+    &:has(#faq:target) .support-tabs-nav a:first-child,
+    &:has(#installation:target) .support-tabs-nav a:nth-child(2),
+    &:has(#renters:target) .support-tabs-nav a:nth-child(3),
+    &:has(#pricing:target) .support-tabs-nav a:nth-child(4),
+    &:has(#data-privacy:target) .support-tabs-nav a:nth-child(5),
+    &:has(#contact:target) .support-tabs-nav a:nth-child(6) {
+        background-color: var(--color-accent);
+        color: var(--color-on-accent);
+        box-shadow: 0 12px 32px rgb(from var(--color-accent) r g b / 0.28);
+    }
+
+    @media (width < 48rem) {
+        .support-tabs-nav {
+            padding: var(--space-1);
+
+            a {
+                padding-block: var(--space-2);
+                padding-inline: var(--space-2);
+
+                .support-tab-title {
+                    display: none;
+                }
+            }
+        }
+
+        &:not(:has(.support-target:target)) .support-tabs-nav a:first-child,
+        &:has(#faq:target) .support-tabs-nav a:first-child,
+        &:has(#installation:target) .support-tabs-nav a:nth-child(2),
+        &:has(#renters:target) .support-tabs-nav a:nth-child(3),
+        &:has(#pricing:target) .support-tabs-nav a:nth-child(4),
+        &:has(#data-privacy:target) .support-tabs-nav a:nth-child(5),
+        &:has(#contact:target) .support-tabs-nav a:nth-child(6) {
+            padding-inline: var(--space-4);
+
+            .support-tab-title {
+                display: inline;
+                white-space: nowrap;
+                font-size: var(--fs-body-sm);
+            }
+        }
+    }
+}
+
+.faq-panel {
+    .support-panel-heading {
+        display: grid;
+        gap: var(--space-2);
+        margin-bottom: var(--space-8);
+
+        p {
+            font-size: var(--fs-body-lg);
+        }
+    }
+
+    .faq-list {
+        --faq-summary-bg: rgb(from var(--neutral-200) r g b / 0.15);
+        --faq-box-shadow-hover: 0 12px 32px rgb(from var(--color-accent) r g b / 0.12);
+
+        display: grid;
+        gap: var(--space-3);
+
+        .faq-item {
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-2xl);
+            background-color: var(--color-surface);
+            box-shadow: var(--shadow-xs);
+
+            transition:
+                border-color var(--transition-fast),
+                box-shadow var(--transition-fast),
+                transform var(--transition-fast);
+
+            &:hover,
+            &:has(summary:focus-visible) {
+                transform: translateY(-2px);
+                box-shadow: var(--faq-box-shadow-hover);
+                border-color: var(--color-accent-border);
+            }
+
+            overflow: hidden;
+
+            summary {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--space-4);
+
+                padding: var(--space-5);
+
+                color: var(--color-text);
+                font-size: var(--fs-body-xl);
+                font-weight: var(--fw-bold);
+                line-height: var(--lh-snug);
+
+                cursor: pointer;
+                list-style: none;
+
+                border-radius: inherit;
+
+                transition:
+                    background-color var(--transition-fast),
+                    color var(--transition-fast);
+
+                &:focus,
+                &:focus-visible {
+                    outline: none;
+                }
+
+                &:hover,
+                &:focus-visible {
+                    color: var(--color-accent-text);
+                    background-color: var(--faq-summary-bg);
+                }
+
+                .faq-icon {
+                    display: grid;
+                    place-items: center;
+                    width: 2rem;
+                    aspect-ratio: 1;
+                    border-radius: var(--radius-full);
+                    background-color: var(--color-accent-subtle);
+                    color: var(--color-accent-text);
+                    font-size: var(--fs-xl);
+
+                    transition:
+                        rotate var(--transition-fast),
+                        background-color var(--transition-fast),
+                        color var(--transition-fast);
+                }
+            }
+
+            .faq-answer {
+                padding: var(--space-5);
+                background-color: var(--color-surface);
+
+                p {
+                    font-size: var(--fs-body-lg);
+                    line-height: var(--lh-relaxed);
+                }
+            }
+
+            &[open] {
+                border-color: var(--color-accent-border);
+                box-shadow: var(--faq-box-shadow-hover);
+
+                summary {
+                    background-color: var(--faq-summary-bg);
+                    color: var(--color-text);
+                    border-bottom: 1px solid var(--color-border-subtle);
+
+                    .faq-icon {
+                        background-color: var(--color-accent);
+                        color: var(--color-on-accent);
+                        rotate: 45deg;
+                    }
+                }
+            }
+        }
+
+        @media (width < 48rem) {
+            .faq-item {
+                summary {
+                    padding: var(--space-4);
+                    font-size: var(--fs-body-md);
+                }
+
+                .faq-answer {
+                    padding: var(--space-4);
+
+                    p {
+                        font-size: var(--fs-body-md);
+                    }
+                }
+            }
+        }
+    }
+}
