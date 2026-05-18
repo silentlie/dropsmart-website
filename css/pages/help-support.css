@@ -130,16 +130,21 @@
     }
 }
 
-.faq-panel {
+.support-panel-layout {
+    display: grid;
+    gap: var(--space-6);
+
     .support-panel-heading {
         display: grid;
         gap: var(--space-2);
-        margin-bottom: var(--space-8);
 
         p {
             font-size: var(--fs-body-lg);
         }
     }
+}
+
+.faq-panel {
 
     .faq-list {
         --faq-summary-bg: rgb(from var(--neutral-200) r g b / 0.15);
@@ -258,6 +263,335 @@
 
                     p {
                         font-size: var(--fs-body-md);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.installation-panel {
+    .installation-journey {
+        display: grid;
+        gap: var(--space-4);
+    }
+
+    .installation-phase {
+        display: grid;
+        grid-template-columns: minmax(12rem, 16rem) minmax(0, 1fr);
+
+        border: 1px solid var(--color-accent-border);
+        border-radius: var(--radius-2xl);
+
+        background-color: var(--color-surface);
+        box-shadow: var(--shadow-xs);
+
+        overflow: hidden;
+
+        .installation-phase-summary {
+            display: grid;
+            align-content: start;
+            gap: var(--space-3);
+
+            padding: var(--space-6);
+
+            border-right: 1px solid var(--color-border-subtle);
+            background-color: rgb(from var(--color-accent) r g b / 0.04);
+
+            .installation-phase-icon {
+                display: grid;
+                place-items: center;
+
+                width: 4rem;
+                aspect-ratio: 1;
+
+                border-radius: var(--radius-full);
+                background-color: var(--color-accent-subtle);
+                color: var(--color-accent-text);
+
+                img {
+                    width: 1.75rem;
+                    aspect-ratio: 1;
+                }
+            }
+
+            .installation-phase-label {
+                color: var(--color-accent-text);
+                font-size: var(--fs-body-sm);
+                font-weight: var(--fw-bold);
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+
+            .installation-phase-time {
+                display: inline-flex;
+                align-items: center;
+                gap: var(--space-2);
+
+                width: fit-content;
+                padding-top: var(--space-3);
+
+                border-top: 1px solid var(--color-border-subtle);
+
+                color: var(--color-accent-text);
+                font-size: var(--fs-body-sm);
+                font-weight: var(--fw-bold);
+
+                img {
+                    width: 1rem;
+                    aspect-ratio: 1;
+                }
+            }
+        }
+
+        .installation-steps {
+            display: grid;
+
+            .installation-step {
+                display: grid;
+                grid-template-columns: auto minmax(0, 1fr) auto;
+                align-items: center;
+                gap: var(--space-5);
+
+                padding: var(--space-5) var(--space-6);
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid var(--color-border-subtle);
+                }
+
+                .installation-step-number {
+                    display: grid;
+                    place-items: center;
+
+                    width: 2.75rem;
+                    aspect-ratio: 1;
+
+                    border-radius: var(--radius-full);
+                    background-color: var(--color-secondary);
+                    color: var(--color-on-secondary);
+
+                    font-size: var(--fs-body-lg);
+                    font-weight: var(--fw-bold);
+
+                    box-shadow: 0 4px 8px rgb(from var(--color-secondary) r g b / 0.24);
+                }
+
+                .installation-step-content {
+                    display: grid;
+                    gap: var(--space-1);
+                }
+
+                .installation-step-time {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: var(--space-2);
+
+                    min-width: 6.5rem;
+                    padding-left: var(--space-5);
+
+                    border-left: 1px solid var(--color-border-subtle);
+
+                    color: var(--color-accent-text);
+                    font-size: var(--fs-body-sm);
+                    font-weight: var(--fw-bold);
+
+                    img {
+                        width: 1rem;
+                        aspect-ratio: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .setup-factors {
+        display: grid;
+        gap: var(--space-4);
+
+        .setup-factor-grid {
+            gap: var(--space-5);
+        }
+
+        .setup-factor-card {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr);
+            align-items: start;
+            gap: var(--space-3);
+
+            padding: var(--space-4);
+
+            .setup-factor-icon {
+                display: grid;
+                place-items: center;
+
+                width: 4rem;
+                aspect-ratio: 1;
+
+                border-radius: var(--radius-xl);
+                background-color: var(--color-accent-subtle);
+                color: var(--color-accent-text);
+
+                img {
+                    width: 2rem;
+                    aspect-ratio: 1;
+                }
+            }
+
+            .setup-factor-content {
+                display: grid;
+                gap: var(--space-2);
+            }
+        }
+    }
+
+    .installation-note {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: var(--space-3);
+
+        padding: var(--space-4);
+
+        border: 1px solid var(--color-accent-border);
+        border-radius: var(--radius-2xl);
+
+        background-color: rgb(from var(--color-accent) r g b / 0.06);
+        box-shadow: var(--shadow-xs);
+
+        .installation-note-icon {
+            display: grid;
+            place-items: center;
+
+            width: 4rem;
+            aspect-ratio: 1;
+
+            border-radius: var(--radius-full);
+            background-color: var(--color-accent-subtle);
+            color: var(--color-accent-text);
+
+            img {
+                width: 2rem;
+                aspect-ratio: 1;
+            }
+        }
+
+        .installation-note-content {
+            display: grid;
+            gap: var(--space-2);
+        }
+    }
+
+    .after-setup {
+        display: grid;
+        gap: var(--space-4);
+
+        .after-setup-card {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr);
+            align-items: start;
+            gap: var(--space-3);
+
+            padding: var(--space-4);
+
+            .after-setup-icon {
+                display: grid;
+                place-items: center;
+
+                width: 4rem;
+                aspect-ratio: 1;
+
+                border-radius: var(--radius-xl);
+                background-color: var(--color-accent-subtle);
+                color: var(--color-accent-text);
+
+                img {
+                    width: 2rem;
+                    aspect-ratio: 1;
+                }
+            }
+
+            .after-setup-content {
+                display: grid;
+                gap: var(--space-2);
+            }
+        }
+    }
+
+    @media (width < 48rem) {
+        .installation-phase {
+            grid-template-columns: 1fr;
+
+            .installation-phase-summary {
+                grid-template-columns: auto minmax(0, 1fr);
+                align-items: center;
+
+                border-right: 0;
+                border-bottom: 1px solid var(--color-border-subtle);
+
+                .installation-phase-icon {
+                    grid-row: span 4;
+                    width: 3rem;
+                }
+
+                .installation-phase-time {
+                    margin-top: 0;
+                    padding-top: 0;
+                    border-top: 0;
+                }
+            }
+
+            .installation-steps {
+                .installation-step {
+                    grid-template-columns: auto minmax(0, 1fr);
+                    gap: var(--space-4);
+
+                    .installation-step-time {
+                        grid-column: 2;
+
+                        padding-left: 0;
+                        border-left: 0;
+
+                        color: var(--color-accent-text);
+                    }
+                }
+            }
+        }
+
+        .setup-factors {
+            .setup-factor-card {
+                grid-template-columns: 1fr;
+
+                .setup-factor-icon {
+                    width: 3rem;
+
+                    img {
+                        width: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .installation-note {
+            grid-template-columns: 1fr;
+
+            .installation-note-icon {
+                width: 3rem;
+
+                img {
+                    width: 1.5rem;
+                }
+            }
+        }
+
+        .after-setup {
+            .after-setup-card {
+                grid-template-columns: 1fr;
+
+                .after-setup-icon {
+                    width: 3rem;
+
+                    img {
+                        width: 1.5rem;
                     }
                 }
             }
