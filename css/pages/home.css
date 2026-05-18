@@ -1,3 +1,51 @@
+.home-hero {
+    .hero-inner {
+        min-height: 100vh;
+
+        .hero-text {
+            & .hero-title {
+                font-size: var(--fs-display-lg);
+            }
+
+            & .hero-footnotes {
+                color: var(--blue-200);
+                font-size: var(--fs-body-sm);
+
+                & span {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: var(--space-2);
+
+                    &::before {
+                        content: "";
+                        width: 8px;
+                        aspect-ratio: 1;
+                        border-radius: var(--radius-full);
+                        background-color: var(--color-accent);
+                        box-shadow: 0 0 12px rgb(from var(--color-accent) r g b / 0.5);
+                    }
+                }
+            }
+        }
+
+        .hero-media {
+            & .hero-device {
+                display: inline-flex;
+                padding: var(--space-4);
+                border: 1px solid var(--glass-border);
+                border-radius: var(--radius-4xl);
+                background-color: var(--glass-bg);
+                box-shadow: 0 24px 48px var(--glass-shadow);
+
+                & img {
+                    width: 100%;
+                    border-radius: var(--radius-3xl);
+                }
+            }
+        }
+    }
+}
+
 .benefits-section,
 .problem-section {
     .container {
