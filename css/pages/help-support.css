@@ -33,11 +33,6 @@
             font-weight: var(--fw-bold);
 
             .support-tab-icon {
-                display: grid;
-                place-items: center;
-                width: 1rem;
-                aspect-ratio: 1;
-
                 img {
                     width: 100%;
                     aspect-ratio: 1;
