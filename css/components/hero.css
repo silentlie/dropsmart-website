@@ -4,6 +4,7 @@
 
     & .hero-inner {
         align-items: center;
+        padding-block: var(--space-8);
 
         & .hero-text {
             display: flex;

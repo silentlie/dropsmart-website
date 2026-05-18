@@ -7,10 +7,6 @@
     display: grid;
     place-items: center;
 
-    .flow-target {
-        display: none;
-    }
-
     .container {
         display: grid;
         place-items: center;
