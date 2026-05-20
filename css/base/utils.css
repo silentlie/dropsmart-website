@@ -1,13 +1,7 @@
-.u-borderless {
-    border-color: transparent;
-}
-
-.u-plain {
-    border-color: transparent;
-    background-color: transparent;
-    box-shadow: none;
-}
-
 .hide {
     display: none;
+}
+
+.bg-page {
+    background-color: var(--color-bg);
 }

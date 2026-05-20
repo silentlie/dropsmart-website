@@ -1,0 +1,108 @@
+.accordion-list {
+    --accordion-summary-bg: rgb(from var(--neutral-200) r g b / 0.15);
+
+    .accordion-item {
+        overflow: hidden;
+
+        border: var(--border-base);
+        border-radius: var(--radius-2xl);
+
+        background-color: var(--color-surface);
+        box-shadow: var(--shadow-xs);
+
+        transition:
+            border-color var(--transition-fast),
+            box-shadow var(--transition-fast),
+            transform var(--transition-fast);
+
+        &:hover,
+        &:has(summary:focus-visible) {
+            transform: translateY(var(--offset-hover-sm));
+            box-shadow: var(--shadow-accent-xl);
+            border-color: var(--color-accent-border);
+        }
+
+        summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-4);
+
+            padding: var(--space-5);
+            border-radius: inherit;
+
+            color: var(--color-text);
+
+            cursor: pointer;
+            list-style: none;
+
+            transition:
+                background-color var(--transition-fast),
+                color var(--transition-fast);
+
+            &:focus,
+            &:focus-visible {
+                outline: none;
+            }
+
+            &:hover,
+            &:focus-visible {
+                color: var(--color-accent-text);
+                background-color: var(--accordion-summary-bg);
+            }
+
+            .accordion-icon {
+                display: grid;
+                place-items: center;
+
+                width: 2rem;
+                aspect-ratio: 1;
+                border-radius: var(--radius-full);
+
+                background-color: var(--color-accent-subtle);
+                color: var(--color-accent-text);
+
+                transition:
+                    rotate var(--transition-fast),
+                    background-color var(--transition-fast),
+                    color var(--transition-fast);
+            }
+        }
+
+        .accordion-content {
+            padding: var(--space-5);
+            background-color: var(--color-surface);
+        }
+
+        &[open] {
+            border-color: var(--color-accent-border);
+            box-shadow: var(--shadow-accent-xl);
+
+            summary {
+                background-color: var(--accordion-summary-bg);
+                color: var(--color-text);
+                border-bottom: var(--border-subtle-preset);
+
+                .accordion-icon {
+                    background-color: var(--color-accent);
+                    color: var(--color-on-accent);
+                    rotate: 45deg;
+                }
+            }
+        }
+    }
+}
+
+@media (width < 48rem) {
+    .accordion-list {
+        .accordion-item {
+            summary {
+                padding: var(--space-4);
+            }
+
+            .accordion-content {
+                padding: var(--space-4);
+            }
+        }
+    }
+}

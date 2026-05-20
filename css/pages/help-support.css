@@ -1,0 +1,284 @@
+.support-topics-section {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+
+    .container {
+        justify-items: center;
+    }
+
+    .support-tabs-nav {
+        display: inline-flex;
+        justify-content: center;
+        gap: var(--space-1);
+        padding: var(--space-2);
+        border: var(--border-base);
+        border-radius: var(--radius-full);
+        background-color: var(--color-surface);
+        box-shadow: var(--shadow-md);
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+
+            padding-block: var(--space-3);
+            padding-inline: var(--space-5);
+
+            border-radius: var(--radius-full);
+
+            color: var(--color-text-muted);
+            text-decoration: none;
+
+            .support-tab-icon {
+                img {
+                    width: 100%;
+                    aspect-ratio: 1;
+                }
+            }
+
+            .support-tab-title {
+                display: inline;
+                white-space: nowrap;
+            }
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-accent-subtle);
+                color: var(--color-accent-text);
+            }
+
+            &:focus-visible {
+                outline: 2px solid var(--color-focus-ring);
+                outline-offset: -4px;
+            }
+        }
+    }
+
+    .support-panels {
+        justify-self: stretch;
+
+        .support-panel {
+            display: none;
+        }
+
+        .faq-panel {
+            display: block;
+        }
+    }
+
+    &:has(:is(#installation, #renters, #pricing, #data-privacy, #contact):target) {
+        .faq-panel {
+            display: none;
+        }
+    }
+
+    &:has(#faq:target) .faq-panel,
+    &:has(#installation:target) .installation-panel,
+    &:has(#renters:target) .renters-panel,
+    &:has(#pricing:target) .pricing-panel,
+    &:has(#data-privacy:target) .data-privacy-panel,
+    &:has(#contact:target) .support-contact-panel {
+        display: block;
+    }
+
+    &:not(:has(.support-target:target)) .support-tabs-nav a:first-child,
+    &:has(#faq:target) .support-tabs-nav a:first-child,
+    &:has(#installation:target) .support-tabs-nav a:nth-child(2),
+    &:has(#renters:target) .support-tabs-nav a:nth-child(3),
+    &:has(#pricing:target) .support-tabs-nav a:nth-child(4),
+    &:has(#data-privacy:target) .support-tabs-nav a:nth-child(5),
+    &:has(#contact:target) .support-tabs-nav a:nth-child(6) {
+        background-color: var(--color-accent);
+        color: var(--color-on-accent);
+        box-shadow: var(--shadow-accent-md);
+    }
+
+    @media (width < 48rem) {
+        .support-tabs-nav {
+            padding: var(--space-1);
+
+            a {
+                padding-block: var(--space-2);
+                padding-inline: var(--space-2);
+
+                .support-tab-title {
+                    display: none;
+                }
+            }
+        }
+
+        &:not(:has(.support-target:target)) .support-tabs-nav a:first-child,
+        &:has(#faq:target) .support-tabs-nav a:first-child,
+        &:has(#installation:target) .support-tabs-nav a:nth-child(2),
+        &:has(#renters:target) .support-tabs-nav a:nth-child(3),
+        &:has(#pricing:target) .support-tabs-nav a:nth-child(4),
+        &:has(#data-privacy:target) .support-tabs-nav a:nth-child(5),
+        &:has(#contact:target) .support-tabs-nav a:nth-child(6) {
+            padding-inline: var(--space-4);
+
+            .support-tab-title {
+                display: inline;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.installation-panel {
+    .installation-phase {
+        border: var(--border-accent-preset);
+        border-radius: var(--radius-2xl);
+
+        background-color: var(--color-surface);
+        box-shadow: var(--shadow-xs);
+
+        overflow: hidden;
+
+        .installation-phase-summary {
+            align-content: start;
+
+            padding: var(--space-6);
+
+            border-right: var(--border-subtle-preset);
+            background-color: var(--accent-overlay-lightest);
+
+            .installation-phase-label {
+                color: var(--color-accent-text);
+            }
+
+            .installation-phase-time {
+                display: inline-flex;
+                align-items: center;
+                gap: var(--space-2);
+
+                width: fit-content;
+                padding-top: var(--space-3);
+
+                border-top: var(--border-subtle-preset);
+
+                color: var(--color-accent-text);
+
+                img {
+                    width: 1rem;
+                    aspect-ratio: 1;
+                }
+            }
+        }
+
+        .installation-step {
+            align-items: center;
+
+            padding: var(--space-5) var(--space-6);
+
+            &:not(:last-child) {
+                border-bottom: var(--border-subtle-preset);
+            }
+
+            .installation-step-time {
+                display: inline-flex;
+                align-items: center;
+                gap: var(--space-2);
+
+                min-width: 6.5rem;
+                padding-left: var(--space-5);
+
+                border-left: var(--border-subtle-preset);
+
+                color: var(--color-accent-text);
+
+                img {
+                    width: 1rem;
+                    aspect-ratio: 1;
+                }
+            }
+        }
+    }
+
+    @media (width < 48rem) {
+        .installation-phase {
+            .installation-phase-summary {
+                align-items: center;
+
+                border-right: var(--border-none);
+                border-bottom: var(--border-subtle-preset);
+
+                .installation-phase-icon {
+                    grid-row: span 4;
+                    --icon-well-size: 3rem;
+                    --icon-image-size: 1.5rem;
+                }
+
+                .installation-phase-time {
+                    margin-top: 0;
+                    padding-top: 0;
+                    border-top: var(--border-none);
+                }
+            }
+
+            .installation-steps {
+                .installation-step {
+                    .installation-step-time {
+                        grid-column: 2;
+
+                        padding-left: 0;
+                        border-left: var(--border-none);
+
+                        color: var(--color-accent-text);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.renters-panel {
+    .renter-situation-header {
+        align-items: center;
+
+        .renter-situation-prompts {
+            padding-left: var(--space-6);
+            border-left: var(--border-primary-subtle-preset);
+
+            .renter-situation-prompt {
+                align-items: center;
+            }
+        }
+    }
+
+    .renter-next-step-header {
+        align-items: center;
+    }
+
+    .renter-share-access-header {
+        align-items: start;
+    }
+
+    .renter-share-access-content {
+        padding-top: var(--space-6);
+        border-top: var(--border-primary-light-preset);
+    }
+
+    @media (max-width: 48rem) {
+        .renter-situation {
+            padding: var(--space-4);
+            border: var(--border-primary-lighter-preset);
+            border-radius: var(--radius-2xl);
+            background-color: var(--color-surface);
+
+            .renter-situation-prompts {
+                .renter-situation-prompt {
+                    padding: var(--space-4);
+                    border: var(--border-primary-lighter);
+                    border-radius: var(--radius-2xl);
+                    background-color: var(--color-surface);
+                }
+            }
+        }
+    }
+
+    .renter-next-step {
+        .renter-next-step-header {
+            align-items: start;
+        }
+    }
+}

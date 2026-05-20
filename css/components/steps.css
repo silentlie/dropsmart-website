@@ -1,0 +1,55 @@
+.rail-steps {
+    --rail-step-size: 2.5rem;
+    --rail-step-line-color: rgb(from var(--color-primary) r g b / 0.25);
+
+    .rail-step {
+        display: grid;
+        grid-template-columns: var(--rail-step-size) minmax(0, 1fr);
+        gap: var(--space-6);
+
+        .rail-step-rail {
+            display: grid;
+            grid-template-rows: var(--rail-step-size) 1fr;
+            justify-items: center;
+
+            .rail-step-number {
+                display: grid;
+                place-items: center;
+
+                width: var(--rail-step-size);
+                aspect-ratio: 1;
+                border-radius: var(--radius-full);
+                background-color: var(--color-primary);
+                color: var(--color-on-primary);
+                box-shadow: var(--shadow-sm);
+            }
+
+            .rail-step-line {
+                width: 1px;
+                min-height: var(--space-8);
+                background-color: var(--rail-step-line-color);
+            }
+        }
+
+        .rail-step-body {
+            display: grid;
+            gap: var(--space-2);
+
+            padding-bottom: var(--space-8);
+        }
+
+        &:last-child {
+            .rail-step-line {
+                display: none;
+            }
+
+            .rail-step-body {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    @media (width < 48rem) {
+        margin-inline: auto;
+    }
+}
