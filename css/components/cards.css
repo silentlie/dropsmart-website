@@ -6,6 +6,50 @@
     box-shadow: var(--shadow-md);
     padding: var(--space-4);
 
+    &.sm {
+        padding: var(--space-3);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+    }
+
+    &.md {
+        padding: var(--space-4);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+    }
+
+    &.lg {
+        padding: var(--space-6);
+        border-radius: var(--radius-2xl);
+        box-shadow: var(--shadow-md);
+    }
+
+    &.xl {
+        padding: var(--space-8);
+        border-radius: var(--radius-3xl);
+        box-shadow: var(--shadow-lg);
+    }
+
+    &.flat {
+        box-shadow: none;
+    }
+
+    &.subtle {
+        border-color: rgb(from var(--color-primary) r g b / 0.12);
+        background-color: rgb(from var(--color-surface) r g b / 0.72);
+        box-shadow: var(--shadow-sm);
+    }
+
+    &.soft {
+        border-color: rgb(from var(--color-primary) r g b / 0.14);
+        background-color: rgb(from var(--color-surface) r g b / 0.92);
+    }
+
+    &.accent {
+        border-color: rgb(from var(--color-accent) r g b / 0.35);
+        background-color: rgb(from var(--color-accent) r g b / 0.06);
+    }
+
     &.interactive {
         transition:
             border-color var(--transition-medium),
