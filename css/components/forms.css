@@ -3,16 +3,6 @@
     display: grid;
     gap: var(--space-4);
 
-    .form-heading {
-        display: grid;
-        gap: var(--space-3);
-
-        h2 {
-            font-size: var(--fs-display-md);
-            line-height: var(--lh-tight);
-        }
-    }
-
     .form {
         display: grid;
         gap: var(--space-5);
@@ -22,20 +12,8 @@
             grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
             gap: var(--space-5) var(--space-6);
 
-            &.one-one {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            &.one-two {
-                grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-            }
-
             &.one-three {
                 grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
-            }
-
-            &.four {
-                grid-template-columns: repeat(4, minmax(0, 1fr));
             }
 
             @media (width < 64rem) {
@@ -56,7 +34,7 @@
         }
 
         fieldset {
-            border: 0;
+            border: var(--shadow-none);
             padding: 0;
             margin: 0;
         }
@@ -85,12 +63,12 @@
 
         input,
         select {
-            min-height: 3rem;
+            min-height: var(--input-height-base);
             padding-inline: var(--space-4);
         }
 
         textarea {
-            min-height: 5rem;
+            min-height: var(--input-height-tall);
             resize: vertical;
             padding: var(--space-4);
         }
@@ -103,7 +81,7 @@
         input:focus,
         select:focus,
         textarea:focus {
-            outline: 2px solid var(--color-focus-ring);
+            outline: var(--outline-width) solid var(--color-focus-ring);
             border-color: var(--color-input-border-focus);
         }
 
@@ -129,7 +107,7 @@
                 }
 
                 label:last-child {
-                    border-right: 0;
+                    border-right: var(--border-none);
                 }
 
                 input {
@@ -153,12 +131,12 @@
                     grid-template-columns: 1fr;
 
                     label {
-                        border-right: 0;
+                        border-right: var(--border-none);
                         border-bottom: 1px solid var(--color-border-subtle);
                     }
 
                     label:last-child {
-                        border-bottom: 0;
+                        border-bottom: var(--border-none);
                     }
                 }
             }
@@ -205,10 +183,6 @@
                 background-color: var(--color-accent-subtle);
                 border-color: var(--color-input-border-focus);
                 color: var(--color-accent-text);
-
-                .option-meta {
-                    color: var(--color-accent-text);
-                }
             }
 
             label:has(input:focus-visible) {

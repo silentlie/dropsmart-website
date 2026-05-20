@@ -2,6 +2,10 @@
     background-color: var(--color-primary-active);
     color: var(--color-on-primary);
 
+    &.full-height .hero-inner {
+        min-height: 100vh;
+    }
+
     & .hero-inner {
         align-items: center;
         padding-block: var(--space-8);
@@ -27,6 +31,10 @@
                 color: var(--blue-300);
                 font-size: var(--fs-body-lg);
                 line-height: var(--lh-relaxed);
+            }
+
+            & .hero-footnotes {
+                --dot-list-color: var(--blue-200);
             }
 
         }

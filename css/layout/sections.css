@@ -1,14 +1,6 @@
 .section {
     padding-block: var(--space-16);
 
-    &.sm {
-        padding-block: var(--space-8);
-
-        @media (width < 48rem) {
-            padding-block: var(--space-4);
-        }
-    }
-
     &.lg {
         padding-block: var(--space-24);
 
@@ -19,5 +11,58 @@
 
     @media (width < 48rem) {
         padding-block: var(--space-8);
+    }
+
+    .section-header {
+        display: grid;
+        gap: var(--space-4);
+
+        &.center {
+            justify-items: center;
+            text-align: center;
+        }
+
+        &.accent-line {
+            h2 {
+                display: grid;
+                gap: var(--space-3);
+            }
+
+            &.center h2 {
+                justify-items: center;
+            }
+
+            h2::after {
+                content: "";
+                width: 4rem;
+                height: 4px;
+                border-radius: var(--radius-full);
+                background-color: var(--color-accent-strong);
+                box-shadow: var(--shadow-accent-md);
+            }
+        }
+
+        @media (width < 48rem) {
+            gap: var(--space-3);
+        }
+    }
+
+    .section-intro {
+        display: grid;
+        gap: var(--section-intro-gap, var(--space-6));
+
+        &.end {
+            justify-items: end;
+            text-align: right;
+        }
+
+        @media (width < 48rem) {
+            --section-intro-gap: var(--space-4);
+
+            &.end {
+                justify-items: center;
+                text-align: center;
+            }
+        }
     }
 }

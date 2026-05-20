@@ -1,0 +1,40 @@
+:root {
+    /* border width */
+    --border-width-thin: 1px;
+
+    /* border style */
+    --border-style-solid: solid;
+
+    /* border colors - using color tokens */
+    --border-default: var(--color-border);
+    --border-subtle: var(--color-border-subtle);
+    --border-strong: var(--color-border-strong);
+    --border-accent: var(--color-accent-border);
+    --border-accent-inverse: var(--color-accent-inverse-border);
+    --border-glass: var(--glass-border);
+    --border-glass-accent: var(--glass-accent-border);
+    --border-primary-subtle: rgb(from var(--color-primary) r g b / var(--opacity-7));
+    --border-primary-light: rgb(from var(--color-primary) r g b / var(--opacity-4));
+    --border-primary-lighter: rgb(from var(--color-primary) r g b / var(--opacity-3));
+
+    /* border preset combinations */
+    --border-base: var(--border-width-thin) var(--border-style-solid) var(--border-default);
+    --border-subtle-preset: var(--border-width-thin) var(--border-style-solid) var(--border-subtle);
+    --border-accent-preset: var(--border-width-thin) var(--border-style-solid) var(--border-accent);
+    --border-glass-preset: var(--border-width-thin) var(--border-style-solid) var(--border-glass);
+
+    /* direction-agnostic presets (use these for any side or full border) */
+    --border-base: var(--border-width-thin) var(--border-style-solid) var(--border-default);
+    --border-subtle-preset: var(--border-width-thin) var(--border-style-solid) var(--border-subtle);
+    --border-accent-preset: var(--border-width-thin) var(--border-style-solid) var(--border-accent);
+    --border-glass-preset: var(--border-width-thin) var(--border-style-solid) var(--border-glass);
+
+    /* primary-based color presets (use with any direction) */
+    --border-primary-subtle-preset: var(--border-width-thin) var(--border-style-solid) var(--border-primary-subtle);
+    --border-primary-light-preset: var(--border-width-thin) var(--border-style-solid) var(--border-primary-light);
+    --border-primary-lighter-preset: var(--border-width-thin) var(--border-style-solid) var(--border-primary-lighter);
+
+    /* transparent border (for consistent spacing) */
+    --border-transparent: transparent;
+    --border-none: 0;
+}

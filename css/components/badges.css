@@ -1,0 +1,38 @@
+.number-badge {
+    display: inline-grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: var(--number-badge-size, 2.75rem);
+    aspect-ratio: 1;
+    border-radius: var(--radius-full);
+
+    background-color: var(--number-badge-bg, var(--color-primary));
+    color: var(--number-badge-color, var(--color-on-primary));
+    box-shadow: var(--number-badge-shadow, var(--shadow-secondary-md));
+
+    font-size: var(--number-badge-font-size, var(--fs-body-lg));
+    font-weight: var(--fw-bold);
+    line-height: 1;
+
+    &.sm {
+        --number-badge-size: 2rem;
+        --number-badge-font-size: var(--fs-body-sm);
+    }
+
+    &.lg {
+        --number-badge-size: 3.5rem;
+        --number-badge-font-size: var(--fs-title-lg);
+    }
+
+    &.primary {
+        --number-badge-bg: var(--color-primary);
+        --number-badge-color: var(--color-on-primary);
+    }
+
+    &.secondary {
+        --number-badge-bg: var(--color-secondary);
+        --number-badge-color: var(--color-on-secondary);
+        --number-badge-shadow: 0 4px 8px rgb(from var(--color-secondary) r g b / 0.24);
+    }
+}

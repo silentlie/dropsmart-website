@@ -1,0 +1,59 @@
+.cta-panel {
+    align-items: center;
+
+    padding: var(--space-16) var(--space-20);
+    border-radius: var(--radius-4xl);
+
+    background-color: var(--cta-panel-bg, var(--color-primary));
+    color: var(--cta-panel-color, var(--color-on-primary));
+
+    .cta-text {
+        display: grid;
+        gap: var(--space-4);
+        color: inherit;
+
+        h2,
+        p:not(.eyebrow) {
+            color: inherit;
+        }
+    }
+
+    .section-actions {
+        display: grid;
+        gap: var(--space-4);
+        justify-items: stretch;
+        min-width: 16rem;
+
+        .btn {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    @media (width < 48rem) {
+        justify-items: center;
+        gap: var(--space-6);
+        padding: var(--space-12) var(--space-6);
+        text-align: center;
+
+        .cta-text {
+            justify-items: center;
+            text-align: center;
+        }
+
+        .section-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: stretch;
+            gap: var(--space-4);
+
+            width: 100%;
+            min-width: 0;
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -7,31 +7,19 @@
 
     --eyebrow-font-size: var(--fs-body-sm);
     --eyebrow-font-weight: var(--fw-semibold);
-    --eyebrow-letter-spacing: 0.12em;
+    --eyebrow-letter-spacing: var(--ls-uppercase);
 
     /* default eyebrow */
     --eyebrow-color: var(--color-text);
     --eyebrow-border: var(--color-border);
     --eyebrow-bg: var(--color-surface);
-    --eyebrow-shadow: 0 0 18px rgb(0 0 0 / 0.08);
-
-    /* muted eyebrow */
-    --eyebrow-muted-color: var(--color-text-muted);
-    --eyebrow-muted-border: var(--color-border-subtle);
-    --eyebrow-muted-bg: transparent;
-    --eyebrow-muted-shadow: 0 0 14px rgb(0 0 0 / 0.04);
+    --eyebrow-shadow: var(--shadow-xs);
 
     /* accent eyebrow for light backgrounds */
     --eyebrow-accent-color: var(--color-accent-text);
     --eyebrow-accent-border: var(--color-accent-border);
     --eyebrow-accent-bg: var(--color-accent-subtle);
-    --eyebrow-accent-shadow: 0 0 24px rgb(from var(--color-accent) r g b / 0.18);
-
-    /* accent eyebrow for dark backgrounds */
-    --eyebrow-accent-inverse-color: var(--color-accent);
-    --eyebrow-accent-inverse-border: var(--color-accent-inverse-border);
-    --eyebrow-accent-inverse-bg: var(--color-accent-inverse-subtle);
-    --eyebrow-accent-inverse-shadow: 0 0 28px rgb(from var(--color-accent) r g b / 0.22);
+    --eyebrow-accent-shadow: var(--shadow-accent-sm);
 
     /* glass accent eyebrow */
     --eyebrow-glass-accent-color: var(--color-accent);
@@ -50,7 +38,7 @@
     padding-inline: var(--eyebrow-padding-inline);
     padding-block: var(--eyebrow-padding-block);
 
-    border: 1px solid var(--eyebrow-border);
+    border: var(--border-width-thin) var(--border-style-solid) var(--eyebrow-border);
     border-radius: var(--eyebrow-radius);
 
     background-color: var(--eyebrow-bg);
@@ -63,25 +51,11 @@
     text-transform: uppercase;
     letter-spacing: var(--eyebrow-letter-spacing);
 
-    &.muted {
-        border-color: var(--eyebrow-muted-border);
-        background-color: var(--eyebrow-muted-bg);
-        color: var(--eyebrow-muted-color);
-        box-shadow: var(--eyebrow-muted-shadow);
-    }
-
     &.accent {
         border-color: var(--eyebrow-accent-border);
         background-color: var(--eyebrow-accent-bg);
         color: var(--eyebrow-accent-color);
         box-shadow: var(--eyebrow-accent-shadow);
-    }
-
-    &.accent-inverse {
-        border-color: var(--eyebrow-accent-inverse-border);
-        background-color: var(--eyebrow-accent-inverse-bg);
-        color: var(--eyebrow-accent-inverse-color);
-        box-shadow: var(--eyebrow-accent-inverse-shadow);
     }
 
     &.glass-accent {
