@@ -63,12 +63,12 @@
 
         input,
         select {
-            min-height: 3rem;
+            min-height: var(--input-height-base);
             padding-inline: var(--space-4);
         }
 
         textarea {
-            min-height: 5rem;
+            min-height: var(--input-height-tall);
             resize: vertical;
             padding: var(--space-4);
         }
@@ -81,7 +81,7 @@
         input:focus,
         select:focus,
         textarea:focus {
-            outline: 2px solid var(--color-focus-ring);
+            outline: var(--outline-width) solid var(--color-focus-ring);
             border-color: var(--color-input-border-focus);
         }
 

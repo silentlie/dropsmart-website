@@ -120,14 +120,6 @@
     --color-link-hover: var(--blue-800);
     --color-link-visited: var(--violet-700);
 
-    --color-button-primary-bg: var(--color-primary);
-    --color-button-primary-text: var(--color-on-primary);
-    --color-button-primary-hover-bg: var(--color-primary-hover);
-
-    --color-button-secondary-bg: var(--color-secondary);
-    --color-button-secondary-text: var(--color-on-secondary);
-    --color-button-secondary-hover-bg: var(--color-secondary-hover);
-
     --color-input-bg: var(--white);
     --color-input-text: var(--neutral-900);
     --color-input-border: var(--neutral-400);
@@ -152,4 +144,17 @@
     --color-on-info: var(--white);
     --color-info-container: var(--blue-100);
     --color-on-info-container: var(--blue-900);
+
+    /* opacity scale */
+    --opacity-1: 0.04;
+    --opacity-2: 0.06;
+    --opacity-3: 0.08;
+    --opacity-4: 0.14;
+    --opacity-5: 0.15;
+    --opacity-6: 0.16;
+    --opacity-7: 0.18;
+    --opacity-8: 0.22;
+    --opacity-9: 0.24;
+    --opacity-10: 0.5;
+    --opacity-11: 0.72;
 }

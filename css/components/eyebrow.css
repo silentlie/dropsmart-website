@@ -7,7 +7,7 @@
 
     --eyebrow-font-size: var(--fs-body-sm);
     --eyebrow-font-weight: var(--fw-semibold);
-    --eyebrow-letter-spacing: 0.12em;
+    --eyebrow-letter-spacing: var(--ls-uppercase);
 
     /* default eyebrow */
     --eyebrow-color: var(--color-text);
@@ -25,7 +25,7 @@
     --eyebrow-glass-accent-color: var(--color-accent);
     --eyebrow-glass-accent-border: var(--glass-accent-border);
     --eyebrow-glass-accent-bg: var(--glass-accent-bg);
-    --eyebrow-glass-accent-shadow: var(--shadow-eyebrow-glass-accent);
+    --eyebrow-glass-accent-shadow: 0 0 24px var(--glass-accent-shadow);
 }
 
 .eyebrow {

@@ -11,27 +11,19 @@
     /* shadow state values */
     --shadow-none: none;
 
-    /* component shadows - accent color interactions */
+    /* reusable color-based shadows */
     --shadow-accent-sm: 0 0 18px rgb(from var(--color-accent) r g b / 0.18);
     --shadow-accent-md: 0 0 18px rgb(from var(--color-accent) r g b / 0.28);
     --shadow-accent-lg: 0 0 24px rgb(from var(--color-accent) r g b / 0.5);
+    --shadow-accent-xl: 0 12px 32px rgb(from var(--color-accent) r g b / 0.12);
 
-    /* component shadows - glass morphism */
-    --shadow-glass-overlay: var(--glass-shadow);
-    --shadow-glass-accent: var(--glass-accent-shadow);
-
-    /* component shadows - accordion */
-    --shadow-accordion-hover: 0 12px 32px rgb(from var(--color-accent) r g b / 0.12);
-
-    /* component shadows - icon */
-    --shadow-icon-default: none;
-    --shadow-icon-accent: 0 0 20px rgb(from var(--color-accent) r g b / 0.16);
-
-    /* component shadows - card */
-    --shadow-card-elevated: 0 24px 48px var(--glass-shadow);
-
-    /* component shadows - eyebrow */
+    /* component-specific shadows */
     --shadow-eyebrow-default: 0 0 18px rgb(0 0 0 / 0.08);
     --shadow-eyebrow-accent: 0 0 24px rgb(from var(--color-accent) r g b / 0.18);
-    --shadow-eyebrow-glass-accent: 0 0 24px var(--glass-accent-shadow);
+    --shadow-icon-accent: 0 0 20px rgb(from var(--color-accent) r g b / 0.16);
+    --shadow-badge-secondary: 0 4px 8px rgb(from var(--color-secondary) r g b / 0.24);
+
+    /* glass morphism shadows (color tokens) */
+    --shadow-glass-overlay: var(--glass-shadow);
+    --shadow-glass-accent: var(--glass-accent-shadow);
 }

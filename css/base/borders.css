@@ -23,21 +23,4 @@
     /* transparent border (for consistent spacing) */
     --border-transparent: transparent;
     --border-none: 0;
-
-    /* button borders */
-    --btn-border-default: transparent;
-    --btn-border-outline: var(--border-width-thin) var(--border-style-solid) var(--color-primary);
-    --btn-border-outline-inverse: var(--border-width-thin) var(--border-style-solid) rgb(255 255 255 / 0.35);
-
-    /* icon borders */
-    --icon-border-width: var(--border-width-thin);
-    --icon-border-style: var(--border-style-solid);
-
-    /* border radius combinations */
-    --border-rounded-sm: var(--radius-sm);
-    --border-rounded-md: var(--radius-md);
-    --border-rounded-lg: var(--radius-lg);
-    --border-rounded-xl: var(--radius-xl);
-    --border-rounded-2xl: var(--radius-2xl);
-    --border-rounded-full: var(--radius-full);
 }

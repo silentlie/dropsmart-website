@@ -4,6 +4,7 @@
     --icon-padding: var(--space-2);
     --icon-radius: var(--radius-md);
     --icon-border-width: var(--border-width-thin);
+    --icon-border-style: var(--border-style-solid);
 
     /* default icon */
     --icon-color: var(--color-text);

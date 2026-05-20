@@ -1,3 +1,8 @@
+:root {
+    /* card shadows */
+    --shadow-card-elevated: 0 24px 48px var(--glass-shadow);
+}
+
 .card {
     background-color: var(--color-surface);
     color: var(--color-text);
