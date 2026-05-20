@@ -139,7 +139,7 @@
 
             padding: var(--space-6);
 
-            border-right: 1px solid var(--color-border-subtle);
+            border-right: var(--border-subtle-preset);
             background-color: rgb(from var(--color-accent) r g b / 0.04);
 
             .installation-phase-label {
@@ -154,7 +154,7 @@
                 width: fit-content;
                 padding-top: var(--space-3);
 
-                border-top: 1px solid var(--color-border-subtle);
+                border-top: var(--border-subtle-preset);
 
                 color: var(--color-accent-text);
 
@@ -171,7 +171,7 @@
             padding: var(--space-5) var(--space-6);
 
             &:not(:last-child) {
-                border-bottom: 1px solid var(--color-border-subtle);
+                border-bottom: var(--border-subtle-preset);
             }
 
             .installation-step-time {
@@ -182,7 +182,7 @@
                 min-width: 6.5rem;
                 padding-left: var(--space-5);
 
-                border-left: 1px solid var(--color-border-subtle);
+                border-left: var(--border-subtle-preset);
 
                 color: var(--color-accent-text);
 
@@ -200,7 +200,7 @@
                 align-items: center;
 
                 border-right: var(--border-none);
-                border-bottom: var(--border-bottom-subtle);
+                border-bottom: var(--border-subtle-preset);
 
                 .installation-phase-icon {
                     grid-row: span 4;
@@ -237,7 +237,7 @@
 
         .renter-situation-prompts {
             padding-left: var(--space-6);
-            border-left: var(--border-left-primary-subtle);
+            border-left: var(--border-primary-subtle-preset);
 
             .renter-situation-prompt {
                 align-items: center;
@@ -255,31 +255,31 @@
 
     .renter-share-access-content {
         padding-top: var(--space-6);
-        border-top: var(--border-top-primary-light);
+        border-top: var(--border-primary-light-preset);
     }
 
     @media (max-width: 48rem) {
         .renter-situation {
-            padding: var(--space-5);
+            padding: var(--space-4);
+            border: var(--border-primary-lighter-preset);
+            border-radius: var(--radius-2xl);
+            background-color: var(--color-surface);
 
-            .renter-situation-header {
-                align-items: start;
-
-                .renter-situation-prompts {
-                    .renter-situation-prompt {
-                        padding: var(--space-4);
-                        border: var(--border-primary-lighter);
-                        border-radius: var(--radius-2xl);
-                        background-color: var(--color-surface);
-                    }
+            .renter-situation-prompts {
+                .renter-situation-prompt {
+                    padding: var(--space-4);
+                    border: var(--border-primary-lighter);
+                    border-radius: var(--radius-2xl);
+                    background-color: var(--color-surface);
                 }
             }
         }
+    }
 
-        .renter-next-step {
-            .renter-next-step-header {
-                align-items: start;
-            }
+    .renter-next-step {
+        .renter-next-step-header {
+            align-items: start;
         }
     }
+}
 }

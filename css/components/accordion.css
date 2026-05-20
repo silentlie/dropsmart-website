@@ -81,7 +81,7 @@
             summary {
                 background-color: var(--accordion-summary-bg);
                 color: var(--color-text);
-                border-bottom: var(--border-bottom-subtle);
+                border-bottom: var(--border-subtle-preset);
 
                 .accordion-icon {
                     background-color: var(--color-accent);
