@@ -17,11 +17,11 @@
     --shadow-accent-lg: 0 0 24px rgb(from var(--color-accent) r g b / 0.5);
     --shadow-accent-xl: 0 12px 32px rgb(from var(--color-accent) r g b / 0.12);
 
-    /* component-specific shadows */
-    --shadow-eyebrow-default: 0 0 18px rgb(0 0 0 / 0.08);
-    --shadow-eyebrow-accent: 0 0 24px rgb(from var(--color-accent) r g b / 0.18);
-    --shadow-icon-accent: 0 0 20px rgb(from var(--color-accent) r g b / 0.16);
-    --shadow-badge-secondary: 0 4px 8px rgb(from var(--color-secondary) r g b / 0.24);
+    /* secondary color shadows */
+    --shadow-secondary-md: 0 4px 8px rgb(from var(--color-secondary) r g b / 0.24);
+
+    /* elevated shadow for glass morphism */
+    --shadow-elevated: 0 24px 48px var(--glass-shadow);
 
     /* glass morphism shadows (color tokens) */
     --shadow-glass-overlay: var(--glass-shadow);

@@ -13,13 +13,13 @@
     --eyebrow-color: var(--color-text);
     --eyebrow-border: var(--color-border);
     --eyebrow-bg: var(--color-surface);
-    --eyebrow-shadow: var(--shadow-eyebrow-default);
+    --eyebrow-shadow: var(--shadow-xs);
 
     /* accent eyebrow for light backgrounds */
     --eyebrow-accent-color: var(--color-accent-text);
     --eyebrow-accent-border: var(--color-accent-border);
     --eyebrow-accent-bg: var(--color-accent-subtle);
-    --eyebrow-accent-shadow: var(--shadow-eyebrow-accent);
+    --eyebrow-accent-shadow: var(--shadow-accent-sm);
 
     /* glass accent eyebrow */
     --eyebrow-glass-accent-color: var(--color-accent);

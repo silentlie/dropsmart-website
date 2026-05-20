@@ -16,7 +16,7 @@
     --icon-accent-color: var(--color-accent-text);
     --icon-accent-border: var(--color-accent-border);
     --icon-accent-bg: var(--color-accent-subtle);
-    --icon-accent-shadow: var(--shadow-icon-accent);
+    --icon-accent-shadow: var(--shadow-accent-sm);
 }
 
 .icon {

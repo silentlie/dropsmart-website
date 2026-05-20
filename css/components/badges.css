@@ -9,7 +9,7 @@
 
     background-color: var(--number-badge-bg, var(--color-primary));
     color: var(--number-badge-color, var(--color-on-primary));
-    box-shadow: var(--number-badge-shadow, var(--shadow-sm));
+    box-shadow: var(--number-badge-shadow, var(--shadow-secondary-md));
 
     font-size: var(--number-badge-font-size, var(--fs-body-lg));
     font-weight: var(--fw-bold);
