@@ -11,7 +11,7 @@
         justify-content: center;
         gap: var(--space-1);
         padding: var(--space-2);
-        border: 1px solid var(--color-border);
+        border: var(--border-base);
         border-radius: var(--radius-full);
         background-color: var(--color-surface);
         box-shadow: var(--shadow-md);
@@ -126,7 +126,7 @@
 
 .installation-panel {
     .installation-phase {
-        border: 1px solid var(--color-accent-border);
+        border: var(--border-accent-preset);
         border-radius: var(--radius-2xl);
 
         background-color: var(--color-surface);
@@ -200,7 +200,7 @@
                 align-items: center;
 
                 border-right: var(--border-none);
-                border-bottom: 1px solid var(--color-border-subtle);
+                border-bottom: var(--border-bottom-subtle);
 
                 .installation-phase-icon {
                     grid-row: span 4;
@@ -237,7 +237,7 @@
 
         .renter-situation-prompts {
             padding-left: var(--space-6);
-            border-left: 1px solid rgb(from var(--color-primary) r g b / 0.18);
+            border-left: var(--border-left-primary-subtle);
 
             .renter-situation-prompt {
                 align-items: center;
@@ -255,7 +255,7 @@
 
     .renter-share-access-content {
         padding-top: var(--space-6);
-        border-top: 1px solid rgb(from var(--color-primary) r g b / 0.14);
+        border-top: var(--border-top-primary-light);
     }
 
     @media (max-width: 48rem) {
@@ -268,7 +268,7 @@
                 .renter-situation-prompts {
                     .renter-situation-prompt {
                         padding: var(--space-4);
-                        border: 1px solid rgb(from var(--color-primary) r g b / 0.12);
+                        border: var(--border-primary-lighter);
                         border-radius: var(--radius-2xl);
                         background-color: var(--color-surface);
                     }

@@ -4,7 +4,7 @@
     .accordion-item {
         overflow: hidden;
 
-        border: var(--border-width-thin) var(--border-style-solid) var(--color-border);
+        border: var(--border-base);
         border-radius: var(--radius-2xl);
 
         background-color: var(--color-surface);
@@ -81,7 +81,7 @@
             summary {
                 background-color: var(--accordion-summary-bg);
                 color: var(--color-text);
-                border-bottom: 1px solid var(--color-border-subtle);
+                border-bottom: var(--border-bottom-subtle);
 
                 .accordion-icon {
                     background-color: var(--color-accent);
