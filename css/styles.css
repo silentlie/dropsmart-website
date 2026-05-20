@@ -1,5 +1,9 @@
 @import "./base/reset.css";
-@import "./base/tokens.css";
+@import "./base/colors.css";
+@import "./base/spacing.css";
+@import "./base/shadow.css";
+@import "./base/radius.css";
+@import "./base/motion.css";
 @import "./base/typography.css";
 @import "./base/utils.css";
 @import "./layout/layout.css";

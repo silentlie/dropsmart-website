@@ -23,13 +23,13 @@
     &.no-shadow {
         --notice-shadow: none;
     }
-}
 
-.notice-content {
-    display: grid;
-    gap: var(--notice-content-gap, var(--space-2));
+    .notice-content {
+        display: grid;
+        gap: var(--notice-content-gap, var(--space-2));
 
-    &.xs {
-        --notice-content-gap: var(--space-1);
+        &.xs {
+            --notice-content-gap: var(--space-1);
+        }
     }
 }
