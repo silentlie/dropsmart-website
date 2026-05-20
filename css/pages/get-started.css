@@ -329,6 +329,18 @@
                         box-shadow: var(--shadow-accent-sm);
                     }
 
+                    /* When using global number-badge component, adapt its vars for planner use */
+                    .planner-step-number.number-badge {
+                        --number-badge-bg: var(--color-surface);
+                        --number-badge-color: var(--color-accent-text);
+                        --number-badge-shadow: var(--shadow-accent-sm);
+                        --number-badge-font-size: var(--fs-body-sm);
+                        border: 1px solid var(--color-accent);
+                        background-color: var(--number-badge-bg);
+                        color: var(--number-badge-color);
+                        box-shadow: var(--number-badge-shadow);
+                    }
+
                     .planner-step-line {
                         width: 1px;
                         min-height: var(--space-10);
