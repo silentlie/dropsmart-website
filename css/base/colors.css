@@ -157,4 +157,21 @@
     --opacity-9: 0.24;
     --opacity-10: 0.5;
     --opacity-11: 0.72;
+
+    --accent-overlay-lightest: rgb(from var(--color-accent) r g b / var(--opacity-1));
+    --accent-overlay-lighter: rgb(from var(--color-accent) r g b / var(--opacity-2));
+    --accent-overlay-light: rgb(from var(--color-accent) r g b / var(--opacity-6));
+    --accent-overlay-subtle: rgb(from var(--color-accent) r g b / var(--opacity-7));
+    --accent-overlay-medium: rgb(from var(--color-accent) r g b / var(--opacity-8));
+    --accent-overlay-strong: rgb(from var(--color-accent) r g b / var(--opacity-8));
+    --accent-overlay-stronger: rgb(from var(--color-accent) r g b / var(--opacity-9));
+    --accent-overlay-dense: rgb(from var(--color-accent) r g b / var(--opacity-10));
+    --accent-overlay-darker: rgb(from var(--color-accent) r g b / var(--opacity-11));
+    --accent-overlay-darkest: rgb(from var(--color-accent) r g b / var(--opacity-10));
+    --accent-overlay-opaque: rgb(from var(--color-accent) r g b / 0.7);
+    --primary-overlay-lighter: rgb(from var(--color-primary) r g b / var(--opacity-3));
+    --primary-overlay-light: rgb(from var(--color-primary) r g b / 0.12);
+    --primary-overlay-subtle: rgb(from var(--color-primary) r g b / 0.25);
+    --secondary-overlay-strong: rgb(from var(--color-secondary) r g b / var(--opacity-9));
+    --surface-overlay-opaque: rgb(from var(--color-surface) r g b / var(--opacity-11));
 }

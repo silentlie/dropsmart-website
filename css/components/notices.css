@@ -5,7 +5,7 @@
     border: 1px solid var(--notice-border, var(--color-accent-border));
     border-radius: var(--radius-2xl);
 
-    background-color: var(--notice-bg, rgb(from var(--color-accent) r g b / 0.06));
+    background-color: var(--notice-bg, var(--accent-overlay-lighter));
     box-shadow: var(--notice-shadow, var(--shadow-xs));
 
     &.compact {

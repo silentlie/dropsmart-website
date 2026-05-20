@@ -140,7 +140,7 @@
             padding: var(--space-6);
 
             border-right: var(--border-subtle-preset);
-            background-color: rgb(from var(--color-accent) r g b / 0.04);
+            background-color: var(--accent-overlay-lightest);
 
             .installation-phase-label {
                 color: var(--color-accent-text);
@@ -281,5 +281,4 @@
             align-items: start;
         }
     }
-}
 }
