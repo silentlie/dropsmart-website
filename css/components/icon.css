@@ -4,13 +4,11 @@
     --icon-padding: var(--space-2);
     --icon-radius: var(--radius-md);
     --icon-border-width: var(--border-width-thin);
-    --icon-border-style: var(--border-style-solid);
 
     /* default icon */
     --icon-color: var(--color-text);
     --icon-border: var(--border-transparent);
     --icon-bg: transparent;
-    --icon-shadow: var(--shadow-none);
 
     /* accent icon for light backgrounds */
     --icon-accent-color: var(--color-accent-text);
@@ -32,7 +30,7 @@
 
     background-color: var(--icon-bg);
     color: var(--icon-color);
-    box-shadow: var(--icon-shadow);
+    box-shadow: none;
 
     line-height: 1;
 
