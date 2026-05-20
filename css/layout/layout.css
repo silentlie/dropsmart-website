@@ -5,9 +5,32 @@
     gap: var(--space-4);
 }
 
+.dot-list {
+    color: var(--dot-list-color, inherit);
+
+    & > * {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+    }
+
+    & > *::before {
+        content: "";
+        width: 8px;
+        aspect-ratio: 1;
+        border-radius: var(--radius-full);
+        background-color: var(--dot-list-marker-bg, var(--color-accent));
+        box-shadow: var(--dot-list-marker-shadow, 0 0 12px rgb(from var(--color-accent) r g b / 0.5));
+    }
+}
+
 .grid {
     display: grid;
     gap: var(--space-8);
+
+    &.items-center {
+        align-items: center;
+    }
 
     &.gap-none {
         gap: 0;
@@ -43,6 +66,10 @@
 
     &.gap-12 {
         gap: var(--space-12);
+    }
+
+    &.gap-16 {
+        gap: var(--space-16);
     }
 
     &.two {
@@ -114,6 +141,10 @@
 
         &.sm-cols-auto-fr {
             grid-template-columns: auto minmax(0, 1fr);
+        }
+
+        &.sm-gap-8 {
+            gap: var(--space-8);
         }
     }
 }
