@@ -3,13 +3,8 @@
         min-height: 100vh;
 
         .hero-text {
-            & .hero-title {
-                font-size: var(--fs-display-lg);
-            }
-
             & .hero-footnotes {
                 color: var(--blue-200);
-                font-size: var(--fs-body-sm);
 
                 & span {
                     display: inline-flex;
@@ -89,10 +84,6 @@
         &:hover {
             box-shadow: var(--shadow-xl);
         }
-
-        h3 {
-            font-size: var(--fs-headline-sm);
-        }
     }
 
     @media (width < 48rem) {
@@ -149,7 +140,6 @@
                         background-color: var(--color-primary);
                         color: var(--color-on-primary);
 
-                        font-weight: var(--fw-bold);
                         box-shadow: var(--shadow-sm);
                     }
 
@@ -201,10 +191,7 @@
     background-color: var(--color-bg);
 
     .cta-panel {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
         align-items: center;
-        gap: var(--space-12);
 
         background-color: var(--color-primary);
         color: var(--color-on-primary);
@@ -241,7 +228,6 @@
 
     @media (width < 48rem) {
         .cta-panel {
-            grid-template-columns: 1fr;
             justify-items: center;
             text-align: center;
 

@@ -3,8 +3,6 @@
     color: var(--color-text);
 
     .container {
-        display: grid;
-        gap: var(--space-8);
         justify-items: center;
     }
 
@@ -30,7 +28,6 @@
 
             color: var(--color-text-muted);
             text-decoration: none;
-            font-weight: var(--fw-bold);
 
             .support-tab-icon {
                 img {
@@ -42,8 +39,6 @@
             .support-tab-title {
                 display: inline;
                 white-space: nowrap;
-                font-size: var(--fs-body-sm);
-                font-weight: var(--fw-bold);
             }
 
             &:hover,
@@ -124,22 +119,7 @@
             .support-tab-title {
                 display: inline;
                 white-space: nowrap;
-                font-size: var(--fs-body-sm);
             }
-        }
-    }
-}
-
-.support-panel-layout {
-    display: grid;
-    gap: var(--space-6);
-
-    .support-panel-heading {
-        display: grid;
-        gap: var(--space-2);
-
-        p {
-            font-size: var(--fs-body-lg);
         }
     }
 }
@@ -149,9 +129,6 @@
     .faq-list {
         --faq-summary-bg: rgb(from var(--neutral-200) r g b / 0.15);
         --faq-box-shadow-hover: 0 12px 32px rgb(from var(--color-accent) r g b / 0.12);
-
-        display: grid;
-        gap: var(--space-3);
 
         .faq-item {
             border: 1px solid var(--color-border);
@@ -182,9 +159,6 @@
                 padding: var(--space-5);
 
                 color: var(--color-text);
-                font-size: var(--fs-body-xl);
-                font-weight: var(--fw-bold);
-                line-height: var(--lh-snug);
 
                 cursor: pointer;
                 list-style: none;
@@ -214,7 +188,6 @@
                     border-radius: var(--radius-full);
                     background-color: var(--color-accent-subtle);
                     color: var(--color-accent-text);
-                    font-size: var(--fs-xl);
 
                     transition:
                         rotate var(--transition-fast),
@@ -226,11 +199,6 @@
             .faq-answer {
                 padding: var(--space-5);
                 background-color: var(--color-surface);
-
-                p {
-                    font-size: var(--fs-body-lg);
-                    line-height: var(--lh-relaxed);
-                }
             }
 
             &[open] {
@@ -255,15 +223,10 @@
             .faq-item {
                 summary {
                     padding: var(--space-4);
-                    font-size: var(--fs-body-md);
                 }
 
                 .faq-answer {
                     padding: var(--space-4);
-
-                    p {
-                        font-size: var(--fs-body-md);
-                    }
                 }
             }
         }
@@ -271,15 +234,7 @@
 }
 
 .installation-panel {
-    .installation-journey {
-        display: grid;
-        gap: var(--space-4);
-    }
-
     .installation-phase {
-        display: grid;
-        grid-template-columns: minmax(12rem, 16rem) minmax(0, 1fr);
-
         border: 1px solid var(--color-accent-border);
         border-radius: var(--radius-2xl);
 
@@ -289,38 +244,15 @@
         overflow: hidden;
 
         .installation-phase-summary {
-            display: grid;
             align-content: start;
-            gap: var(--space-3);
 
             padding: var(--space-6);
 
             border-right: 1px solid var(--color-border-subtle);
             background-color: rgb(from var(--color-accent) r g b / 0.04);
 
-            .installation-phase-icon {
-                display: grid;
-                place-items: center;
-
-                width: 4rem;
-                aspect-ratio: 1;
-
-                border-radius: var(--radius-full);
-                background-color: var(--color-accent-subtle);
-                color: var(--color-accent-text);
-
-                img {
-                    width: 1.75rem;
-                    aspect-ratio: 1;
-                }
-            }
-
             .installation-phase-label {
                 color: var(--color-accent-text);
-                font-size: var(--fs-body-sm);
-                font-weight: var(--fw-bold);
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
             }
 
             .installation-phase-time {
@@ -334,8 +266,6 @@
                 border-top: 1px solid var(--color-border-subtle);
 
                 color: var(--color-accent-text);
-                font-size: var(--fs-body-sm);
-                font-weight: var(--fw-bold);
 
                 img {
                     width: 1rem;
@@ -344,185 +274,38 @@
             }
         }
 
-        .installation-steps {
-            display: grid;
+        .installation-step {
+            align-items: center;
 
-            .installation-step {
-                display: grid;
-                grid-template-columns: auto minmax(0, 1fr) auto;
+            padding: var(--space-5) var(--space-6);
+
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--color-border-subtle);
+            }
+
+            .installation-step-time {
+                display: inline-flex;
                 align-items: center;
-                gap: var(--space-5);
+                gap: var(--space-2);
 
-                padding: var(--space-5) var(--space-6);
+                min-width: 6.5rem;
+                padding-left: var(--space-5);
 
-                &:not(:last-child) {
-                    border-bottom: 1px solid var(--color-border-subtle);
-                }
+                border-left: 1px solid var(--color-border-subtle);
 
-                .installation-step-number {
-                    display: grid;
-                    place-items: center;
-
-                    width: 2.75rem;
-                    aspect-ratio: 1;
-
-                    border-radius: var(--radius-full);
-                    background-color: var(--color-secondary);
-                    color: var(--color-on-secondary);
-
-                    font-size: var(--fs-body-lg);
-                    font-weight: var(--fw-bold);
-
-                    box-shadow: 0 4px 8px rgb(from var(--color-secondary) r g b / 0.24);
-                }
-
-                .installation-step-content {
-                    display: grid;
-                    gap: var(--space-1);
-                }
-
-                .installation-step-time {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: var(--space-2);
-
-                    min-width: 6.5rem;
-                    padding-left: var(--space-5);
-
-                    border-left: 1px solid var(--color-border-subtle);
-
-                    color: var(--color-accent-text);
-                    font-size: var(--fs-body-sm);
-                    font-weight: var(--fw-bold);
-
-                    img {
-                        width: 1rem;
-                        aspect-ratio: 1;
-                    }
-                }
-            }
-        }
-    }
-
-    .setup-factors {
-        display: grid;
-        gap: var(--space-4);
-
-        .setup-factor-grid {
-            gap: var(--space-5);
-        }
-
-        .setup-factor-card {
-            display: grid;
-            grid-template-columns: auto minmax(0, 1fr);
-            align-items: start;
-            gap: var(--space-3);
-
-            padding: var(--space-4);
-
-            .setup-factor-icon {
-                display: grid;
-                place-items: center;
-
-                width: 4rem;
-                aspect-ratio: 1;
-
-                border-radius: var(--radius-xl);
-                background-color: var(--color-accent-subtle);
                 color: var(--color-accent-text);
 
                 img {
-                    width: 2rem;
+                    width: 1rem;
                     aspect-ratio: 1;
                 }
-            }
-
-            .setup-factor-content {
-                display: grid;
-                gap: var(--space-2);
-            }
-        }
-    }
-
-    .installation-note {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-        align-items: center;
-        gap: var(--space-3);
-
-        padding: var(--space-4);
-
-        border: 1px solid var(--color-accent-border);
-        border-radius: var(--radius-2xl);
-
-        background-color: rgb(from var(--color-accent) r g b / 0.06);
-        box-shadow: var(--shadow-xs);
-
-        .installation-note-icon {
-            display: grid;
-            place-items: center;
-
-            width: 4rem;
-            aspect-ratio: 1;
-
-            border-radius: var(--radius-full);
-            background-color: var(--color-accent-subtle);
-            color: var(--color-accent-text);
-
-            img {
-                width: 2rem;
-                aspect-ratio: 1;
-            }
-        }
-
-        .installation-note-content {
-            display: grid;
-            gap: var(--space-2);
-        }
-    }
-
-    .after-setup {
-        display: grid;
-        gap: var(--space-4);
-
-        .after-setup-card {
-            display: grid;
-            grid-template-columns: auto minmax(0, 1fr);
-            align-items: start;
-            gap: var(--space-3);
-
-            padding: var(--space-4);
-
-            .after-setup-icon {
-                display: grid;
-                place-items: center;
-
-                width: 4rem;
-                aspect-ratio: 1;
-
-                border-radius: var(--radius-xl);
-                background-color: var(--color-accent-subtle);
-                color: var(--color-accent-text);
-
-                img {
-                    width: 2rem;
-                    aspect-ratio: 1;
-                }
-            }
-
-            .after-setup-content {
-                display: grid;
-                gap: var(--space-2);
             }
         }
     }
 
     @media (width < 48rem) {
         .installation-phase {
-            grid-template-columns: 1fr;
-
             .installation-phase-summary {
-                grid-template-columns: auto minmax(0, 1fr);
                 align-items: center;
 
                 border-right: 0;
@@ -530,7 +313,8 @@
 
                 .installation-phase-icon {
                     grid-row: span 4;
-                    width: 3rem;
+                    --icon-well-size: 3rem;
+                    --icon-image-size: 1.5rem;
                 }
 
                 .installation-phase-time {
@@ -542,9 +326,6 @@
 
             .installation-steps {
                 .installation-step {
-                    grid-template-columns: auto minmax(0, 1fr);
-                    gap: var(--space-4);
-
                     .installation-step-time {
                         grid-column: 2;
 
@@ -556,333 +337,34 @@
                 }
             }
         }
-
-        .setup-factors {
-            .setup-factor-card {
-                grid-template-columns: 1fr;
-
-                .setup-factor-icon {
-                    width: 3rem;
-
-                    img {
-                        width: 1.5rem;
-                    }
-                }
-            }
-        }
-
-        .installation-note {
-            grid-template-columns: 1fr;
-
-            .installation-note-icon {
-                width: 3rem;
-
-                img {
-                    width: 1.5rem;
-                }
-            }
-        }
-
-        .after-setup {
-            .after-setup-card {
-                grid-template-columns: 1fr;
-
-                .after-setup-icon {
-                    width: 3rem;
-
-                    img {
-                        width: 1.5rem;
-                    }
-                }
-            }
-        }
     }
 }
 
 .renters-panel {
-    .renter-situation {
-        display: grid;
-        gap: var(--space-6);
+    .renter-situation-header {
+        align-items: center;
 
-        padding: var(--space-8);
-        border: 1px solid var(--color-border-subtle);
-        border-radius: var(--radius-3xl);
-        background-color: var(--color-surface);
-        box-shadow: var(--shadow-md);
+        .renter-situation-prompts {
+            padding-left: var(--space-6);
+            border-left: 1px solid rgb(from var(--color-primary) r g b / 0.18);
 
-        .renter-situation-header {
-            display: grid;
-            grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr);
-            align-items: center;
-            gap: var(--space-6);
-
-            .renter-step-number {
-                display: grid;
-                place-items: center;
-
-                width: 2.75rem;
-                aspect-ratio: 1;
-                border-radius: var(--radius-full);
-
-                background-color: var(--color-primary);
-                color: var(--color-on-primary);
-                box-shadow: var(--shadow-sm);
-            }
-
-            .renter-situation-prompts {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: var(--space-5);
-
-                padding-left: var(--space-6);
-                border-left: 1px solid rgb(from var(--color-primary) r g b / 0.18);
-
-                .renter-situation-prompt {
-                    display: grid;
-                    grid-template-columns: auto minmax(0, 1fr);
-                    align-items: center;
-                    gap: var(--space-4);
-
-                    .renter-prompt-icon {
-                        display: grid;
-                        place-items: center;
-
-                        width: 4rem;
-                        aspect-ratio: 1;
-                        border-radius: var(--radius-full);
-
-                        background-color: rgb(from var(--color-accent) r g b / 0.12);
-
-                        img {
-                            width: 2rem;
-                            aspect-ratio: 1;
-                        }
-                    }
-                }
-            }
-        }
-
-        .renter-situation-note {
-            display: grid;
-            grid-template-columns: auto minmax(0, 1fr);
-            align-items: center;
-            gap: var(--space-4);
-
-            padding: var(--space-5);
-            border: 1px solid var(--color-border-subtle);
-            border-radius: var(--radius-2xl);
-            background-color: rgb(from var(--color-accent) r g b / 0.06);
-
-            .renter-note-icon {
-                display: grid;
-                place-items: center;
-
-                width: 3rem;
-                aspect-ratio: 1;
-                border-radius: var(--radius-full);
-
-                background-color: var(--color-accent);
-
-                img {
-                    width: 2rem;
-                    aspect-ratio: 1;
-                    filter: brightness(0) invert(1);
-                }
+            .renter-situation-prompt {
+                align-items: center;
             }
         }
     }
 
-    .renter-next-step {
-        display: grid;
-        gap: var(--space-6);
-
-        .renter-next-step-header {
-            display: grid;
-            grid-template-columns: auto minmax(0, 1fr);
-            align-items: center;
-            gap: var(--space-5);
-
-            .renter-step-number {
-                display: grid;
-                place-items: center;
-
-                width: 2.75rem;
-                aspect-ratio: 1;
-                border-radius: var(--radius-full);
-
-                background-color: var(--color-primary);
-                color: var(--color-on-primary);
-                box-shadow: var(--shadow-sm);
-
-                line-height: 1;
-            }
-        }
-
-        .renter-next-step-grid {
-            gap: var(--space-5);
-
-            .renter-next-step-card {
-                display: grid;
-                align-content: start;
-                gap: var(--space-5);
-
-                .renter-next-step-card-top {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    gap: var(--space-4);
-
-                    .renter-inner-step-number {
-                        display: grid;
-                        place-items: center;
-
-                        width: 2rem;
-                        aspect-ratio: 1;
-                        border-radius: var(--radius-full);
-
-                        background-color: var(--color-primary);
-                        color: var(--color-on-primary);
-                        box-shadow: var(--shadow-sm);
-                        line-height: 1;
-                    }
-
-                    .renter-next-step-icon {
-                        display: grid;
-                        place-items: center;
-
-                        width: 4rem;
-                        aspect-ratio: 1;
-                        border-radius: var(--radius-full);
-
-                        background-color: rgb(from var(--color-accent) r g b / 0.12);
-                    }
-                }
-
-                .renter-next-step-card-content {
-                    display: grid;
-                    gap: var(--space-3);
-                }
-            }
-        }
+    .renter-next-step-header {
+        align-items: center;
     }
 
-    .renter-share-access {
-        display: grid;
-        gap: var(--space-6);
-
-        .renter-share-access-header {
-            display: grid;
-            grid-template-columns: auto minmax(0, 1fr);
-            align-items: start;
-            gap: var(--space-5);
-
-            .renter-step-number {
-                display: grid;
-                place-items: center;
-
-                width: 3.5rem;
-                aspect-ratio: 1;
-                border-radius: var(--radius-full);
-
-                background-color: var(--color-primary);
-                color: var(--color-on-primary);
-                box-shadow: var(--shadow-sm);
-
-                font-size: var(--fs-title-lg);
-                font-weight: var(--fw-bold);
-                line-height: 1;
-            }
-
-            .renter-share-access-copy {
-                display: grid;
-                gap: var(--space-2);
-            }
-        }
-
-        .renter-share-access-content {
-            display: grid;
-            gap: var(--space-5);
-            padding-top: var(--space-6);
-            border-top: 1px solid rgb(from var(--color-primary) r g b / 0.14);
-            .renter-share-access-grid {
-                gap: var(--space-5);
-
-                .renter-share-access-card {
-                    display: grid;
-                    align-content: start;
-                    justify-items: start;
-                    gap: var(--space-5);
-
-                    min-height: 18rem;
-
-                    .renter-share-access-icon {
-                        display: grid;
-                        place-items: center;
-                        justify-self: center;
-
-                        width: 5rem;
-                        aspect-ratio: 1;
-                        border-radius: var(--radius-full);
-
-                        background-color: rgb(from var(--color-accent) r g b / 0.12);
-
-                        img {
-                            width: 2.25rem;
-                            height: 2.25rem;
-                        }
-                    }
-
-                    .renter-share-access-card-content {
-                        display: grid;
-                        gap: var(--space-3);
-                        text-align: center;
-                    }
-                }
-            }
-        }
-
-        .renter-share-access-note {
-            display: grid;
-            grid-template-columns: auto minmax(0, 1fr);
-            align-items: center;
-            gap: var(--space-5);
-
-            padding: var(--space-5);
-            border: 1px solid rgb(from var(--color-accent) r g b / 0.22);
-            border-radius: var(--radius-2xl);
-            background-color: rgb(from var(--color-accent) r g b / 0.06);
-
-            .renter-share-access-note-icon {
-                display: grid;
-                place-items: center;
-
-                width: 3.75rem;
-                aspect-ratio: 1;
-                border-radius: var(--radius-full);
-
-                background-color: rgb(from var(--color-accent) r g b / 0.16);
-
-                img {
-                    width: 1.8rem;
-                    height: 1.8rem;
-                }
-            }
-
-            .renter-share-access-note-content {
-                display: grid;
-                gap: var(--space-1);
-            }
-        }
+    .renter-share-access-header {
+        align-items: start;
     }
 
-    @media (max-width: 64rem) {
-        .renters-panel {
-            .renter-next-step {
-                .renter-next-step-grid {
-                    grid-template-columns: repeat(2, minmax(0, 1fr));
-                }
-            }
-        }
+    .renter-share-access-content {
+        padding-top: var(--space-6);
+        border-top: 1px solid rgb(from var(--color-primary) r g b / 0.14);
     }
 
     @media (max-width: 48rem) {
@@ -890,12 +372,9 @@
             padding: var(--space-5);
 
             .renter-situation-header {
-                grid-template-columns: 1fr;
                 align-items: start;
 
                 .renter-situation-prompts {
-                    grid-template-columns: 1fr;
-
                     .renter-situation-prompt {
                         padding: var(--space-4);
                         border: 1px solid rgb(from var(--color-primary) r g b / 0.12);
@@ -904,47 +383,11 @@
                     }
                 }
             }
-
-            .renter-situation-note {
-                grid-template-columns: 1fr;
-
-                .renter-note-icon {
-                    width: 2.75rem;
-                }
-            }
         }
 
-        .renters-panel {
-            .renter-next-step {
-                .renter-next-step-header {
-                    grid-template-columns: 1fr;
-                    align-items: start;
-
-                    .renter-step-number {
-                        width: 3rem;
-                    }
-                }
-
-                .renter-next-step-grid {
-                    grid-template-columns: 1fr;
-
-                    .renter-next-step-card {
-                        .renter-next-step-card-top {
-                            .renter-inner-step-number {
-                                width: 2.15rem;
-                            }
-
-                            .renter-next-step-icon {
-                                width: 3.5rem;
-
-                                img {
-                                    width: 1.6rem;
-                                    height: 1.6rem;
-                                }
-                            }
-                        }
-                    }
-                }
+        .renter-next-step {
+            .renter-next-step-header {
+                align-items: start;
             }
         }
     }

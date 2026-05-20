@@ -16,7 +16,7 @@
     .flow-nav {
         --flow-step-size: 3rem;
         --flow-line-width: 3rem;
-        --flow-line-height: 2px;
+        --flow-line-thickness: 2px;
 
         display: flex;
         align-items: center;
@@ -43,8 +43,6 @@
             color: var(--color-text-muted);
 
             text-decoration: none;
-            font-weight: var(--fw-bold);
-            line-height: 1;
 
             transition:
                 width var(--transition-slow),
@@ -89,7 +87,7 @@
             top: 50%;
             right: 100%;
             width: var(--flow-line-width);
-            height: var(--flow-line-height);
+            height: var(--flow-line-thickness);
             background-color: var(--color-border-subtle);
         }
     }
@@ -114,8 +112,6 @@
         .flow-label {
             display: inline;
             white-space: nowrap;
-            font-size: var(--fs-sm);
-            font-weight: var(--fw-semibold);
         }
 
         &::before {
@@ -254,8 +250,6 @@
             .flow-label {
                 display: inline;
                 white-space: nowrap;
-                font-size: var(--fs-sm);
-                font-weight: var(--fw-semibold);
             }
         }
 
@@ -297,10 +291,6 @@
         display: grid;
         justify-items: start;
         gap: var(--space-4);
-
-        h1 {
-            line-height: var(--lh-tight);
-        }
     }
 
     .planner-overview {
@@ -309,12 +299,6 @@
 
         padding-left: var(--space-12);
         border-left: 1px solid var(--color-border-subtle);
-
-        h2 {
-            font-family: var(--font-body);
-            font-size: var(--fs-title-lg);
-            font-weight: var(--fw-bold);
-        }
 
         .planner-steps {
             display: grid;
@@ -342,9 +326,6 @@
                         background-color: var(--color-surface);
                         color: var(--color-accent-text);
 
-                        font-size: var(--fs-sm);
-                        font-weight: var(--fw-bold);
-
                         box-shadow: 0 0 18px rgb(from var(--color-accent) r g b / 0.18);
                     }
 
@@ -360,16 +341,6 @@
                     gap: var(--space-1);
 
                     padding-bottom: var(--space-6);
-
-                    h3 {
-                        font-family: var(--font-body);
-                        font-size: var(--fs-title-sm);
-                        font-weight: var(--fw-bold);
-                    }
-
-                    p {
-                        font-size: var(--fs-body-sm);
-                    }
                 }
 
                 &:last-child {
@@ -391,8 +362,6 @@
 
             padding-top: var(--space-6);
             border-top: 1px solid var(--color-border-subtle);
-
-            font-size: var(--fs-body-sm);
 
             .planner-note-icon {
                 display: grid;
@@ -454,10 +423,7 @@
     }
 
     .confirmation-hero {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
         align-items: center;
-        gap: var(--space-6);
 
         .success-icon {
             width: 6rem;
@@ -472,9 +438,6 @@
             background-color: var(--color-accent);
             color: var(--color-on-accent);
 
-            font-size: var(--fs-display-sm);
-            font-weight: var(--fw-bold);
-
             box-shadow: 0 0 24px rgb(from var(--color-accent) r g b / 0.5);
         }
     }
@@ -487,9 +450,7 @@
         border-block: 1px solid var(--color-border-subtle);
 
         .success-step {
-            display: grid;
             justify-items: center;
-            gap: var(--space-3);
 
             padding-inline: var(--space-5);
             text-align: center;
@@ -520,7 +481,6 @@
         }
 
         .confirmation-hero {
-            grid-template-columns: minmax(0, 1fr);
             justify-items: center;
             text-align: center;
 
@@ -539,7 +499,6 @@
             padding: 0;
 
             .success-step {
-                grid-template-columns: auto minmax(0, 1fr);
                 justify-items: start;
                 align-items: center;
 

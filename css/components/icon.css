@@ -95,3 +95,69 @@
         box-shadow: none;
     }
 }
+
+.icon-well {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: var(--icon-well-size, 4rem);
+    aspect-ratio: 1;
+    border-radius: var(--icon-well-radius, var(--radius-full));
+
+    background-color: var(--icon-well-bg, var(--color-accent-subtle));
+    color: var(--icon-well-color, var(--color-accent-text));
+
+    &.sm {
+        --icon-well-size: 3rem;
+        --icon-image-size: 1.5rem;
+    }
+
+    &.md {
+        --icon-well-size: 4rem;
+        --icon-image-size: 2rem;
+    }
+
+    &.lg {
+        --icon-well-size: 5rem;
+        --icon-image-size: 2.25rem;
+    }
+
+    &.note {
+        --icon-well-size: 3.75rem;
+        --icon-image-size: 1.8rem;
+    }
+
+    &.rounded {
+        --icon-well-radius: var(--radius-xl);
+    }
+
+    &.accent-muted {
+        --icon-well-bg: rgb(from var(--color-accent) r g b / 0.16);
+    }
+
+    &.accent-solid {
+        --icon-well-bg: var(--color-accent);
+        --icon-well-color: var(--color-on-accent);
+    }
+
+    &.image-sm {
+        --icon-image-size: 1.75rem;
+    }
+
+    &.image-md {
+        --icon-image-size: 2rem;
+    }
+
+    &.invert-img {
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    img,
+    svg {
+        width: var(--icon-image-size, 2rem);
+        height: var(--icon-image-size, 2rem);
+    }
+}
