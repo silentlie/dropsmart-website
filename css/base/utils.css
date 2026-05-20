@@ -1,13 +1,3 @@
-.u-borderless {
-    border-color: transparent;
-}
-
-.u-plain {
-    border-color: transparent;
-    background-color: transparent;
-    box-shadow: none;
-}
-
 .hide {
     display: none;
 }

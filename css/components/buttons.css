@@ -45,16 +45,6 @@
         outline-offset: 2px;
     }
 
-    &.primary {
-        --btn-bg: var(--color-primary);
-        --btn-text: var(--color-on-primary);
-    }
-
-    &.secondary {
-        --btn-bg: var(--color-secondary);
-        --btn-text: var(--color-on-secondary);
-    }
-
     &.accent {
         --btn-bg: var(--color-accent);
         --btn-text: var(--color-on-accent);
@@ -90,12 +80,6 @@
         animation: btn-pulse 2s infinite;
     }
 
-    &.xxs {
-        padding-inline: var(--space-2);
-        padding-block: var(--space-1);
-        font-size: var(--fs-xs);
-    }
-
     &.xs {
         padding-inline: var(--space-3);
         padding-block: var(--space-2);
@@ -114,10 +98,6 @@
 
     &.pill {
         border-radius: var(--radius-full);
-    }
-
-    &.block {
-        width: 100%;
     }
 }
 

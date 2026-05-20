@@ -1,14 +1,6 @@
 .section {
     padding-block: var(--space-16);
 
-    &.sm {
-        padding-block: var(--space-8);
-
-        @media (width < 48rem) {
-            padding-block: var(--space-4);
-        }
-    }
-
     &.lg {
         padding-block: var(--space-24);
 

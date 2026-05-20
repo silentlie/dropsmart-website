@@ -3,16 +3,6 @@
     display: grid;
     gap: var(--space-4);
 
-    .form-heading {
-        display: grid;
-        gap: var(--space-3);
-
-        h2 {
-            font-size: var(--fs-display-md);
-            line-height: var(--lh-tight);
-        }
-    }
-
     .form {
         display: grid;
         gap: var(--space-5);
@@ -22,20 +12,8 @@
             grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
             gap: var(--space-5) var(--space-6);
 
-            &.one-one {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            &.one-two {
-                grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-            }
-
             &.one-three {
                 grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
-            }
-
-            &.four {
-                grid-template-columns: repeat(4, minmax(0, 1fr));
             }
 
             @media (width < 64rem) {
@@ -205,10 +183,6 @@
                 background-color: var(--color-accent-subtle);
                 border-color: var(--color-input-border-focus);
                 color: var(--color-accent-text);
-
-                .option-meta {
-                    color: var(--color-accent-text);
-                }
             }
 
             label:has(input:focus-visible) {
