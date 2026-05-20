@@ -68,7 +68,7 @@
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-4xl);
     background-color: var(--glass-bg);
-    box-shadow: 0 24px 48px var(--glass-shadow);
+    box-shadow: var(--shadow-card-elevated);
 
     & img {
         width: 100%;

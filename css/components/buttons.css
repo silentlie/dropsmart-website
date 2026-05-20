@@ -1,12 +1,12 @@
 :root {
     --btn-bg: var(--color-primary);
     --btn-text: var(--color-on-primary);
-    --btn-border: transparent;
+    --btn-border: var(--border-transparent);
 
     --btn-glow-color: rgb(from var(--color-accent) r g b / 0.35);
     --btn-glow-color-strong: rgb(from var(--color-accent) r g b / 0.7);
 
-    --btn-outline-inverse-border: rgb(255 255 255 / 0.35);
+    --btn-outline-inverse-border: var(--border-width-thin) var(--border-style-solid) rgb(255 255 255 / 0.35);
     --btn-outline-inverse-hover-bg: rgb(255 255 255 / 0.08);
 }
 

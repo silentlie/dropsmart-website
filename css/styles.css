@@ -3,6 +3,7 @@
 @import "./base/spacing.css";
 @import "./base/shadow.css";
 @import "./base/radius.css";
+@import "./base/borders.css";
 @import "./base/motion.css";
 @import "./base/typography.css";
 @import "./base/utils.css";

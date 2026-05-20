@@ -38,7 +38,7 @@
                 height: 4px;
                 border-radius: var(--radius-full);
                 background-color: var(--color-accent-strong);
-                box-shadow: 0 0 18px rgb(from var(--color-accent) r g b / 0.28);
+                box-shadow: var(--shadow-accent-md);
             }
         }
 
