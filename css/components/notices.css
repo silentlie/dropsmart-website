@@ -2,10 +2,10 @@
     align-items: center;
 
     padding: var(--notice-padding, var(--space-5));
-    border: 1px solid var(--notice-border, var(--color-accent-border));
+    border: var(--border-width-thin) solid var(--notice-border, var(--border-accent));
     border-radius: var(--radius-2xl);
 
-    background-color: var(--notice-bg, var(--accent-overlay-lighter));
+    background-color: var(--accent-overlay-faint);
     box-shadow: var(--notice-shadow, var(--shadow-xs));
 
     &.compact {
@@ -13,15 +13,15 @@
     }
 
     &.subtle {
-        --notice-border: var(--color-border-subtle);
+        --notice-border: var(--border-subtle);
     }
 
     &.accent {
-        --notice-border: rgb(from var(--color-accent) r g b / 0.22);
+        --notice-border: var(--border-accent-light);
     }
 
     &.no-shadow {
-        --notice-shadow: none;
+        --notice-shadow: var(--shadow-none);
     }
 
     .notice-content {

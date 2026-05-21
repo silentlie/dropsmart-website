@@ -1,7 +1,7 @@
 .site-footer {
     background-color: var(--color-surface-strong);
     color: var(--color-text-inverse);
-    border-top: var(--border-width-thick) solid var(--color-accent);
+    border-top: var(--border-accent-solid-thick-preset);
 
     & .footer-top {
         display: grid;
@@ -51,12 +51,6 @@
                     &:focus-visible {
                         color: var(--color-accent);
                     }
-
-                    &:focus-visible {
-                        outline: 2px solid var(--color-focus-ring);
-                        outline-offset: 3px;
-                        border-radius: var(--radius-sm);
-                    }
                 }
             }
         }
@@ -67,7 +61,7 @@
         align-items: center;
         justify-content: space-between;
         padding-block: var(--space-6);
-        border-top: 1px solid var(--blue-700);
+        border-top: var(--border-inverse-subtle-preset);
 
         & .footer-copy,
         & .footer-note {

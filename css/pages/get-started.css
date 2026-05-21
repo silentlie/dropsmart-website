@@ -16,7 +16,7 @@
     .flow-nav {
         --flow-step-size: 3rem;
         --flow-line-width: 3rem;
-        --flow-line-thickness: 2px;
+        --flow-line-thickness: var(--border-width-medium);
 
         display: flex;
         align-items: center;
@@ -27,6 +27,7 @@
 
         a {
             position: relative;
+            --focus-ring-offset: var(--outline-offset-large);
 
             display: flex;
             align-items: center;
@@ -36,7 +37,7 @@
             width: var(--flow-step-size);
             height: var(--flow-step-size);
 
-            border: 1px solid var(--color-border);
+            border: var(--border-base);
             border-radius: var(--radius-full);
 
             background-color: var(--color-surface);
@@ -71,14 +72,10 @@
 
             &:hover,
             &:focus-visible {
-                border-color: var(--color-accent-border);
+                border-color: var(--border-accent);
                 box-shadow: var(--shadow-accent-sm);
             }
 
-            &:focus-visible {
-                outline: 2px solid var(--color-focus-ring);
-                outline-offset: 4px;
-            }
         }
 
         a+a::before {
@@ -103,11 +100,10 @@
         padding-inline: var(--space-4);
 
         background-color: var(--color-surface);
-        border-color: var(--color-accent);
+        border-color: var(--border-accent-solid);
         color: var(--color-accent-text);
 
-        box-shadow:
-            0 0 24px var(--accent-overlay-subtle);
+        box-shadow: var(--shadow-accent-sm);
 
         .flow-label {
             display: inline;
@@ -125,11 +121,10 @@
     &:has(#step-4:target) .flow-nav a:nth-child(-1n + 4),
     &:has(#confirmation:target) .flow-nav a:nth-child(-1n + 5) {
         background-color: var(--color-accent);
-        border-color: var(--color-accent);
+        border-color: var(--border-accent-solid);
         color: var(--color-on-accent);
 
-        box-shadow:
-            0 0 18px var(--accent-overlay-medium);
+        box-shadow: var(--shadow-accent-md);
 
         .flow-icon-default {
             display: none;
@@ -150,8 +145,6 @@
 
     .flow-panels {
         width: 100%;
-        padding: var(--space-12);
-        border-radius: var(--radius-4xl);
 
         .flow-panel {
             display: none;
@@ -161,9 +154,6 @@
             display: block;
         }
 
-        @media (width < 48rem) {
-            padding: var(--space-6);
-        }
     }
 
     &:has(:is(#step-1, #step-2, #step-3, #step-4, #confirmation):target) .intro {
@@ -178,10 +168,8 @@
     &:has(#confirmation:target) .confirmation {
         display: block;
     }
-}
 
-@media (width < 48rem) {
-    .get-started-flow {
+    @media (width < 48rem) {
         .flow-nav {
             display: flex;
             align-items: stretch;
@@ -189,7 +177,7 @@
 
             margin-top: var(--space-4);
 
-            border: 2px solid var(--color-border);
+            border: var(--border-medium-preset);
             border-radius: var(--radius-full);
 
             background-color: var(--color-surface);
@@ -198,11 +186,13 @@
             overflow: hidden;
 
             a {
+                --focus-ring-offset: var(--outline-offset-inset);
+
                 flex: 1 1 0;
                 width: auto;
 
-                border: var(--shadow-none);
-                border-right: var(--border-width-thin) var(--border-style-solid) var(--color-border-subtle);
+                border: var(--border-none);
+                border-right: var(--border-subtle-preset);
                 border-radius: 0;
 
                 background-color: transparent;
@@ -224,10 +214,6 @@
                     box-shadow: var(--shadow-none);
                 }
 
-                &:focus-visible {
-                    outline: 2px solid var(--color-focus-ring);
-                    outline-offset: -2px;
-                }
             }
 
             a+a::before {
@@ -277,20 +263,8 @@
 }
 
 .intro {
-    --planner-step-size: 2.25rem;
-    --planner-step-line-color: var(--accent-overlay-darker);
-
-    .intro-layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        align-items: center;
-        gap: var(--space-16);
-    }
-
     .flow-content {
-        display: grid;
         justify-items: start;
-        gap: var(--space-4);
     }
 
     .planner-overview {
@@ -298,62 +272,7 @@
         gap: var(--space-6);
 
         padding-left: var(--space-12);
-        border-left: 1px solid var(--color-border-subtle);
-
-        .planner-steps {
-            display: grid;
-
-            .planner-step {
-                display: grid;
-                grid-template-columns: var(--planner-step-size) minmax(0, 1fr);
-                gap: var(--space-5);
-
-                .planner-step-rail {
-                    display: grid;
-                    grid-template-rows: var(--planner-step-size) 1fr;
-                    justify-items: center;
-
-                    .planner-step-number {
-                        display: grid;
-                        place-items: center;
-
-                        width: var(--planner-step-size);
-                        aspect-ratio: 1;
-
-                        border: 1px solid var(--color-accent);
-                        border-radius: var(--radius-full);
-
-                        background-color: var(--color-surface);
-                        color: var(--color-accent-text);
-
-                        box-shadow: var(--shadow-accent-sm);
-                    }
-
-                    .planner-step-line {
-                        width: 1px;
-                        min-height: var(--space-10);
-                        background-color: var(--planner-step-line-color);
-                    }
-                }
-
-                .planner-step-body {
-                    display: grid;
-                    gap: var(--space-1);
-
-                    padding-bottom: var(--space-6);
-                }
-
-                &:last-child {
-                    .planner-step-line {
-                        display: none;
-                    }
-
-                    .planner-step-body {
-                        padding-bottom: 0;
-                    }
-                }
-            }
-        }
+        border-left: var(--border-subtle-preset);
 
         .planner-note {
             display: flex;
@@ -361,33 +280,18 @@
             gap: var(--space-3);
 
             padding-top: var(--space-6);
-            border-top: 1px solid var(--color-border-subtle);
+            border-top: var(--border-subtle-preset);
 
             .planner-note-icon {
-                display: grid;
-                place-items: center;
-                flex-shrink: 0;
-
-                width: var(--planner-step-size);
-                aspect-ratio: 1;
-
-                border-radius: var(--radius-full);
-                background-color: var(--color-surface-alt);
-                color: var(--color-accent-text);
-
-                img {
-                    width: 1rem;
-                    height: 1rem;
-                }
+                --icon-size: var(--rail-step-size);
+                --icon-image-size: 1rem;
+                --icon-bg: var(--color-surface-alt);
+                --icon-color: var(--color-accent-text);
             }
         }
     }
 
     @media (width < 48rem) {
-        .intro-layout {
-            grid-template-columns: none;
-        }
-
         .flow-content {
             justify-items: center;
             text-align: center;
@@ -401,9 +305,6 @@
 
 .step-1 {
     .reason-field {
-        display: grid;
-        gap: var(--space-3);
-
         .reason-other-field {
             display: none;
         }
@@ -417,37 +318,19 @@
 }
 
 .confirmation {
-    .flow-content {
-        display: grid;
-        gap: var(--space-4);
-    }
-
     .confirmation-hero {
         align-items: center;
 
         .success-icon {
-            width: 6rem;
-            aspect-ratio: 1;
+            --icon-size: 6rem;
 
             margin: var(--space-6);
-
-            display: grid;
-            place-items: center;
-
-            border-radius: var(--radius-full);
-            background-color: var(--color-accent);
-            color: var(--color-on-accent);
-
-            box-shadow: var(--shadow-accent-lg);
         }
     }
 
     .success-next-steps {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-
         padding-block: var(--space-6);
-        border-block: 1px solid var(--color-border-subtle);
+        border-block: var(--border-subtle-preset);
 
         .success-step {
             justify-items: center;
@@ -466,7 +349,7 @@
             }
 
             &+.success-step {
-                border-left: 1px solid var(--color-border-subtle);
+                border-left: var(--border-subtle-preset);
             }
         }
     }
@@ -476,16 +359,13 @@
     }
 
     @media (width < 48rem) {
-        .flow-content {
-            gap: var(--space-4);
-        }
-
         .confirmation-hero {
             justify-items: center;
             text-align: center;
 
             .success-icon {
-                width: 4rem;
+                --icon-size: 4rem;
+
                 margin: 0;
             }
 
@@ -495,7 +375,6 @@
         }
 
         .success-next-steps {
-            grid-template-columns: minmax(0, 1fr);
             padding: 0;
 
             .success-step {
@@ -511,7 +390,7 @@
 
                 &+.success-step {
                     border-left: var(--border-none);
-                    border-top: 1px solid var(--color-border-subtle);
+                    border-top: var(--border-subtle-preset);
                     padding-top: var(--space-4);
                 }
             }

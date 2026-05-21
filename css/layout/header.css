@@ -32,13 +32,7 @@
 
                     &:hover,
                     &:focus-visible {
-                        opacity: 0.8;
-                    }
-
-                    &:focus-visible {
-                        outline: 2px solid var(--color-focus-ring);
-                        outline-offset: 3px;
-                        border-radius: var(--radius-sm);
+                        opacity: var(--alpha-8);
                     }
 
                     &[aria-current="page"] {
@@ -67,7 +61,7 @@
 
                 &:hover,
                 &:focus-visible {
-                    background-color: rgb(255 255 255 / 0.12);
+                    background-color: var(--white-overlay-faint);
                     color: var(--secondary-blue-100);
                 }
             }
@@ -99,7 +93,7 @@
                 &:hover,
                 &:focus-visible,
                 &[aria-current="page"] {
-                    background-color: rgb(255 255 255 / 0.12);
+                    background-color: var(--white-overlay-faint);
                     color: var(--secondary-blue-100);
                 }
             }
@@ -111,7 +105,7 @@
 
                 &:hover,
                 &:focus-visible {
-                    background-color: rgb(255 255 255 / 0.12);
+                    background-color: var(--white-overlay-faint);
                     color: var(--color-accent);
                 }
             }
@@ -135,7 +129,7 @@
         &:has(.mobile-menu[open]) {
             & .mobile-nav {
                 display: block;
-                border-top: 1px solid var(--secondary-blue-100);
+                border-top: var(--border-on-primary-subtle-preset);
                 padding-block: var(--space-4);
             }
         }

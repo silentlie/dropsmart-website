@@ -62,11 +62,36 @@
     --white: white;
     --black: black;
 
+    /* alpha scale */
+    --alpha-1: 0.1;
+    --alpha-2: 0.2;
+    --alpha-3: 0.3;
+    --alpha-4: 0.4;
+    --alpha-5: 0.5;
+    --alpha-6: 0.6;
+    --alpha-7: 0.7;
+    --alpha-8: 0.8;
+    --alpha-9: 0.9;
+
+    --white-overlay-faint: rgb(255 255 255 / var(--alpha-1));
+    --white-overlay-subtle: rgb(255 255 255 / var(--alpha-2));
+    --white-overlay-soft: rgb(255 255 255 / var(--alpha-3));
+    --white-overlay-medium: rgb(255 255 255 / var(--alpha-4));
+
+    --black-overlay-faint: rgb(0 0 0 / var(--alpha-1));
+    --black-overlay-subtle: rgb(0 0 0 / var(--alpha-2));
+    --black-overlay-soft: rgb(0 0 0 / var(--alpha-3));
+    --black-overlay-medium: rgb(0 0 0 / var(--alpha-4));
+
     /* semantic colors */
     --color-primary: var(--blue-800);
     --color-primary-hover: var(--blue-700);
     --color-primary-active: var(--blue-900);
     --color-on-primary: var(--white);
+
+    --primary-overlay-faint: rgb(from var(--color-primary) r g b / var(--alpha-1));
+    --primary-overlay-subtle: rgb(from var(--color-primary) r g b / var(--alpha-2));
+    --primary-overlay-medium: rgb(from var(--color-primary) r g b / var(--alpha-3));
 
     --color-primary-container: var(--blue-100);
     --color-on-primary-container: var(--blue-900);
@@ -76,6 +101,8 @@
     --color-secondary-active: var(--secondary-blue-800);
     --color-on-secondary: var(--white);
 
+    --secondary-overlay-subtle: rgb(from var(--color-secondary) r g b / var(--alpha-2));
+
     --color-secondary-container: var(--secondary-blue-100);
     --color-on-secondary-container: var(--secondary-blue-900);
 
@@ -83,21 +110,28 @@
     --color-accent-strong: var(--secondary-blue-400);
     --color-on-accent: var(--secondary-blue-900);
 
-    --color-accent-subtle: rgb(from var(--color-accent) r g b / 0.12);
-    --color-accent-border: rgb(from var(--color-accent) r g b / 0.45);
+    --accent-overlay-faint: rgb(from var(--color-accent) r g b / var(--alpha-1));
+    --accent-overlay-subtle: rgb(from var(--color-accent) r g b / var(--alpha-2));
+    --accent-overlay-medium: rgb(from var(--color-accent) r g b / var(--alpha-3));
+    --accent-overlay-strong: rgb(from var(--color-accent) r g b / var(--alpha-4));
+    --accent-overlay-dense: rgb(from var(--color-accent) r g b / var(--alpha-5));
+    --accent-overlay-opaque: rgb(from var(--color-accent) r g b / var(--alpha-7));
+
+    --color-accent-subtle: var(--accent-overlay-faint);
+    --color-accent-border: var(--accent-overlay-dense);
     --color-accent-text: var(--color-secondary-hover);
 
-    --color-accent-inverse-subtle: rgb(from var(--color-accent) r g b / 0.12);
-    --color-accent-inverse-border: rgb(from var(--color-accent) r g b / 0.55);
+    --color-accent-inverse-subtle: var(--accent-overlay-faint);
+    --color-accent-inverse-border: rgb(from var(--color-accent) r g b / var(--alpha-6));
     --color-accent-inverse-text: var(--color-accent);
 
-    --glass-border: rgb(255 255 255 / 0.12);
-    --glass-bg: rgb(255 255 255 / 0.06);
-    --glass-shadow: rgb(0 0 0 / 0.24);
+    --glass-border: var(--white-overlay-faint);
+    --glass-bg: var(--white-overlay-faint);
+    --glass-shadow: var(--black-overlay-soft);
 
-    --glass-accent-border: rgb(from var(--color-accent) r g b / 0.35);
-    --glass-accent-bg: rgb(from var(--color-accent) r g b / 0.18);
-    --glass-accent-shadow: rgb(from var(--color-accent) r g b / 0.12);
+    --glass-accent-border: var(--accent-overlay-strong);
+    --glass-accent-bg: var(--accent-overlay-subtle);
+    --glass-accent-shadow: var(--accent-overlay-faint);
 
     --color-bg: var(--neutral-100);
     --color-bg-subtle: var(--blue-100);
@@ -145,33 +179,10 @@
     --color-info-container: var(--blue-100);
     --color-on-info-container: var(--blue-900);
 
-    /* opacity scale */
-    --opacity-1: 0.04;
-    --opacity-2: 0.06;
-    --opacity-3: 0.08;
-    --opacity-4: 0.14;
-    --opacity-5: 0.15;
-    --opacity-6: 0.16;
-    --opacity-7: 0.18;
-    --opacity-8: 0.22;
-    --opacity-9: 0.24;
-    --opacity-10: 0.5;
-    --opacity-11: 0.72;
+    --color-warning: #633806;
+    --color-warning-container: #faeeda;
+    --color-warning-border: #ef9f27;
 
-    --accent-overlay-lightest: rgb(from var(--color-accent) r g b / var(--opacity-1));
-    --accent-overlay-lighter: rgb(from var(--color-accent) r g b / var(--opacity-2));
-    --accent-overlay-light: rgb(from var(--color-accent) r g b / var(--opacity-6));
-    --accent-overlay-subtle: rgb(from var(--color-accent) r g b / var(--opacity-7));
-    --accent-overlay-medium: rgb(from var(--color-accent) r g b / var(--opacity-8));
-    --accent-overlay-strong: rgb(from var(--color-accent) r g b / var(--opacity-8));
-    --accent-overlay-stronger: rgb(from var(--color-accent) r g b / var(--opacity-9));
-    --accent-overlay-dense: rgb(from var(--color-accent) r g b / var(--opacity-10));
-    --accent-overlay-darker: rgb(from var(--color-accent) r g b / var(--opacity-11));
-    --accent-overlay-darkest: rgb(from var(--color-accent) r g b / var(--opacity-10));
-    --accent-overlay-opaque: rgb(from var(--color-accent) r g b / 0.7);
-    --primary-overlay-lighter: rgb(from var(--color-primary) r g b / var(--opacity-3));
-    --primary-overlay-light: rgb(from var(--color-primary) r g b / 0.12);
-    --primary-overlay-subtle: rgb(from var(--color-primary) r g b / 0.25);
-    --secondary-overlay-strong: rgb(from var(--color-secondary) r g b / var(--opacity-9));
-    --surface-overlay-opaque: rgb(from var(--color-surface) r g b / var(--opacity-11));
+    --surface-overlay-opaque: rgb(from var(--color-surface) r g b / var(--alpha-7));
+    --neutral-overlay-subtle: rgb(from var(--neutral-200) r g b / var(--alpha-2));
 }

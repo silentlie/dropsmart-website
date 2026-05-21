@@ -1,67 +1,37 @@
-:root {
-    /* eyebrow base */
-    --eyebrow-gap: var(--space-2);
-    --eyebrow-padding-inline: var(--space-3);
-    --eyebrow-padding-block: var(--space-1);
-    --eyebrow-radius: var(--radius-md);
-
-    --eyebrow-font-size: var(--fs-body-sm);
-    --eyebrow-font-weight: var(--fw-semibold);
-    --eyebrow-letter-spacing: var(--ls-uppercase);
-
-    /* default eyebrow */
-    --eyebrow-color: var(--color-text);
-    --eyebrow-border: var(--color-border);
-    --eyebrow-bg: var(--color-surface);
-    --eyebrow-shadow: var(--shadow-xs);
-
-    /* accent eyebrow for light backgrounds */
-    --eyebrow-accent-color: var(--color-accent-text);
-    --eyebrow-accent-border: var(--color-accent-border);
-    --eyebrow-accent-bg: var(--color-accent-subtle);
-    --eyebrow-accent-shadow: var(--shadow-accent-sm);
-
-    /* glass accent eyebrow */
-    --eyebrow-glass-accent-color: var(--color-accent);
-    --eyebrow-glass-accent-border: var(--glass-accent-border);
-    --eyebrow-glass-accent-bg: var(--glass-accent-bg);
-    --eyebrow-glass-accent-shadow: 0 0 24px var(--glass-accent-shadow);
-}
-
 .eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: var(--eyebrow-gap);
+    gap: var(--space-2);
 
     width: fit-content;
 
-    padding-inline: var(--eyebrow-padding-inline);
-    padding-block: var(--eyebrow-padding-block);
+    padding-inline: var(--space-3);
+    padding-block: var(--space-1);
 
-    border: var(--border-width-thin) var(--border-style-solid) var(--eyebrow-border);
-    border-radius: var(--eyebrow-radius);
+    border: var(--border-width-thin) solid var(--border-default);
+    border-radius: var(--radius-md);
 
-    background-color: var(--eyebrow-bg);
-    color: var(--eyebrow-color);
-    box-shadow: var(--eyebrow-shadow);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    box-shadow: var(--shadow-xs);
 
-    font-size: var(--eyebrow-font-size);
-    font-weight: var(--eyebrow-font-weight);
+    font-size: var(--fs-body-sm);
+    font-weight: var(--fw-semibold);
     line-height: var(--lh-tight);
     text-transform: uppercase;
-    letter-spacing: var(--eyebrow-letter-spacing);
+    letter-spacing: var(--ls-uppercase);
 
     &.accent {
-        border-color: var(--eyebrow-accent-border);
-        background-color: var(--eyebrow-accent-bg);
-        color: var(--eyebrow-accent-color);
-        box-shadow: var(--eyebrow-accent-shadow);
+        border-color: var(--border-accent);
+        background-color: var(--color-accent-subtle);
+        color: var(--color-accent-text);
+        box-shadow: var(--shadow-accent-sm);
     }
 
     &.glass-accent {
-        border-color: var(--eyebrow-glass-accent-border);
-        background-color: var(--eyebrow-glass-accent-bg);
-        color: var(--eyebrow-glass-accent-color);
-        box-shadow: var(--eyebrow-glass-accent-shadow);
+        border-color: var(--border-glass-accent);
+        background-color: var(--glass-accent-bg);
+        color: var(--color-accent);
+        box-shadow: var(--shadow-glass-accent);
     }
 }

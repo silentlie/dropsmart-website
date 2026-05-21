@@ -1,17 +1,8 @@
-:root {
+.btn {
     --btn-bg: var(--color-primary);
     --btn-text: var(--color-on-primary);
     --btn-border: var(--border-transparent);
 
-    --btn-glow-color: rgb(from var(--color-accent) r g b / 0.35);
-    --btn-glow-color-strong: rgb(from var(--color-accent) r g b / 0.7);
-
-    /* button border variants */
-    --btn-outline-inverse-border: var(--border-width-thin) var(--border-style-solid) rgb(255 255 255 / 0.35);
-    --btn-outline-inverse-hover-bg: rgb(255 255 255 / 0.08);
-}
-
-.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +11,7 @@
     padding-inline: var(--space-5);
     padding-block: var(--space-3);
 
-    border: 1px solid var(--btn-border);
+    border: var(--border-width-thin) solid var(--btn-border);
     border-radius: var(--radius-md);
 
     background-color: var(--btn-bg);
@@ -42,7 +33,7 @@
     }
 
     &:focus-visible {
-        outline: var(--outline-width) solid var(--color-focus-ring);
+        outline: var(--outline-focus);
         outline-offset: var(--outline-offset-default);
     }
 
@@ -54,26 +45,24 @@
     &.outline {
         --btn-bg: transparent;
         --btn-text: var(--color-primary);
-        --btn-border: currentColor;
+        --btn-border: var(--border-current);
     }
 
     &.outline-inverse {
         --btn-bg: transparent;
         --btn-text: var(--color-on-primary);
-        --btn-border: var(--btn-outline-inverse-border);
+        --btn-border: var(--border-on-primary-medium);
 
         &:hover {
-            background-color: var(--btn-outline-inverse-hover-bg);
+            background-color: var(--white-overlay-faint);
         }
     }
 
     &.glow {
-        box-shadow:
-            0 0 24px var(--btn-glow-color);
+        box-shadow: var(--shadow-accent-lg);
 
         &:hover {
-            box-shadow:
-                0 0 40px var(--btn-glow-color-strong);
+            box-shadow: var(--shadow-accent-xl);
         }
     }
 
@@ -106,12 +95,10 @@
 
     0%,
     100% {
-        box-shadow:
-            0 0 24px var(--btn-glow-color);
+        box-shadow: var(--shadow-accent-lg);
     }
 
     50% {
-        box-shadow:
-            0 0 42px var(--btn-glow-color-strong);
+        box-shadow: var(--shadow-accent-xl);
     }
 }
