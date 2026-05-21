@@ -33,6 +33,14 @@
         --icon-shadow: var(--shadow-accent-sm);
     }
 
+    &.shadow-accent-lg {
+        --icon-shadow: var(--shadow-accent-lg);
+    }
+
+    &.shadow-accent-xl {
+        --icon-shadow: var(--shadow-accent-xl);
+    }
+
     &.borderless {
         --icon-border: var(--border-width-thin) solid var(--border-transparent);
     }

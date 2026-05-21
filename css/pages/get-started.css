@@ -145,8 +145,6 @@
 
     .flow-panels {
         width: 100%;
-        padding: var(--space-12);
-        border-radius: var(--radius-4xl);
 
         .flow-panel {
             display: none;
@@ -156,9 +154,6 @@
             display: block;
         }
 
-        @media (width < 48rem) {
-            padding: var(--space-6);
-        }
     }
 
     &:has(:is(#step-1, #step-2, #step-3, #step-4, #confirmation):target) .intro {
@@ -173,10 +168,8 @@
     &:has(#confirmation:target) .confirmation {
         display: block;
     }
-}
 
-@media (width < 48rem) {
-    .get-started-flow {
+    @media (width < 48rem) {
         .flow-nav {
             display: flex;
             align-items: stretch;
@@ -330,16 +323,12 @@
 
         .success-icon {
             --icon-size: 6rem;
-            --icon-shadow: var(--shadow-accent-lg);
 
             margin: var(--space-6);
         }
     }
 
     .success-next-steps {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-
         padding-block: var(--space-6);
         border-block: var(--border-subtle-preset);
 
@@ -386,7 +375,6 @@
         }
 
         .success-next-steps {
-            grid-template-columns: minmax(0, 1fr);
             padding: 0;
 
             .success-step {

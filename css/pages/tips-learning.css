@@ -11,12 +11,6 @@
   --card-border-radius: var(--radius-2xl);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .hero {
   .tips-value-list {
     padding: 0;

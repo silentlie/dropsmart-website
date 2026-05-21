@@ -262,6 +262,9 @@
             background-color: var(--color-surface);
 
             .renter-situation-prompts {
+                padding-left: 0;
+                border-left: var(--border-none);
+
                 .renter-situation-prompt {
                     padding: var(--space-4);
                     border: var(--border-primary-lighter-preset);
