@@ -140,7 +140,7 @@
             padding: var(--space-6);
 
             border-right: var(--border-subtle-preset);
-            background-color: var(--accent-overlay-lightest);
+            background-color: var(--accent-overlay-faint);
 
             .installation-phase-label {
                 color: var(--color-accent-text);
@@ -268,7 +268,7 @@
             .renter-situation-prompts {
                 .renter-situation-prompt {
                     padding: var(--space-4);
-                    border: var(--border-primary-lighter);
+                    border: var(--border-primary-lighter-preset);
                     border-radius: var(--radius-2xl);
                     background-color: var(--color-surface);
                 }

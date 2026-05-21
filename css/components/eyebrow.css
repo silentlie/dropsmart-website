@@ -11,19 +11,19 @@
 
     /* default eyebrow */
     --eyebrow-color: var(--color-text);
-    --eyebrow-border: var(--color-border);
+    --eyebrow-border: var(--border-default);
     --eyebrow-bg: var(--color-surface);
     --eyebrow-shadow: var(--shadow-xs);
 
     /* accent eyebrow for light backgrounds */
     --eyebrow-accent-color: var(--color-accent-text);
-    --eyebrow-accent-border: var(--color-accent-border);
+    --eyebrow-accent-border: var(--border-accent);
     --eyebrow-accent-bg: var(--color-accent-subtle);
     --eyebrow-accent-shadow: var(--shadow-accent-sm);
 
     /* glass accent eyebrow */
     --eyebrow-glass-accent-color: var(--color-accent);
-    --eyebrow-glass-accent-border: var(--glass-accent-border);
+    --eyebrow-glass-accent-border: var(--border-glass-accent);
     --eyebrow-glass-accent-bg: var(--glass-accent-bg);
     --eyebrow-glass-accent-shadow: 0 0 24px var(--glass-accent-shadow);
 }

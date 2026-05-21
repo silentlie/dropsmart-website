@@ -32,7 +32,7 @@
 
                     &:hover,
                     &:focus-visible {
-                        opacity: 0.8;
+                        opacity: var(--alpha-8);
                     }
 
                     &:focus-visible {
@@ -67,7 +67,7 @@
 
                 &:hover,
                 &:focus-visible {
-                    background-color: rgb(255 255 255 / 0.12);
+                    background-color: var(--white-overlay-faint);
                     color: var(--secondary-blue-100);
                 }
             }
@@ -99,7 +99,7 @@
                 &:hover,
                 &:focus-visible,
                 &[aria-current="page"] {
-                    background-color: rgb(255 255 255 / 0.12);
+                    background-color: var(--white-overlay-faint);
                     color: var(--secondary-blue-100);
                 }
             }
@@ -111,7 +111,7 @@
 
                 &:hover,
                 &:focus-visible {
-                    background-color: rgb(255 255 255 / 0.12);
+                    background-color: var(--white-overlay-faint);
                     color: var(--color-accent);
                 }
             }
@@ -135,7 +135,7 @@
         &:has(.mobile-menu[open]) {
             & .mobile-nav {
                 display: block;
-                border-top: 1px solid var(--secondary-blue-100);
+                border-top: var(--border-on-primary-subtle-preset);
                 padding-block: var(--space-4);
             }
         }

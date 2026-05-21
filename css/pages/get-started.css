@@ -16,7 +16,7 @@
     .flow-nav {
         --flow-step-size: 3rem;
         --flow-line-width: 3rem;
-        --flow-line-thickness: 2px;
+        --flow-line-thickness: var(--border-width-medium);
 
         display: flex;
         align-items: center;
@@ -36,7 +36,7 @@
             width: var(--flow-step-size);
             height: var(--flow-step-size);
 
-            border: 1px solid var(--color-border);
+            border: var(--border-base);
             border-radius: var(--radius-full);
 
             background-color: var(--color-surface);
@@ -71,7 +71,7 @@
 
             &:hover,
             &:focus-visible {
-                border-color: var(--color-accent-border);
+                border-color: var(--border-accent);
                 box-shadow: var(--shadow-accent-sm);
             }
 
@@ -103,7 +103,7 @@
         padding-inline: var(--space-4);
 
         background-color: var(--color-surface);
-        border-color: var(--color-accent);
+        border-color: var(--border-accent-solid);
         color: var(--color-accent-text);
 
         box-shadow:
@@ -125,7 +125,7 @@
     &:has(#step-4:target) .flow-nav a:nth-child(-1n + 4),
     &:has(#confirmation:target) .flow-nav a:nth-child(-1n + 5) {
         background-color: var(--color-accent);
-        border-color: var(--color-accent);
+        border-color: var(--border-accent-solid);
         color: var(--color-on-accent);
 
         box-shadow:
@@ -189,7 +189,7 @@
 
             margin-top: var(--space-4);
 
-            border: 2px solid var(--color-border);
+            border: var(--border-medium-preset);
             border-radius: var(--radius-full);
 
             background-color: var(--color-surface);
@@ -201,8 +201,8 @@
                 flex: 1 1 0;
                 width: auto;
 
-                border: var(--shadow-none);
-                border-right: var(--border-width-thin) var(--border-style-solid) var(--color-border-subtle);
+                border: var(--border-none);
+                border-right: var(--border-subtle-preset);
                 border-radius: 0;
 
                 background-color: transparent;
@@ -278,7 +278,7 @@
 
 .intro {
     --planner-step-size: 2.25rem;
-    --planner-step-line-color: var(--accent-overlay-darker);
+    --planner-step-line-color: var(--accent-overlay-opaque);
 
     .intro-layout {
         display: grid;
@@ -298,7 +298,7 @@
         gap: var(--space-6);
 
         padding-left: var(--space-12);
-        border-left: 1px solid var(--color-border-subtle);
+        border-left: var(--border-subtle-preset);
 
         .planner-steps {
             display: grid;
@@ -320,7 +320,7 @@
                         width: var(--planner-step-size);
                         aspect-ratio: 1;
 
-                        border: 1px solid var(--color-accent);
+                        border: var(--border-accent-solid-preset);
                         border-radius: var(--radius-full);
 
                         background-color: var(--color-surface);
@@ -361,7 +361,7 @@
             gap: var(--space-3);
 
             padding-top: var(--space-6);
-            border-top: 1px solid var(--color-border-subtle);
+            border-top: var(--border-subtle-preset);
 
             .planner-note-icon {
                 display: grid;
@@ -447,7 +447,7 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
 
         padding-block: var(--space-6);
-        border-block: 1px solid var(--color-border-subtle);
+        border-block: var(--border-subtle-preset);
 
         .success-step {
             justify-items: center;
@@ -466,7 +466,7 @@
             }
 
             &+.success-step {
-                border-left: 1px solid var(--color-border-subtle);
+                border-left: var(--border-subtle-preset);
             }
         }
     }
@@ -511,7 +511,7 @@
 
                 &+.success-step {
                     border-left: var(--border-none);
-                    border-top: 1px solid var(--color-border-subtle);
+                    border-top: var(--border-subtle-preset);
                     padding-top: var(--space-4);
                 }
             }

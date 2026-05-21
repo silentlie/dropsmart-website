@@ -1,6 +1,5 @@
 .rail-steps {
     --rail-step-size: 2.5rem;
-    --rail-step-line-color: rgb(from var(--color-primary) r g b / 0.25);
 
     .rail-step {
         display: grid;
@@ -27,7 +26,7 @@
             .rail-step-line {
                 width: 1px;
                 min-height: var(--space-8);
-                background-color: var(--rail-step-line-color);
+                background-color: var(--primary-overlay-medium);
             }
         }
 

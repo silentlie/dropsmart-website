@@ -34,7 +34,7 @@
         }
 
         fieldset {
-            border: var(--shadow-none);
+            border: var(--border-none);
             padding: 0;
             margin: 0;
         }
@@ -54,7 +54,7 @@
         select,
         textarea {
             width: 100%;
-            border: 1px solid var(--color-border);
+            border: var(--border-input-preset);
             border-radius: var(--radius-md);
             background-color: var(--color-input-bg);
             color: var(--color-input-text);
@@ -82,14 +82,14 @@
         select:focus,
         textarea:focus {
             outline: var(--outline-width) solid var(--color-focus-ring);
-            border-color: var(--color-input-border-focus);
+            border-color: var(--border-input-focus);
         }
 
         .segmented-field {
             .segmented-options {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-                border: 1px solid var(--color-border);
+                border: var(--border-input-preset);
                 border-radius: var(--radius-md);
                 overflow: hidden;
 
@@ -101,7 +101,7 @@
                     gap: var(--space-2);
                     min-height: 3rem;
                     padding-inline: var(--space-4);
-                    border-right: 1px solid var(--color-border-subtle);
+                    border-right: var(--border-subtle-preset);
                     color: var(--color-text);
                     cursor: pointer;
                 }
@@ -132,7 +132,7 @@
 
                     label {
                         border-right: var(--border-none);
-                        border-bottom: 1px solid var(--color-border-subtle);
+                        border-bottom: var(--border-subtle-preset);
                     }
 
                     label:last-child {
@@ -163,7 +163,7 @@
                 min-height: 3rem;
                 padding: var(--space-3) var(--space-4);
 
-                border: 1px solid var(--color-border);
+                border: var(--border-input-preset);
                 border-radius: var(--radius-md);
 
                 background-color: var(--color-input-bg);
@@ -181,7 +181,7 @@
 
             label:has(input:checked) {
                 background-color: var(--color-accent-subtle);
-                border-color: var(--color-input-border-focus);
+                border-color: var(--border-input-focus);
                 color: var(--color-accent-text);
             }
 
@@ -218,6 +218,6 @@
         justify-content: space-between;
         align-items: center;
         padding-top: var(--space-4);
-        border-top: 1px solid var(--color-border-subtle);
+        border-top: var(--border-subtle-preset);
     }
 }

@@ -33,6 +33,6 @@
     &.secondary {
         --number-badge-bg: var(--color-secondary);
         --number-badge-color: var(--color-on-secondary);
-        --number-badge-shadow: 0 4px 8px rgb(from var(--color-secondary) r g b / 0.24);
+        --number-badge-shadow: var(--shadow-secondary-md);
     }
 }

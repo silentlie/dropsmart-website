@@ -1,5 +1,4 @@
 :root {
-    /* spacing */
     --header-height: 4rem;
     /* 64px */
 
@@ -39,7 +38,6 @@
     --container-2xl: 96rem;
     /* 1536px */
 
-    /* focus ring & outline system */
     --outline-width: 2px;
     --outline-offset-default: 2px;
     --outline-offset-spaced: 3px;
@@ -47,22 +45,14 @@
     --outline-offset-inset: -2px;
     --outline-offset-inset-large: -4px;
 
-    /* hover transform offsets */
     --offset-hover-sm: -2px;
     --offset-hover-md: -3px;
 
-    /* input heights */
     --input-height-base: 3rem;
     --input-height-tall: 5rem;
 
-    /* border widths - extended */
-    --border-width-medium: 2px;
-    --border-width-thick: 4px;
-
-    /* text decoration */
     --ls-uppercase: 0.12em;
     --underline-thickness: 2px;
 
-    /* element sizes */
     --dot-size: 8px;
 }

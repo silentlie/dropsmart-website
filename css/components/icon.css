@@ -1,18 +1,15 @@
 :root {
-    /* icon base */
     --icon-size: 1.25rem;
     --icon-padding: var(--space-2);
     --icon-radius: var(--radius-md);
     --icon-border-width: var(--border-width-thin);
 
-    /* default icon */
     --icon-color: var(--color-text);
     --icon-border: var(--border-transparent);
     --icon-bg: transparent;
 
-    /* accent icon for light backgrounds */
     --icon-accent-color: var(--color-accent-text);
-    --icon-accent-border: var(--color-accent-border);
+    --icon-accent-border: var(--border-accent);
     --icon-accent-bg: var(--color-accent-subtle);
     --icon-accent-shadow: var(--shadow-accent-sm);
 }
@@ -25,7 +22,7 @@
     width: fit-content;
     padding: var(--icon-padding);
 
-    border: var(--icon-border-width) solid var(--icon-border);
+    border: var(--icon-border-width) var(--border-style-solid) var(--icon-border);
     border-radius: var(--icon-radius);
 
     background-color: var(--icon-bg);
@@ -93,7 +90,7 @@
     }
 
     &.accent-muted {
-        --icon-well-bg: rgb(from var(--color-accent) r g b / 0.16);
+        --icon-well-bg: var(--accent-overlay-subtle);
     }
 
     &.accent-solid {

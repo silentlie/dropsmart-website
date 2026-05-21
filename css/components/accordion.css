@@ -1,6 +1,4 @@
 .accordion-list {
-    --accordion-summary-bg: rgb(from var(--neutral-200) r g b / 0.15);
-
     .accordion-item {
         overflow: hidden;
 
@@ -19,7 +17,7 @@
         &:has(summary:focus-visible) {
             transform: translateY(var(--offset-hover-sm));
             box-shadow: var(--shadow-accent-xl);
-            border-color: var(--color-accent-border);
+            border-color: var(--border-accent);
         }
 
         summary {
@@ -48,7 +46,7 @@
             &:hover,
             &:focus-visible {
                 color: var(--color-accent-text);
-                background-color: var(--accordion-summary-bg);
+                background-color: var(--neutral-overlay-subtle);
             }
 
             .accordion-icon {
@@ -75,11 +73,11 @@
         }
 
         &[open] {
-            border-color: var(--color-accent-border);
+            border-color: var(--border-accent);
             box-shadow: var(--shadow-accent-xl);
 
             summary {
-                background-color: var(--accordion-summary-bg);
+                background-color: var(--neutral-overlay-subtle);
                 color: var(--color-text);
                 border-bottom: var(--border-subtle-preset);
 
