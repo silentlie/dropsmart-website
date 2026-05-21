@@ -58,6 +58,19 @@
         }
     }
 
+    &.text {
+        --btn-bg: transparent;
+        --btn-text: var(--color-primary);
+        --btn-border: var(--border-transparent);
+
+        padding-inline: 0;
+        padding-block: 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     &.glow {
         box-shadow: var(--shadow-accent-lg);
 

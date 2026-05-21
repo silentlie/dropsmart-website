@@ -1,0 +1,20 @@
+.items-divider {
+    padding-block: var(--space-6);
+    border-block: var(--border-subtle-preset);
+
+    >*+* {
+        border-left: var(--border-subtle-preset);
+        padding-left: var(--space-5);
+    }
+
+    @media (width < 48rem) {
+        padding: 0;
+
+        >*+* {
+            border-left: var(--border-none);
+            border-top: var(--border-subtle-preset);
+            padding-left: 0;
+            padding-top: var(--space-4);
+        }
+    }
+}

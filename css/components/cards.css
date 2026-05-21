@@ -48,63 +48,61 @@
             border-color: var(--border-glass-accent);
         }
     }
-}
 
-.media-card {
-    align-items: start;
+    &.media {
+        align-items: start;
 
-    padding: var(--space-4);
+        .media-card-content {
+            display: grid;
+            gap: var(--space-2);
+        }
 
-    .media-card-content {
-        display: grid;
-        gap: var(--space-2);
-    }
-
-    @media (max-width: 48rem) {
-        .icon.well {
-            --icon-size: 3rem;
-            --icon-image-size: 1.5rem;
+        @media (max-width: 48rem) {
+            .icon.well {
+                --icon-size: 3rem;
+                --icon-image-size: 1.5rem;
+            }
         }
     }
-}
 
-.glass-frame {
-    display: inline-flex;
-    padding: var(--space-4);
-    border: var(--border-glass-preset);
-    border-radius: var(--radius-4xl);
-    background-color: var(--glass-bg);
-    box-shadow: var(--shadow-elevated);
+    &.glass {
+        display: inline-flex;
+        padding: var(--space-4);
+        border: var(--border-glass-preset);
+        border-radius: var(--radius-4xl);
+        background-color: var(--glass-bg);
+        box-shadow: var(--shadow-elevated);
 
-    & img {
-        width: 100%;
-        border-radius: var(--radius-3xl);
-    }
-}
-
-.feature-card {
-    display: grid;
-    align-content: start;
-    gap: var(--space-5);
-
-    &.center {
-        justify-items: center;
-        text-align: center;
+        & img {
+            width: 100%;
+            border-radius: var(--radius-3xl);
+        }
     }
 
-    &.tall {
-        min-height: 18rem;
-    }
-
-    .feature-card-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: var(--space-4);
-    }
-
-    .feature-card-content {
+    &.feature {
         display: grid;
-        gap: var(--space-3);
+        align-content: start;
+        gap: var(--space-5);
+
+        &.center {
+            justify-items: center;
+            text-align: center;
+        }
+
+        &.tall {
+            min-height: 18rem;
+        }
+
+        .feature-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-4);
+        }
+
+        .feature-card-content {
+            display: grid;
+            gap: var(--space-3);
+        }
     }
 }
