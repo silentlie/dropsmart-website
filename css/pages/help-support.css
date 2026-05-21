@@ -200,7 +200,7 @@
 
                 .installation-phase-icon {
                     grid-row: span 4;
-                    --icon-well-size: 3rem;
+                    --icon-size: 3rem;
                     --icon-image-size: 1.5rem;
                 }
 

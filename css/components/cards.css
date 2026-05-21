@@ -55,8 +55,8 @@
     }
 
     @media (max-width: 48rem) {
-        .icon-well {
-            --icon-well-size: 3rem;
+        .icon.well {
+            --icon-size: 3rem;
             --icon-image-size: 1.5rem;
         }
     }

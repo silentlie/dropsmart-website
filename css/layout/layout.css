@@ -20,7 +20,7 @@
         aspect-ratio: 1;
         border-radius: var(--radius-full);
         background-color: var(--dot-list-marker-bg, var(--color-accent));
-        box-shadow: var(--dot-list-marker-shadow, 0 0 12px var(--accent-overlay-dense));
+        box-shadow: var(--dot-list-marker-shadow, var(--shadow-accent-dot));
     }
 }
 

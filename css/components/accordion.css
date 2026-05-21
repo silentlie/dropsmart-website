@@ -16,7 +16,7 @@
         &:hover,
         &:has(summary:focus-visible) {
             transform: translateY(var(--offset-hover-sm));
-            box-shadow: var(--shadow-accent-xl);
+            box-shadow: var(--shadow-accent-lift);
             border-color: var(--border-accent);
         }
 
@@ -74,7 +74,7 @@
 
         &[open] {
             border-color: var(--border-accent);
-            box-shadow: var(--shadow-accent-xl);
+            box-shadow: var(--shadow-accent-lift);
 
             summary {
                 background-color: var(--neutral-overlay-subtle);

@@ -4,8 +4,8 @@
     padding: var(--space-16) var(--space-20);
     border-radius: var(--radius-4xl);
 
-    background-color: var(--cta-panel-bg, var(--color-primary));
-    color: var(--cta-panel-color, var(--color-on-primary));
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
 
     .cta-text {
         display: grid;

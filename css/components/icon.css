@@ -1,101 +1,93 @@
-:root {
-    --icon-size: 1.25rem;
-    --icon-padding: var(--space-2);
-    --icon-radius: var(--radius-md);
-    --icon-border-width: var(--border-width-thin);
-
-    --icon-color: var(--color-text);
-    --icon-border: var(--border-transparent);
-    --icon-bg: transparent;
-
-    --icon-accent-color: var(--color-accent-text);
-    --icon-accent-border: var(--border-accent);
-    --icon-accent-bg: var(--color-accent-subtle);
-    --icon-accent-shadow: var(--shadow-accent-sm);
-}
-
 .icon {
+    --icon-size: fit-content;
+    --icon-aspect-ratio: auto;
+    --icon-padding: var(--space-2);
+    --icon-border: var(--border-width-thin) solid var(--border-transparent);
+    --icon-radius: var(--radius-md);
+    --icon-bg: transparent;
+    --icon-color: var(--color-text);
+    --icon-shadow: var(--shadow-none);
+    --icon-image-size: 1.5rem;
+
     display: inline-grid;
     place-items: center;
     flex-shrink: 0;
 
-    width: fit-content;
+    width: var(--icon-size);
+    aspect-ratio: var(--icon-aspect-ratio);
     padding: var(--icon-padding);
 
-    border: var(--icon-border-width) solid var(--icon-border);
+    border: var(--icon-border);
     border-radius: var(--icon-radius);
 
     background-color: var(--icon-bg);
     color: var(--icon-color);
-    box-shadow: none;
+    box-shadow: var(--icon-shadow);
 
     line-height: 1;
 
-    & svg {
-        width: var(--icon-size);
-        height: var(--icon-size);
-        stroke: currentColor;
-    }
-
     &.accent {
-        border-color: var(--icon-accent-border);
-        background-color: var(--icon-accent-bg);
-        color: var(--icon-accent-color);
-        box-shadow: var(--icon-accent-shadow);
+        --icon-border: var(--border-accent-preset);
+        --icon-bg: var(--color-accent-subtle);
+        --icon-color: var(--color-accent-text);
+        --icon-shadow: var(--shadow-accent-sm);
     }
 
     &.borderless {
-        border-color: var(--border-transparent);
+        --icon-border: var(--border-width-thin) solid var(--border-transparent);
     }
 
     &.shadowless {
-        box-shadow: var(--shadow-none);
-    }
-}
-
-.icon-well {
-    display: grid;
-    place-items: center;
-    flex-shrink: 0;
-
-    width: var(--icon-well-size, 4rem);
-    aspect-ratio: 1;
-    border-radius: var(--icon-well-radius, var(--radius-full));
-
-    background-color: var(--icon-well-bg, var(--color-accent-subtle));
-    color: var(--icon-well-color, var(--color-accent-text));
-
-    &.sm {
-        --icon-well-size: 3rem;
-        --icon-image-size: 1.5rem;
+        --icon-shadow: var(--shadow-none);
     }
 
-    &.md {
-        --icon-well-size: 4rem;
+    &.well {
+        --icon-size: 4rem;
+        --icon-aspect-ratio: 1;
+        --icon-padding: 0;
+        --icon-border: var(--border-none);
+        --icon-radius: var(--radius-full);
+        --icon-bg: var(--color-accent-subtle);
+        --icon-color: var(--color-accent-text);
         --icon-image-size: 2rem;
-    }
 
-    &.lg {
-        --icon-well-size: 5rem;
-        --icon-image-size: 2.25rem;
-    }
+        &.sm {
+            --icon-size: 3rem;
+            --icon-image-size: 1.5rem;
+        }
 
-    &.note {
-        --icon-well-size: 3.75rem;
-        --icon-image-size: 1.8rem;
-    }
+        &.md {
+            --icon-size: 4rem;
+            --icon-image-size: 2rem;
+        }
 
-    &.rounded {
-        --icon-well-radius: var(--radius-xl);
-    }
+        &.lg {
+            --icon-size: 5rem;
+            --icon-image-size: 2.25rem;
+        }
 
-    &.accent-muted {
-        --icon-well-bg: var(--accent-overlay-subtle);
-    }
+        &.xl {
+            --icon-size: 6rem;
+            --icon-image-size: 2.5rem;
+        }
 
-    &.accent-solid {
-        --icon-well-bg: var(--color-accent);
-        --icon-well-color: var(--color-on-accent);
+        &.note {
+            --icon-size: 3.75rem;
+            --icon-image-size: 1.8rem;
+        }
+
+        &.rounded {
+            --icon-radius: var(--radius-xl);
+        }
+
+        &.accent-muted {
+            --icon-bg: var(--accent-overlay-subtle);
+        }
+
+        &.accent-solid {
+            --icon-bg: var(--color-accent);
+            --icon-color: var(--color-on-accent);
+        }
     }
 
     &.image-sm {
@@ -114,7 +106,12 @@
 
     img,
     svg {
-        width: var(--icon-image-size, 2rem);
-        height: var(--icon-image-size, 2rem);
+        width: var(--icon-image-size);
+        height: var(--icon-image-size);
+        object-fit: contain;
+    }
+
+    svg {
+        stroke: currentColor;
     }
 }

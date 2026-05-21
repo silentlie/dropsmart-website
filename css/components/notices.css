@@ -5,7 +5,7 @@
     border: var(--border-width-thin) solid var(--notice-border, var(--border-accent));
     border-radius: var(--radius-2xl);
 
-    background-color: var(--notice-bg, var(--accent-overlay-faint));
+    background-color: var(--accent-overlay-faint);
     box-shadow: var(--notice-shadow, var(--shadow-xs));
 
     &.compact {
@@ -21,7 +21,7 @@
     }
 
     &.no-shadow {
-        --notice-shadow: none;
+        --notice-shadow: var(--shadow-none);
     }
 
     .notice-content {

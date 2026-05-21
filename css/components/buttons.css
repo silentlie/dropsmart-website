@@ -1,16 +1,8 @@
-:root {
+.btn {
     --btn-bg: var(--color-primary);
     --btn-text: var(--color-on-primary);
     --btn-border: var(--border-transparent);
 
-    --btn-glow-color: var(--accent-overlay-strong);
-    --btn-glow-color-strong: var(--accent-overlay-opaque);
-
-    --btn-outline-inverse-border: var(--border-on-primary-medium);
-    --btn-outline-inverse-hover-bg: var(--white-overlay-faint);
-}
-
-.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -59,20 +51,18 @@
     &.outline-inverse {
         --btn-bg: transparent;
         --btn-text: var(--color-on-primary);
-        --btn-border: var(--btn-outline-inverse-border);
+        --btn-border: var(--border-on-primary-medium);
 
         &:hover {
-            background-color: var(--btn-outline-inverse-hover-bg);
+            background-color: var(--white-overlay-faint);
         }
     }
 
     &.glow {
-        box-shadow:
-            0 0 24px var(--btn-glow-color);
+        box-shadow: var(--shadow-accent-lg);
 
         &:hover {
-            box-shadow:
-                0 0 40px var(--btn-glow-color-strong);
+            box-shadow: var(--shadow-accent-xl);
         }
     }
 
@@ -105,12 +95,10 @@
 
     0%,
     100% {
-        box-shadow:
-            0 0 24px var(--btn-glow-color);
+        box-shadow: var(--shadow-accent-lg);
     }
 
     50% {
-        box-shadow:
-            0 0 42px var(--btn-glow-color-strong);
+        box-shadow: var(--shadow-accent-xl);
     }
 }
