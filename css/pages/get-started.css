@@ -329,12 +329,8 @@
     }
 
     .success-next-steps {
-        padding-block: var(--space-6);
-        border-block: var(--border-subtle-preset);
-
         .success-step {
             justify-items: center;
-
             padding-inline: var(--space-5);
             text-align: center;
 
@@ -346,10 +342,6 @@
 
             p {
                 color: var(--color-text);
-            }
-
-            &+.success-step {
-                border-left: var(--border-subtle-preset);
             }
         }
     }
@@ -375,23 +367,14 @@
         }
 
         .success-next-steps {
-            padding: 0;
-
             .success-step {
                 justify-items: start;
                 align-items: center;
-
                 text-align: left;
                 padding: var(--space-4);
 
                 p {
                     max-width: none;
-                }
-
-                &+.success-step {
-                    border-left: var(--border-none);
-                    border-top: var(--border-subtle-preset);
-                    padding-top: var(--space-4);
                 }
             }
         }
