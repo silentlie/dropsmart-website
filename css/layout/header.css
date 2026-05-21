@@ -35,12 +35,6 @@
                         opacity: var(--alpha-8);
                     }
 
-                    &:focus-visible {
-                        outline: 2px solid var(--color-focus-ring);
-                        outline-offset: 3px;
-                        border-radius: var(--radius-sm);
-                    }
-
                     &[aria-current="page"] {
                         text-decoration: underline;
                         text-decoration-thickness: 2px;

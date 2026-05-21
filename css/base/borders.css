@@ -1,10 +1,9 @@
 :root {
-    /* border width */
+    --border-width-hairline: 0.5px;
     --border-width-thin: 1px;
     --border-width-medium: 2px;
     --border-width-thick: 4px;
 
-    /* border colors */
     --border-default: var(--color-border);
     --border-subtle: var(--color-border-subtle);
     --border-strong: var(--color-border-strong);
@@ -20,15 +19,23 @@
     --border-glass: var(--glass-border);
     --border-glass-accent: var(--glass-accent-border);
     --border-accent-light: var(--accent-overlay-subtle);
+    --border-info: var(--blue-300);
+    --border-secondary-strong: var(--secondary-blue-400);
+    --border-success: var(--color-success);
+    --border-warning: var(--color-warning-border);
+    --border-quick: var(--secondary-blue-200);
+    --border-long: var(--blue-200);
     --border-primary-subtle: var(--primary-overlay-medium);
     --border-primary-light: var(--primary-overlay-subtle);
     --border-primary-lighter: var(--primary-overlay-faint);
 
-    /* border presets */
     --border-base: var(--border-width-thin) solid var(--border-default);
+    --border-base-hairline-preset: var(--border-width-hairline) solid var(--border-default);
     --border-medium-preset: var(--border-width-medium) solid var(--border-default);
     --border-subtle-preset: var(--border-width-thin) solid var(--border-subtle);
+    --border-subtle-hairline-preset: var(--border-width-hairline) solid var(--border-subtle);
     --border-current-preset: var(--border-width-thin) solid var(--border-current);
+    --border-current-hairline-preset: var(--border-width-hairline) solid var(--border-current);
     --border-accent-preset: var(--border-width-thin) solid var(--border-accent);
     --border-accent-solid-preset: var(--border-width-thin) solid var(--border-accent-solid);
     --border-accent-solid-thick-preset: var(--border-width-thick) solid var(--border-accent-solid);
@@ -39,11 +46,26 @@
     --border-input-focus-preset: var(--border-width-thin) solid var(--border-input-focus);
     --border-glass-preset: var(--border-width-thin) solid var(--border-glass);
     --border-accent-light-preset: var(--border-width-thin) solid var(--border-accent-light);
+    --border-info-preset: var(--border-width-thin) solid var(--border-info);
+    --border-info-hairline-preset: var(--border-width-hairline) solid var(--border-info);
+    --border-success-hairline-preset: var(--border-width-hairline) solid var(--border-success);
+    --border-quick-preset: var(--border-width-thin) solid var(--border-quick);
+    --border-long-preset: var(--border-width-thin) solid var(--border-long);
     --border-primary-subtle-preset: var(--border-width-thin) solid var(--border-primary-subtle);
     --border-primary-light-preset: var(--border-width-thin) solid var(--border-primary-light);
     --border-primary-lighter-preset: var(--border-width-thin) solid var(--border-primary-lighter);
 
-    /* transparent border */
+    --outline-width: var(--border-width-medium);
+    --outline-color: var(--color-focus-ring);
+    --outline-focus: var(--outline-width) solid var(--outline-color);
+    --outline-none: none;
+
+    --outline-offset-default: var(--border-width-medium);
+    --outline-offset-spaced: 3px;
+    --outline-offset-large: var(--border-width-thick);
+    --outline-offset-inset: calc(0px - var(--border-width-medium));
+    --outline-offset-inset-large: calc(0px - var(--border-width-thick));
+
     --border-transparent: transparent;
     --border-none: 0;
 }

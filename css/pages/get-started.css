@@ -27,6 +27,7 @@
 
         a {
             position: relative;
+            --focus-ring-offset: var(--outline-offset-large);
 
             display: flex;
             align-items: center;
@@ -75,10 +76,6 @@
                 box-shadow: var(--shadow-accent-sm);
             }
 
-            &:focus-visible {
-                outline: 2px solid var(--color-focus-ring);
-                outline-offset: 4px;
-            }
         }
 
         a+a::before {
@@ -198,6 +195,8 @@
             overflow: hidden;
 
             a {
+                --focus-ring-offset: var(--outline-offset-inset);
+
                 flex: 1 1 0;
                 width: auto;
 
@@ -224,10 +223,6 @@
                     box-shadow: var(--shadow-none);
                 }
 
-                &:focus-visible {
-                    outline: 2px solid var(--color-focus-ring);
-                    outline-offset: -2px;
-                }
             }
 
             a+a::before {

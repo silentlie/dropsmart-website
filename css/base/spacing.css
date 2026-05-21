@@ -38,13 +38,6 @@
     --container-2xl: 96rem;
     /* 1536px */
 
-    --outline-width: 2px;
-    --outline-offset-default: 2px;
-    --outline-offset-spaced: 3px;
-    --outline-offset-large: 4px;
-    --outline-offset-inset: -2px;
-    --outline-offset-inset-large: -4px;
-
     --offset-hover-sm: -2px;
     --offset-hover-md: -3px;
 

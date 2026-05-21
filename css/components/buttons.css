@@ -19,7 +19,7 @@
     padding-inline: var(--space-5);
     padding-block: var(--space-3);
 
-    border: var(--border-width-thin) var(--border-style-solid) var(--btn-border);
+    border: var(--border-width-thin) solid var(--btn-border);
     border-radius: var(--radius-md);
 
     background-color: var(--btn-bg);
@@ -41,7 +41,7 @@
     }
 
     &:focus-visible {
-        outline: var(--outline-width) solid var(--color-focus-ring);
+        outline: var(--outline-focus);
         outline-offset: var(--outline-offset-default);
     }
 

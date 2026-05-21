@@ -22,7 +22,7 @@
     width: fit-content;
     padding: var(--icon-padding);
 
-    border: var(--icon-border-width) var(--border-style-solid) var(--icon-border);
+    border: var(--icon-border-width) solid var(--icon-border);
     border-radius: var(--icon-radius);
 
     background-color: var(--icon-bg);

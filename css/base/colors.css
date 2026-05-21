@@ -179,6 +179,10 @@
     --color-info-container: var(--blue-100);
     --color-on-info-container: var(--blue-900);
 
+    --color-warning: #633806;
+    --color-warning-container: #faeeda;
+    --color-warning-border: #ef9f27;
+
     --surface-overlay-opaque: rgb(from var(--color-surface) r g b / var(--alpha-7));
     --neutral-overlay-subtle: rgb(from var(--neutral-200) r g b / var(--alpha-2));
 }

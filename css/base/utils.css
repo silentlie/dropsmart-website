@@ -5,3 +5,40 @@
 .bg-page {
     background-color: var(--color-bg);
 }
+
+.focus-ring {
+    --focus-ring-offset: var(--outline-offset-default);
+
+    &:focus-visible {
+        outline: var(--outline-focus);
+        outline-offset: var(--focus-ring-offset);
+    }
+
+    &.spaced {
+        --focus-ring-offset: var(--outline-offset-spaced);
+    }
+
+    &.large {
+        --focus-ring-offset: var(--outline-offset-large);
+    }
+
+    &.inset {
+        --focus-ring-offset: var(--outline-offset-inset);
+    }
+
+    &.inset-lg {
+        --focus-ring-offset: var(--outline-offset-inset-large);
+    }
+
+    &.radius-sm:focus-visible {
+        border-radius: var(--radius-sm);
+    }
+
+    &.radius-md:focus-visible {
+        border-radius: var(--radius-md);
+    }
+
+    &.radius-full:focus-visible {
+        border-radius: var(--radius-full);
+    }
+}

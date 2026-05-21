@@ -6,9 +6,4 @@
     line-height: var(--lh-tight);
     text-decoration: none;
 
-    &:focus-visible {
-        outline: var(--outline-width) solid var(--color-focus-ring);
-        outline-offset: var(--outline-offset-spaced);
-        border-radius: var(--radius-sm);
-    }
 }

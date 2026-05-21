@@ -2,7 +2,7 @@
     align-items: center;
 
     padding: var(--notice-padding, var(--space-5));
-    border: var(--border-width-thin) var(--border-style-solid) var(--notice-border, var(--border-accent));
+    border: var(--border-width-thin) solid var(--notice-border, var(--border-accent));
     border-radius: var(--radius-2xl);
 
     background-color: var(--notice-bg, var(--accent-overlay-faint));

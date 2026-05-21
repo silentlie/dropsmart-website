@@ -38,7 +38,7 @@
     padding-inline: var(--eyebrow-padding-inline);
     padding-block: var(--eyebrow-padding-block);
 
-    border: var(--border-width-thin) var(--border-style-solid) var(--eyebrow-border);
+    border: var(--border-width-thin) solid var(--eyebrow-border);
     border-radius: var(--eyebrow-radius);
 
     background-color: var(--eyebrow-bg);
