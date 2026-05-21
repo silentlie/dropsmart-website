@@ -18,6 +18,12 @@
         box-shadow: var(--shadow-lg);
     }
 
+    &.xxl {
+        padding: var(--space-12);
+        border-radius: var(--radius-4xl);
+        box-shadow: var(--shadow-lg);
+    }
+
     &.quiet {
         border-color: var(--border-subtle);
         background-color: var(--color-surface);

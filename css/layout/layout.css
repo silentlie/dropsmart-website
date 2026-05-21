@@ -105,6 +105,12 @@
             minmax(var(--grid-aside-min, 12rem),
                 var(--grid-aside-max, 16rem)) minmax(0, 1fr);
     }
+
+    &.center {
+        place-items: center;
+        justify-items: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 80rem) {
