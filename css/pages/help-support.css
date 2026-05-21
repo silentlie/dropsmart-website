@@ -62,7 +62,7 @@
         }
     }
 
-    &:has(:is(#installation, #renters, #pricing, #data-privacy, #contact):target) {
+    &:has(:is(#installation, #renters, #pricing, #contact):target) {
         .faq-panel {
             display: none;
         }
@@ -72,7 +72,6 @@
     &:has(#installation:target) .installation-panel,
     &:has(#renters:target) .renters-panel,
     &:has(#pricing:target) .pricing-panel,
-    &:has(#data-privacy:target) .data-privacy-panel,
     &:has(#contact:target) .support-contact-panel {
         display: block;
     }
@@ -82,8 +81,7 @@
     &:has(#installation:target) .support-tabs-nav a:nth-child(2),
     &:has(#renters:target) .support-tabs-nav a:nth-child(3),
     &:has(#pricing:target) .support-tabs-nav a:nth-child(4),
-    &:has(#data-privacy:target) .support-tabs-nav a:nth-child(5),
-    &:has(#contact:target) .support-tabs-nav a:nth-child(6) {
+    &:has(#contact:target) .support-tabs-nav a:nth-child(5) {
         background-color: var(--color-accent);
         color: var(--color-on-accent);
         box-shadow: var(--shadow-accent-md);
@@ -108,8 +106,7 @@
         &:has(#installation:target) .support-tabs-nav a:nth-child(2),
         &:has(#renters:target) .support-tabs-nav a:nth-child(3),
         &:has(#pricing:target) .support-tabs-nav a:nth-child(4),
-        &:has(#data-privacy:target) .support-tabs-nav a:nth-child(5),
-        &:has(#contact:target) .support-tabs-nav a:nth-child(6) {
+        &:has(#contact:target) .support-tabs-nav a:nth-child(5) {
             padding-inline: var(--space-4);
 
             .support-tab-title {
@@ -279,5 +276,18 @@
         .renter-next-step-header {
             align-items: start;
         }
+    }
+}
+
+.contact-footnote {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+
+    .contact-footnote-icon {
+        --icon-size: 3rem;
+        --icon-image-size: 1.5rem;
+        --icon-bg: var(--color-surface-alt);
+        --icon-color: var(--color-accent-text);
     }
 }
